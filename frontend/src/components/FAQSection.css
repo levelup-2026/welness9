@@ -1,34 +1,35 @@
+/* Mobile First */
 .faq-section {
-  padding: 120px 48px;
+  padding: 60px 20px;
   background: linear-gradient(180deg, #fafafa 0%, white 100%);
 }
 
 .faq-container {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .faq-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .faq-title {
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 400;
   color: #0a0a0a;
   margin: 0 0 16px 0;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .faq-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: #666;
   margin: 0;
 }
 
 .faq-list {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .faq-item {
@@ -39,26 +40,31 @@
 .faq-question {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 28px 0;
+  padding: 20px 0;
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #0a0a0a;
   text-align: left;
   cursor: pointer;
   transition: color 0.2s;
+  gap: 12px;
 }
 
 .faq-question:hover {
   color: #666;
 }
 
+.faq-question span {
+  flex: 1;
+}
+
 .faq-icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #f5f5f5;
   display: flex;
@@ -80,60 +86,165 @@
 }
 
 .faq-item.open .faq-answer {
-  max-height: 300px;
+  max-height: 500px;
 }
 
 .faq-answer p {
   font-size: 15px;
   color: #666;
   line-height: 1.7;
-  margin: 0 0 28px 0;
-  padding-right: 60px;
+  margin: 0 0 20px 0;
+  padding-right: 0;
 }
 
 .faq-cta {
   text-align: center;
-  padding: 60px 40px;
+  padding: 40px 28px;
   background: linear-gradient(135deg, #FFF4B8 0%, #FFE89F 100%);
-  border-radius: 32px;
+  border-radius: 24px;
   border: 1px solid #f0e68c;
 }
 
 .faq-cta-title {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 400;
   color: #0a0a0a;
   margin: 0 0 12px 0;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
 }
 
 .faq-cta-text {
-  font-size: 16px;
+  font-size: 15px;
   color: #666;
-  margin: 0 0 32px 0;
+  margin: 0 0 28px 0;
 }
 
 .contact-btn {
-  padding: 16px 40px;
+  padding: 14px 32px;
   background: #0a0a0a;
   color: white;
   border: none;
-  border-radius: 28px;
-  font-size: 15px;
+  border-radius: 24px;
+  font-size: 14px;
   cursor: pointer;
   transition: transform 0.2s;
+  width: 100%;
+  max-width: 280px;
 }
 
 .contact-btn:hover {
   transform: scale(1.05);
 }
 
-@media (max-width: 640px) {
-  .faq-title {
-    font-size: 36px;
+/* Tablet - 768px and up */
+@media (min-width: 768px) {
+  .faq-section {
+    padding: 80px 32px;
   }
-  
+
+  .faq-container {
+    max-width: 800px;
+  }
+
+  .faq-header {
+    margin-bottom: 50px;
+  }
+
+  .faq-title {
+    font-size: 48px;
+  }
+
+  .faq-subtitle {
+    font-size: 17px;
+  }
+
+  .faq-list {
+    margin-bottom: 60px;
+  }
+
+  .faq-question {
+    padding: 24px 0;
+    font-size: 17px;
+  }
+
   .faq-answer p {
-    padding-right: 0;
+    padding-right: 40px;
+    margin-bottom: 24px;
+  }
+
+  .faq-cta {
+    padding: 50px 36px;
+  }
+
+  .faq-cta-title {
+    font-size: 28px;
+  }
+
+  .contact-btn {
+    width: auto;
+  }
+}
+
+/* Desktop - 1024px and up */
+@media (min-width: 1024px) {
+  .faq-section {
+    padding: 120px 48px;
+  }
+
+  .faq-container {
+    max-width: 900px;
+  }
+
+  .faq-header {
+    margin-bottom: 60px;
+  }
+
+  .faq-title {
+    font-size: 56px;
+    letter-spacing: -1px;
+  }
+
+  .faq-subtitle {
+    font-size: 18px;
+  }
+
+  .faq-list {
+    margin-bottom: 80px;
+  }
+
+  .faq-question {
+    padding: 28px 0;
+    font-size: 18px;
+  }
+
+  .faq-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-answer p {
+    padding-right: 60px;
+    margin-bottom: 28px;
+  }
+
+  .faq-cta {
+    padding: 60px 40px;
+    border-radius: 32px;
+  }
+
+  .faq-cta-title {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .faq-cta-text {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .contact-btn {
+    padding: 16px 40px;
+    border-radius: 28px;
+    font-size: 15px;
   }
 }
