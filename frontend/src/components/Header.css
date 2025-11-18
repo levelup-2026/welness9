@@ -1,8 +1,9 @@
+/* Mobile First - Base styles for mobile */
 .main-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 48px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px;
   background: #fafafa;
   position: sticky;
   top: 0;
@@ -11,7 +12,7 @@
 }
 
 .header-left {
-  flex: 1;
+  width: 100%;
 }
 
 .logo {
@@ -21,9 +22,9 @@
 }
 
 .logo-icon {
-  font-size: 28px;
-  width: 36px;
-  height: 36px;
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +34,7 @@
 }
 
 .logo-text {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   color: #0a0a0a;
   letter-spacing: -0.3px;
@@ -41,10 +42,9 @@
 
 .header-nav {
   display: flex;
-  align-items: center;
-  gap: 32px;
-  flex: 1;
-  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
 }
 
 .nav-link {
@@ -52,7 +52,9 @@
   color: #0a0a0a;
   text-decoration: none;
   font-weight: 400;
+  padding: 12px 0;
   transition: opacity 0.2s;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .nav-link:hover {
@@ -62,8 +64,9 @@
 .quiz-btn-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 14px 20px;
   background: #0a0a0a;
   color: white;
   border: none;
@@ -72,6 +75,7 @@
   font-weight: 400;
   cursor: pointer;
   transition: transform 0.2s;
+  width: 100%;
 }
 
 .quiz-btn-header:hover {
@@ -93,14 +97,14 @@
 .header-right {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  flex: 1;
-  justify-content: flex-end;
+  width: 100%;
 }
 
 .icon-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #0a0a0a;
   color: white;
@@ -117,16 +121,81 @@
 }
 
 .profile-avatar {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #e5e5e5;
-  margin-left: 4px;
 }
 
 .profile-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Tablet - 768px and up */
+@media (min-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+  }
+
+  .header-left {
+    flex: 0 0 auto;
+  }
+
+  .header-nav {
+    flex-direction: row;
+    gap: 24px;
+    width: auto;
+  }
+
+  .nav-link {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .quiz-btn-header {
+    width: auto;
+  }
+
+  .header-right {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+
+/* Desktop - 1024px and up */
+@media (min-width: 1024px) {
+  .main-header {
+    padding: 24px 48px;
+  }
+
+  .logo-icon {
+    font-size: 28px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .header-nav {
+    gap: 32px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .header-right {
+    flex: 1;
+  }
+
+  .profile-avatar {
+    width: 44px;
+    height: 44px;
+  }
 }
