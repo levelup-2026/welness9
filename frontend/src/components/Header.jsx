@@ -13,11 +13,11 @@ const Header = () => {
       </div>
 
       <nav className="header-nav">
-        <a href="#about" className="nav-link">About</a>
-        <a href="#products" className="nav-link">Products</a>
+        <a href="#about" className="nav-link">Our Approach</a>
+        <a href="#services" className="nav-link">Services</a>
         <button className="quiz-btn-header">
-          Take The Assessment
-          <span className="quiz-icon">❓</span>
+          Free Consultation
+          <span className="quiz-icon">💬</span>
         </button>
       </nav>
 
