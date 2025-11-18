@@ -1,0 +1,157 @@
+.social-proof {
+  padding: 120px 48px;
+  background: white;
+}
+
+.proof-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.proof-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.proof-title {
+  font-size: 56px;
+  font-weight: 400;
+  color: #0a0a0a;
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+}
+
+.proof-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 32px;
+  background: linear-gradient(135deg, #FFF4B8 0%, #FFE89F 100%);
+  border-radius: 24px;
+  border: 1px solid #f0e68c;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 400;
+  color: #0a0a0a;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: #fafafa;
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.testimonial-info {
+  flex: 1;
+}
+
+.testimonial-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0a0a0a;
+  margin-bottom: 4px;
+}
+
+.testimonial-age {
+  font-size: 13px;
+  color: #999;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 14px;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0 0 20px 0;
+}
+
+.testimonial-result {
+  display: inline-block;
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  font-size: 13px;
+  color: #0a0a0a;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .proof-title {
+    font-size: 36px;
+  }
+}
