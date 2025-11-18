@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="footer-logo-text">Banana Health</span>
             </div>
             <p className="footer-tagline">
-              Natural solutions for men's sexual wellness. Reclaim your confidence and vitality.
+              Emotional wellness and counseling for men seeking confidence, healing, and healthier intimate relationships.
             </p>
             <div className="footer-socials">
               <button className="social-btn">
@@ -33,24 +33,24 @@ const Footer = () => {
 
           <div className="footer-links">
             <div className="footer-column">
-              <h4 className="footer-heading">Product</h4>
+              <h4 className="footer-heading">Services</h4>
               <ul className="footer-list">
-                <li><a href="#">How It Works</a></li>
-                <li><a href="#">Product Library</a></li>
-                <li><a href="#">Science</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Individual Therapy</a></li>
+                <li><a href="#">Couples Counseling</a></li>
+                <li><a href="#">Group Support</a></li>
+                <li><a href="#">Online Coaching</a></li>
+                <li><a href="#">Workshops</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="footer-heading">Company</h4>
               <ul className="footer-list">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Mission</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Press</a></li>
+                <li><a href="#">Our Approach</a></li>
+                <li><a href="#">Meet Our Therapists</a></li>
+                <li><a href="#">Success Stories</a></li>
                 <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
               </ul>
             </div>
 
@@ -59,9 +59,9 @@ const Footer = () => {
               <ul className="footer-list">
                 <li><a href="#">Help Center</a></li>
                 <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Shipping Info</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Book Consultation</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Resources</a></li>
               </ul>
             </div>
 
@@ -70,8 +70,8 @@ const Footer = () => {
               <ul className="footer-list">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Medical Disclaimer</a></li>
-                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">HIPAA Compliance</a></li>
+                <li><a href="#">Therapist Code</a></li>
               </ul>
             </div>
           </div>
@@ -80,15 +80,15 @@ const Footer = () => {
         <div className="footer-contact">
           <div className="contact-item">
             <Mail size={18} />
-            <span>support@bananahealth.com</span>
+            <span>hello@bananahealth.com</span>
           </div>
           <div className="contact-item">
             <Phone size={18} />
-            <span>1-800-BANANA-1</span>
+            <span>1-800-HEALING</span>
           </div>
           <div className="contact-item">
             <MapPin size={18} />
-            <span>San Francisco, CA</span>
+            <span>Available Nationwide</span>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ const Footer = () => {
             © 2025 Banana Health. All rights reserved.
           </p>
           <p className="footer-disclaimer">
-            These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+            Banana Health provides counseling and emotional wellness services. We are not a medical provider. If you are experiencing a mental health crisis, please contact 988 (Suicide & Crisis Lifeline) or your local emergency services.
           </p>
         </div>
       </div>

@@ -8,8 +8,8 @@ const SocialProof = () => {
       name: 'Michael R.',
       age: 34,
       rating: 5,
-      text: 'After just 3 months, I noticed significant improvements. My confidence is back and my relationship has never been better.',
-      result: 'Improved Performance',
+      text: 'Therapy helped me understand that my struggles were rooted in anxiety, not physical issues. I feel like myself again.',
+      result: 'Overcame Anxiety',
       avatar: 'https://randomuser.me/api/portraits/men/5.jpg'
     },
     {
@@ -17,8 +17,8 @@ const SocialProof = () => {
       name: 'David K.',
       age: 42,
       rating: 5,
-      text: 'I was skeptical at first, but the natural approach really works. No side effects, just real results.',
-      result: 'Natural Solution',
+      text: 'The emotional approach made all the difference. My therapist helped me rebuild confidence I thought I\'d lost forever.',
+      result: 'Confidence Restored',
       avatar: 'https://randomuser.me/api/portraits/men/8.jpg'
     },
     {
@@ -26,8 +26,8 @@ const SocialProof = () => {
       name: 'James T.',
       age: 38,
       rating: 5,
-      text: 'The personalized plan made all the difference. Finally found something that works for my specific needs.',
-      result: 'Personalized Care',
+      text: 'Learning to communicate openly with my partner transformed our relationship. We\'re closer than ever.',
+      result: 'Relationship Healed',
       avatar: 'https://randomuser.me/api/portraits/men/12.jpg'
     },
     {
@@ -35,8 +35,8 @@ const SocialProof = () => {
       name: 'Robert L.',
       age: 45,
       rating: 5,
-      text: 'Discreet delivery and effective results. Banana Health has changed my life for the better.',
-      result: 'Life Changing',
+      text: 'I was skeptical about therapy, but the mindfulness techniques genuinely changed how I approach intimacy.',
+      result: 'Mind-Body Connection',
       avatar: 'https://randomuser.me/api/portraits/men/15.jpg'
     },
     {
@@ -44,8 +44,8 @@ const SocialProof = () => {
       name: 'Chris M.',
       age: 36,
       rating: 5,
-      text: 'Easy to incorporate into my daily routine. The daily packs make it foolproof.',
-      result: 'Easy to Use',
+      text: 'The support group showed me I wasn\'t alone. Sharing my journey with others was incredibly healing.',
+      result: 'Community Support',
       avatar: 'https://randomuser.me/api/portraits/men/18.jpg'
     },
     {
@@ -53,25 +53,25 @@ const SocialProof = () => {
       name: 'Daniel S.',
       age: 40,
       rating: 5,
-      text: 'Great customer support and quality products. Highly recommend to anyone struggling.',
-      result: 'Highly Recommend',
+      text: 'My therapist helped me see the connection between stress and performance. Addressing the root cause changed everything.',
+      result: 'Root Cause Healing',
       avatar: 'https://randomuser.me/api/portraits/men/22.jpg'
     }
   ];
 
   const stats = [
-    { number: '15,000+', label: 'Active Members' },
+    { number: '8,500+', label: 'Men Helped' },
     { number: '4.9/5', label: 'Average Rating' },
-    { number: '92%', label: 'Success Rate' },
-    { number: '60 Days', label: 'Money Back' }
+    { number: '89%', label: 'Success Rate' },
+    { number: '100%', label: 'Confidential' }
   ];
 
   return (
     <section className="social-proof">
       <div className="proof-container">
         <div className="proof-header">
-          <h2 className="proof-title">Trusted by Thousands</h2>
-          <p className="proof-subtitle">Real men, real results</p>
+          <h2 className="proof-title">Real Stories, Real Healing</h2>
+          <p className="proof-subtitle">Men who chose emotional recovery over quick fixes</p>
         </div>
 
         <div className="stats-row">

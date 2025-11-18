@@ -7,36 +7,36 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: 'How long does it take to see results?',
-      answer: 'Most men start noticing improvements within 2-4 weeks of consistent use. However, optimal results typically appear after 8-12 weeks as the natural ingredients build up in your system and work synergistically.'
+      question: 'How does therapy help with ED and PE?',
+      answer: 'Most cases of ED and PE have psychological roots - performance anxiety, stress, relationship issues, or past trauma. Therapy addresses these underlying emotional causes, helping you develop healthier thought patterns, reduce anxiety, and rebuild confidence naturally. Many men see significant improvement within 8-12 weeks.'
     },
     {
-      question: 'Are your products safe?',
-      answer: 'Yes, all our products use natural, clinically-tested ingredients. They are manufactured in GMP-certified facilities and third-party lab tested for purity and potency. However, we recommend consulting with your healthcare provider if you have any pre-existing conditions or take medications.'
+      question: 'Are your therapists qualified?',
+      answer: 'Yes, all our therapists are licensed mental health professionals (LMFT, LCSW, or psychologists) with specialized training in sex therapy and men\'s wellness. They undergo rigorous background checks and continuing education to provide the highest quality care.'
     },
     {
-      question: 'How does the personalized plan work?',
-      answer: 'After completing our comprehensive wellness assessment, our algorithm analyzes your responses and creates a customized formula based on your specific needs, health goals, and lifestyle factors. Your plan can be adjusted as your needs change.'
+      question: 'How long does treatment typically take?',
+      answer: 'Every journey is unique. Many clients notice improvements within 4-8 weeks, with significant progress by 12-16 weeks. We create personalized treatment plans that adapt to your progress, ensuring you get the support you need for lasting change.'
     },
     {
-      question: 'What if I\'m not satisfied?',
-      answer: 'We offer a 60-day money-back guarantee. If you\'re not completely satisfied with your results, simply contact our support team for a full refund. No questions asked.'
+      question: 'Is my information kept confidential?',
+      answer: 'Absolutely. We adhere to strict HIPAA guidelines and all sessions are completely confidential. Your privacy is our top priority - billing appears discreetly on statements, and we never share your information without explicit consent.'
     },
     {
-      question: 'Is delivery really discreet?',
-      answer: 'Absolutely. All packages are shipped in unmarked boxes with no indication of contents. Billing appears as "Wellness Subscription" on statements. Your privacy is our top priority.'
+      question: 'What if I\'m not comfortable talking about this?',
+      answer: 'That\'s completely normal and expected. Our therapists specialize in creating safe, judgment-free spaces. They\'re trained to help you open up at your own pace. Many clients feel nervous at first but find relief in finally being able to discuss these concerns openly.'
     },
     {
-      question: 'Can I cancel or pause my subscription?',
-      answer: 'Yes, you have complete control. You can pause, skip, or cancel your subscription at any time from your account dashboard. No hidden fees or cancellation charges.'
+      question: 'Do you offer couples counseling?',
+      answer: 'Yes! We offer both individual and couples therapy. Many sexual wellness issues benefit from involving partners, and our therapists are skilled at facilitating healthy communication and rebuilding intimacy in relationships.'
     },
     {
-      question: 'Do you ship internationally?',
-      answer: 'Currently, we ship to the United States, Canada, UK, and Australia. We\'re working on expanding to more countries soon.'
+      question: 'How do online sessions work?',
+      answer: 'Sessions are conducted via secure video conferencing from anywhere you feel comfortable. You\'ll receive a private link before your appointment. It\'s just like an in-person session but with the added comfort and privacy of your own space.'
     },
     {
-      question: 'Will this interact with my medications?',
-      answer: 'While our products use natural ingredients, some may interact with certain medications. We strongly recommend consulting with your healthcare provider before starting any new supplement regimen, especially if you take prescription medications.'
+      question: 'What if therapy doesn\'t work for me?',
+      answer: 'While our success rate is high, we understand therapy isn\'t one-size-fits-all. If you\'re not seeing progress, we\'ll work with you to adjust your treatment plan or connect you with additional resources. Your healing is what matters most.'
     }
   ];
 
@@ -48,8 +48,8 @@ const FAQSection = () => {
     <section className="faq-section">
       <div className="faq-container">
         <div className="faq-header">
-          <h2 className="faq-title">Frequently Asked Questions</h2>
-          <p className="faq-subtitle">Everything you need to know about Banana Health</p>
+          <h2 className="faq-title">Your Questions Answered</h2>
+          <p className="faq-subtitle">Everything you need to know about emotional recovery</p>
         </div>
 
         <div className="faq-list">
@@ -69,9 +69,9 @@ const FAQSection = () => {
         </div>
 
         <div className="faq-cta">
-          <h3 className="faq-cta-title">Still have questions?</h3>
-          <p className="faq-cta-text">Our wellness experts are here to help</p>
-          <button className="contact-btn">Contact Support</button>
+          <h3 className="faq-cta-title">Ready to start your journey?</h3>
+          <p className="faq-cta-text">Book a free consultation with our wellness specialists</p>
+          <button className="contact-btn">Schedule Free Call</button>
         </div>
       </div>
     </section>

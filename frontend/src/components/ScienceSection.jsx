@@ -3,30 +3,30 @@ import { Check } from 'lucide-react';
 import './ScienceSection.css';
 
 const ScienceSection = () => {
-  const ingredients = [
+  const approaches = [
     {
-      name: 'L-Arginine',
-      benefit: 'Boosts nitric oxide for improved blood flow',
-      percentage: '95%',
-      studies: '12 Clinical Studies'
+      name: 'Cognitive Behavioral Therapy',
+      benefit: 'Reframe negative thought patterns and reduce performance anxiety',
+      percentage: '94%',
+      studies: 'Evidence-Based'
     },
     {
-      name: 'Tribulus Terrestris',
-      benefit: 'Supports testosterone and libido naturally',
+      name: 'Mindfulness Training',
+      benefit: 'Stay present, reduce stress, and enhance intimate connections',
+      percentage: '91%',
+      studies: 'Clinically Proven'
+    },
+    {
+      name: 'Emotional Regulation',
+      benefit: 'Manage anxiety and build emotional resilience for lasting confidence',
       percentage: '89%',
-      studies: '8 Clinical Studies'
+      studies: 'Research-Backed'
     },
     {
-      name: 'Maca Root',
-      benefit: 'Enhances energy, stamina, and performance',
-      percentage: '92%',
-      studies: '15 Clinical Studies'
-    },
-    {
-      name: 'Ginseng Extract',
-      benefit: 'Improves energy and reduces stress',
-      percentage: '88%',
-      studies: '20 Clinical Studies'
+      name: 'Relationship Counseling',
+      benefit: 'Improve communication and intimacy with your partner',
+      percentage: '93%',
+      studies: 'Therapist-Led'
     }
   ];
 
@@ -35,49 +35,49 @@ const ScienceSection = () => {
       <div className="science-container">
         <div className="science-content">
           <div className="science-text">
-            <h2 className="science-title">Backed by Science</h2>
+            <h2 className="science-title">Our Approach</h2>
             <p className="science-description">
-              Our formulas combine traditional wisdom with modern science. Every ingredient 
-              is carefully selected based on clinical research and proven efficacy in supporting 
-              men's sexual health and wellness.
+              We believe lasting recovery comes from addressing the emotional and psychological 
+              roots of ED and PE. Our evidence-based therapeutic approach helps you overcome 
+              anxiety, rebuild confidence, and create healthy intimate relationships.
             </p>
             <div className="science-features">
               <div className="feature-item">
                 <div className="feature-icon">
                   <Check size={20} />
                 </div>
-                <span>Clinically Tested Ingredients</span>
+                <span>Evidence-Based Therapy Methods</span>
               </div>
               <div className="feature-item">
                 <div className="feature-icon">
                   <Check size={20} />
                 </div>
-                <span>Third-Party Lab Verified</span>
+                <span>Licensed Mental Health Professionals</span>
               </div>
               <div className="feature-item">
                 <div className="feature-icon">
                   <Check size={20} />
                 </div>
-                <span>GMP Certified Facility</span>
+                <span>Holistic Emotional Wellness</span>
               </div>
               <div className="feature-item">
                 <div className="feature-icon">
                   <Check size={20} />
                 </div>
-                <span>No Artificial Additives</span>
+                <span>Safe, Judgment-Free Environment</span>
               </div>
             </div>
           </div>
 
           <div className="ingredients-list">
-            {ingredients.map((ingredient, index) => (
+            {approaches.map((approach, index) => (
               <div key={index} className="ingredient-card">
                 <div className="ingredient-header">
-                  <h4 className="ingredient-name">{ingredient.name}</h4>
-                  <span className="ingredient-percentage">{ingredient.percentage}</span>
+                  <h4 className="ingredient-name">{approach.name}</h4>
+                  <span className="ingredient-percentage">{approach.percentage}</span>
                 </div>
-                <p className="ingredient-benefit">{ingredient.benefit}</p>
-                <span className="ingredient-studies">{ingredient.studies}</span>
+                <p className="ingredient-benefit">{approach.benefit}</p>
+                <span className="ingredient-studies">{approach.studies}</span>
               </div>
             ))}
           </div>
