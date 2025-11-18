@@ -5,45 +5,45 @@ const BenefitsSection = () => {
   const benefits = [
     {
       id: 1,
-      title: 'Natural Ingredients',
-      description: 'All formulas use clinically-studied natural ingredients with proven efficacy.',
-      icon: '🌿',
-      stats: '100% Natural'
+      title: 'Licensed Therapists',
+      description: 'All counselors are certified professionals with specialized training in men\'s sexual wellness.',
+      icon: '🎓',
+      stats: 'Certified Experts'
     },
     {
       id: 2,
-      title: 'Doctor Approved',
-      description: 'Formulated by medical professionals specializing in men\'s health.',
-      icon: '⚕️',
-      stats: 'Medical Grade'
+      title: 'Evidence-Based',
+      description: 'Our approach combines CBT, mindfulness, and proven therapeutic techniques.',
+      icon: '🧠',
+      stats: 'Science-Backed'
     },
     {
       id: 3,
-      title: 'Discreet Delivery',
-      description: 'Private packaging delivered right to your door every month.',
+      title: 'Complete Privacy',
+      description: 'Confidential online sessions from the comfort of your own space.',
       icon: '🔒',
-      stats: '100% Private'
+      stats: '100% Confidential'
     },
     {
       id: 4,
       title: 'Proven Results',
-      description: 'Thousands of men have improved their wellness and confidence.',
+      description: 'Thousands of men have overcome anxiety and rebuilt confidence through our programs.',
       icon: '✨',
-      stats: '15,000+ Men'
+      stats: '8,500+ Success Stories'
     },
     {
       id: 5,
-      title: 'Easy to Use',
-      description: 'Daily packs organized by date - just grab and go.',
+      title: 'Flexible Scheduling',
+      description: 'Sessions available evenings and weekends to fit your lifestyle.',
       icon: '📅',
-      stats: 'Daily Packs'
+      stats: '7 Days a Week'
     },
     {
       id: 6,
-      title: 'Money Back Guarantee',
-      description: 'Not satisfied? Get a full refund within 60 days.',
-      icon: '💰',
-      stats: '60 Day Guarantee'
+      title: 'Ongoing Support',
+      description: 'Access to therapists, community forums, and resources 24/7.',
+      icon: '💙',
+      stats: 'Always Available'
     }
   ];
 
@@ -52,7 +52,7 @@ const BenefitsSection = () => {
       <div className="benefits-container">
         <div className="benefits-header">
           <h2 className="benefits-title">Why Choose Banana Health</h2>
-          <p className="benefits-subtitle">Trusted by thousands of men taking control of their wellness</p>
+          <p className="benefits-subtitle">Trusted by thousands of men seeking emotional healing and confidence</p>
         </div>
 
         <div className="benefits-grid">

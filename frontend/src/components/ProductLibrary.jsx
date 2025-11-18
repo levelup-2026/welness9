@@ -3,61 +3,61 @@ import { ArrowRight } from 'lucide-react';
 import './ProductLibrary.css';
 
 const ProductLibrary = () => {
-  const [activeCategory, setActiveCategory] = useState('performance');
+  const [activeCategory, setActiveCategory] = useState('therapy');
 
   const categories = [
-    { id: 'performance', name: 'Performance Boosters', icon: '⚡' },
-    { id: 'confidence', name: 'Confidence', icon: '💎' },
-    { id: 'ed-support', name: 'ED Support', icon: '🌿' },
-    { id: 'pe-control', name: 'PE Control', icon: '🔥' }
+    { id: 'therapy', name: 'Therapy Programs', icon: '💭' },
+    { id: 'coaching', name: 'Coaching', icon: '🎯' },
+    { id: 'workshops', name: 'Workshops', icon: '🧠' },
+    { id: 'support', name: 'Support Groups', icon: '🤝' }
   ];
 
-  const products = {
-    performance: [
+  const programs = {
+    therapy: [
       {
         id: 1,
-        name: 'Nitric Oxide Boost',
-        subcategory: 'Blood Flow',
-        description: 'Supports healthy circulation and performance',
-        image: 'https://images.unsplash.com/photo-1550572017-4bdb06043023?w=500&h=400&fit=crop',
+        name: 'Performance Anxiety',
+        subcategory: 'Individual',
+        description: 'Overcome mental blocks and build lasting confidence',
+        image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=400&fit=crop',
         bgColor: '#E5F2FF'
       },
       {
         id: 2,
-        name: 'Energy Complex',
-        subcategory: 'Stamina',
-        description: 'Natural energy for peak performance',
-        image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=400&fit=crop',
+        name: 'Relationship Therapy',
+        subcategory: 'Couples',
+        description: 'Strengthen intimacy and communication with your partner',
+        image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&h=400&fit=crop',
         bgColor: '#FFF4B8'
       }
     ],
-    confidence: [
+    coaching: [
       {
         id: 3,
-        name: 'Mood Enhancer',
-        subcategory: 'Mental Wellness',
-        description: 'Support stress-free confidence',
-        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=400&fit=crop',
+        name: 'Confidence Building',
+        subcategory: 'Self-Development',
+        description: 'Develop self-assurance and positive mindset',
+        image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&h=400&fit=crop',
         bgColor: '#F5E6FF'
       }
     ],
-    'ed-support': [
+    workshops: [
       {
         id: 4,
-        name: 'Recovery Formula',
-        subcategory: 'ED Support',
-        description: 'Natural support for erectile function',
-        image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500&h=400&fit=crop',
+        name: 'Mindfulness for Intimacy',
+        subcategory: 'Workshop',
+        description: 'Learn techniques to stay present and connected',
+        image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=400&fit=crop',
         bgColor: '#E5F2FF'
       }
     ],
-    'pe-control': [
+    support: [
       {
         id: 5,
-        name: 'Control Master',
-        subcategory: 'PE Treatment',
-        description: 'Enhanced stamina and control',
-        image: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=500&h=400&fit=crop',
+        name: 'Weekly Support Circle',
+        subcategory: 'Group',
+        description: 'Share experiences in a judgment-free community',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=400&fit=crop',
         bgColor: '#FFF4B8'
       }
     ]
@@ -67,9 +67,9 @@ const ProductLibrary = () => {
     <section className="product-library">
       <div className="library-container">
         <div className="library-header-section">
-          <h2 className="library-main-title">Product Library</h2>
+          <h2 className="library-main-title">Program Library</h2>
           <button className="build-pack-btn">
-            Build your own personalized monthly pack!
+            Schedule Free Consultation
             <ArrowRight size={18} />
           </button>
         </div>
@@ -77,7 +77,7 @@ const ProductLibrary = () => {
         <div className="library-content">
           <aside className="category-sidebar">
             <div className="sidebar-header">
-              <span className="sidebar-label">/ Library <span className="superscript">02</span></span>
+              <span className="sidebar-label">/ Programs <span className="superscript">02</span></span>
             </div>
             <nav className="category-nav">
               {categories.map((category) => (
@@ -94,10 +94,10 @@ const ProductLibrary = () => {
           </aside>
 
           <div className="products-showcase">
-            {products[activeCategory]?.map((product) => (
-              <div key={product.id} className="showcase-card" style={{ background: product.bgColor }}>
+            {programs[activeCategory]?.map((program) => (
+              <div key={program.id} className="showcase-card" style={{ background: program.bgColor }}>
                 <div className="showcase-card-header">
-                  <span className="showcase-category">{product.subcategory}</span>
+                  <span className="showcase-category">{program.subcategory}</span>
                   <button className="showcase-link-btn">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path d="M8 2L14 8L8 14M14 8H2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -106,20 +106,20 @@ const ProductLibrary = () => {
                   <button className="showcase-add-btn">+</button>
                 </div>
 
-                <h3 className="showcase-product-name">{product.name}</h3>
-                <p className="showcase-description">{product.description}</p>
+                <h3 className="showcase-product-name">{program.name}</h3>
+                <p className="showcase-description">{program.description}</p>
 
                 <div className="showcase-image-container">
-                  <img src={product.image} alt={product.name} className="showcase-img" />
+                  <img src={program.image} alt={program.name} className="showcase-img" />
                   <div className="showcase-icons">
-                    <span className="showcase-icon-circle">🌿</span>
+                    <span className="showcase-icon-circle">💭</span>
                     <span className="showcase-icon-circle">✓</span>
-                    <span className="showcase-icon-circle">📊</span>
+                    <span className="showcase-icon-circle">🎯</span>
                   </div>
                 </div>
 
                 <button className="showcase-cta">
-                  Is this right for you?
+                  Learn More
                   <ArrowRight size={18} />
                 </button>
               </div>

@@ -9,13 +9,13 @@ const HeroSection = () => {
         <div className="hero-main">
           <h1 className="hero-title">
             Simplify your
-            <span className="highlight-blue"> wellness</span>
+            <span className="highlight-blue"> healing</span>
             <br />and
             <span className="highlight-yellow"> confidence.</span>
           </h1>
 
           <div className="unlock-cta">
-            <p className="unlock-text">Unlock your personalized<br />wellness plan.</p>
+            <p className="unlock-text">Start your personalized<br />emotional recovery journey.</p>
             <button className="cta-button">
               <ArrowRight size={24} />
             </button>
@@ -34,23 +34,23 @@ const HeroSection = () => {
               <button className="add-btn-circle">+</button>
             </div>
             <div className="card-content">
-              <p className="card-text">Receive daily packs personalized<br />to your unique health needs.</p>
+              <p className="card-text">Connect with certified therapists<br />specialized in men's wellness.</p>
               <div className="product-image-container">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop" alt="Wellness supplement" className="product-img" />
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop" alt="Therapy session" className="product-img" />
                 <div className="product-icons">
-                  <span className="icon-circle">🌿</span>
-                  <span className="icon-circle">⚡</span>
-                  <span className="icon-circle">💪</span>
+                  <span className="icon-circle">💬</span>
+                  <span className="icon-circle">🧠</span>
+                  <span className="icon-circle">💙</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="quiz-stat-card">
-            <p className="stat-label">→ Start the assessment!</p>
+            <p className="stat-label">→ Begin your journey!</p>
             <div className="stat-number-card">
-              <h2 className="stat-number">1151</h2>
-              <p className="stat-description">People completed<br />the assessment today</p>
+              <h2 className="stat-number">1847</h2>
+              <p className="stat-description">Men started their<br />recovery journey today</p>
               <div className="avatar-group">
                 <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User" className="avatar" />
                 <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="User" className="avatar" />
@@ -62,20 +62,20 @@ const HeroSection = () => {
 
           <div className="library-card">
             <div className="library-header">
-              <span className="library-label">Library <span className="superscript">02</span></span>
+              <span className="library-label">Services <span className="superscript">02</span></span>
               <button className="add-btn-circle">+</button>
             </div>
             <div className="library-pills">
-              <div className="pill-item yellow">Performance ⚡</div>
-              <div className="pill-item blue">Confidence 💎</div>
-              <div className="pill-item white">ED Support</div>
+              <div className="pill-item yellow">1-on-1 Therapy 💭</div>
+              <div className="pill-item blue">Group Support 🤝</div>
+              <div className="pill-item white">Online Coaching</div>
             </div>
           </div>
         </div>
       </div>
 
       <button className="browse-library-btn">
-        Browse Library
+        Explore Services
         <span className="arrow-down">↓</span>
       </button>
     </section>

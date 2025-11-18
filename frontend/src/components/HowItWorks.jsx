@@ -6,30 +6,30 @@ const HowItWorks = () => {
   const steps = [
     {
       id: 1,
-      title: 'Take the Assessment',
-      description: 'Answer questions about your wellness goals, lifestyle, and health history.',
-      icon: '📋',
+      title: 'Initial Consultation',
+      description: 'Share your concerns in a confidential, judgment-free session with our specialists.',
+      icon: '💬',
       bgColor: '#FFF4B8'
     },
     {
       id: 2,
-      title: 'Get Your Plan',
-      description: 'Receive a personalized wellness plan tailored to your unique needs.',
-      icon: '🎯',
+      title: 'Personalized Plan',
+      description: 'Receive a custom recovery roadmap tailored to your emotional needs and goals.',
+      icon: '📋',
       bgColor: '#E5F2FF'
     },
     {
       id: 3,
-      title: 'Monthly Delivery',
-      description: 'Get daily packs delivered to your door with exactly what you need.',
-      icon: '📦',
+      title: 'Ongoing Support',
+      description: 'Regular therapy sessions, coaching calls, and access to support community.',
+      icon: '🤝',
       bgColor: '#F5E6FF'
     },
     {
       id: 4,
       title: 'Track Progress',
-      description: 'Monitor your journey and adjust your plan as your needs evolve.',
-      icon: '📊',
+      description: 'Monitor your emotional growth and celebrate milestones on your healing journey.',
+      icon: '📈',
       bgColor: '#E8F5E9'
     }
   ];
@@ -38,8 +38,8 @@ const HowItWorks = () => {
     <section className="how-it-works">
       <div className="how-container">
         <div className="how-header">
-          <h2 className="how-title">How It Works</h2>
-          <p className="how-subtitle">Your personalized wellness journey in 4 simple steps</p>
+          <h2 className="how-title">Your Recovery Journey</h2>
+          <p className="how-subtitle">A compassionate, evidence-based approach to emotional healing</p>
         </div>
 
         <div className="steps-grid">
@@ -55,7 +55,7 @@ const HowItWorks = () => {
         </div>
 
         <button className="start-assessment-btn">
-          Start Your Assessment
+          Book Free Consultation
           <ArrowRight size={20} />
         </button>
       </div>
