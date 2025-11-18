@@ -1,57 +1,57 @@
+/* Mobile First */
 .science-section {
-  padding: 120px 48px;
+  padding: 60px 20px;
   background: linear-gradient(135deg, #E5F2FF 0%, #D4E9FF 50%, #E5F2FF 100%);
 }
 
 .science-container {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .science-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr;
+  gap: 40px;
   align-items: start;
 }
 
 .science-text {
-  position: sticky;
-  top: 120px;
+  width: 100%;
 }
 
 .science-title {
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 400;
   color: #0a0a0a;
-  margin: 0 0 24px 0;
-  letter-spacing: -1px;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.5px;
 }
 
 .science-description {
-  font-size: 18px;
+  font-size: 16px;
   color: #333;
-  margin: 0 0 40px 0;
+  margin: 0 0 32px 0;
   line-height: 1.7;
 }
 
 .science-features {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 16px;
+  font-size: 15px;
   color: #0a0a0a;
 }
 
 .feature-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #0a0a0a;
   color: white;
@@ -64,19 +64,19 @@
 .ingredients-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .ingredient-card {
   background: white;
-  border-radius: 24px;
-  padding: 32px;
+  border-radius: 20px;
+  padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease;
 }
 
 .ingredient-card:hover {
-  transform: translateX(8px);
+  transform: translateX(4px);
 }
 
 .ingredient-header {
@@ -84,51 +84,148 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .ingredient-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   color: #0a0a0a;
   margin: 0;
 }
 
 .ingredient-percentage {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   color: #0a0a0a;
-  padding: 8px 16px;
+  padding: 6px 14px;
   background: #FFF4B8;
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
 .ingredient-benefit {
   font-size: 15px;
   color: #666;
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
   line-height: 1.6;
 }
 
 .ingredient-studies {
-  font-size: 13px;
+  font-size: 12px;
   color: #0a0a0a;
-  padding: 6px 14px;
+  padding: 6px 12px;
   background: #f5f5f5;
   border-radius: 12px;
   display: inline-block;
 }
 
-@media (max-width: 1024px) {
+/* Tablet - 768px and up */
+@media (min-width: 768px) {
+  .science-section {
+    padding: 80px 32px;
+  }
+
   .science-content {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 60px;
   }
-  
-  .science-text {
-    position: static;
-  }
-  
+
   .science-title {
-    font-size: 36px;
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+
+  .science-description {
+    font-size: 17px;
+    margin-bottom: 36px;
+  }
+
+  .science-features {
+    gap: 16px;
+  }
+
+  .feature-item {
+    font-size: 16px;
+  }
+
+  .feature-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .ingredients-list {
+    gap: 22px;
+  }
+
+  .ingredient-card {
+    padding: 28px;
+  }
+}
+
+/* Desktop - 1024px and up */
+@media (min-width: 1024px) {
+  .science-section {
+    padding: 120px 48px;
+  }
+
+  .science-container {
+    max-width: 1400px;
+  }
+
+  .science-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .science-text {
+    position: sticky;
+    top: 120px;
+  }
+
+  .science-title {
+    font-size: 56px;
+    letter-spacing: -1px;
+  }
+
+  .science-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ingredients-list {
+    gap: 24px;
+  }
+
+  .ingredient-card {
+    border-radius: 24px;
+    padding: 32px;
+  }
+
+  .ingredient-card:hover {
+    transform: translateX(8px);
+  }
+
+  .ingredient-name {
+    font-size: 22px;
+  }
+
+  .ingredient-percentage {
+    font-size: 24px;
+    padding: 8px 16px;
+    border-radius: 16px;
+  }
+
+  .ingredient-benefit {
+    margin-bottom: 16px;
+  }
+
+  .ingredient-studies {
+    font-size: 13px;
+    padding: 6px 14px;
   }
 }
