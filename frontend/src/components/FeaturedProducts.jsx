@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, UserRound, UsersRound, Sparkles } from 'lucide-react';
 import './FeaturedProducts.css';
 
 const FeaturedProducts = () => {
@@ -11,7 +11,7 @@ const FeaturedProducts = () => {
       description: 'Private sessions with certified therapists specialized in sexual wellness',
       image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop',
       bgColor: '#E5F2FF',
-      icon: '💭'
+      Icon: UserRound
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const FeaturedProducts = () => {
       description: 'Connect with others on similar journeys in a safe, supportive space',
       image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=400&fit=crop',
       bgColor: '#FFF4B8',
-      icon: '🤝'
+      Icon: UsersRound
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const FeaturedProducts = () => {
       description: 'Build confidence and overcome anxiety with expert guidance',
       image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop',
       bgColor: '#F5E6FF',
-      icon: '🎯'
+      Icon: Sparkles
     }
   ];
 
@@ -65,7 +65,7 @@ const FeaturedProducts = () => {
               <div className="product-image-wrapper">
                 <img src={service.image} alt={service.name} className="product-card-img" />
                 <div className="product-badge">
-                  <span className="badge-icon">{service.icon}</span>
+                  <service.Icon className="badge-icon" aria-hidden="true" size={20} strokeWidth={2.2} />
                 </div>
               </div>
 

@@ -1,31 +1,87 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Shield, 
+  Clock, 
+  TrendingUp,
+  Target,
+  Dumbbell,
+  Sparkles,
+  Zap,
+  ChevronDown,
+  ArrowUpRight
+} from 'lucide-react';
+import FeaturedOn from './FeaturedOn';
 import './HeroSection.css';
 
 const HeroSection = () => {
+  const heroProductIcons = [
+    { Icon: Target, label: 'Root cause diagnostics' },
+    { Icon: Dumbbell, label: 'Strength-based training' },
+    { Icon: Sparkles, label: 'Performance breakthroughs' }
+  ];
+
+  const expertisePills = [
+    { label: 'ED Reversal', color: 'yellow', Icon: Target },
+    { label: 'PE Solution', color: 'blue', Icon: Zap },
+    { label: 'Performance Boost', color: 'white', Icon: Sparkles }
+  ];
+
   return (
     <section className="hero-section">
       <div className="hero-content">
         <div className="hero-main">
           <h1 className="hero-title">
-            Simplify your
-            <span className="highlight-blue"> healing</span>
-            <br />and
-            <span className="highlight-yellow"> confidence.</span>
+            Reverse ED & PE
+            <span className="highlight-blue"> Naturally</span>
+            <br />
+            Without Pills, Pumps, or
+            <span className="highlight-yellow">
+              Side Effects
+              <Sparkles className="highlight-icon" aria-hidden="true" size={28} strokeWidth={2} />
+            </span>
           </h1>
 
-          <div className="unlock-cta">
-            <p className="unlock-text">Start your personalized<br />emotional recovery journey.</p>
-            <button className="cta-button">
-              <ArrowRight size={24} />
+          <p className="hero-subtitle">
+            India's Leading Natural Sexual Health Solution for Men Who Want <strong>Permanent Results</strong>
+          </p>
+
+          <div className="hero-cta-group">
+            <button 
+              className="cta-button primary-cta"
+              onClick={() => window.open('https://example.com/quiz', '_blank')}
+            >
+              Take Free Assessment
+              <ArrowRight size={20} />
             </button>
+            <button 
+              className="cta-button secondary-cta"
+              onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Watch How It Works
+            </button>
+          </div>
+
+          <div className="trust-badges">
+            <div className="trust-item">
+              <Shield size={18} />
+              <span>100% Natural</span>
+            </div>
+            <div className="trust-item">
+              <Clock size={18} />
+              <span>Results in 6 Weeks</span>
+            </div>
+            <div className="trust-item">
+              <TrendingUp size={18} />
+              <span>5,000+ Success Stories</span>
+            </div>
           </div>
         </div>
 
         <div className="hero-cards-container">
           <div className="info-card floating">
             <div className="card-header">
-              <button className="about-tag">About <span className="superscript">01</span></button>
+              <button className="about-tag">Natural Solution <span className="superscript">01</span></button>
               <button className="link-icon-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M8 2L14 8L8 14M14 8H2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -34,27 +90,32 @@ const HeroSection = () => {
               <button className="add-btn-circle">+</button>
             </div>
             <div className="card-content">
-              <p className="card-text">Connect with certified therapists<br />specialized in men's wellness.</p>
+              <p className="card-text">Science-backed 5-Pillar approach to<br />reverse ED & PE permanently.</p>
               <div className="product-image-container">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop" alt="Therapy session" className="product-img" />
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop" alt="Natural health transformation" className="product-img" />
                 <div className="product-icons">
-                  <span className="icon-circle">💬</span>
-                  <span className="icon-circle">🧠</span>
-                  <span className="icon-circle">💙</span>
+                    {heroProductIcons.map(({ Icon, label }) => (
+                      <span key={label} className="icon-circle" aria-label={label}>
+                        <Icon size={18} strokeWidth={2.4} aria-hidden="true" />
+                      </span>
+                    ))}
                 </div>
               </div>
             </div>
           </div>
 
           <div className="quiz-stat-card">
-            <p className="stat-label">→ Begin your journey!</p>
+            <p className="stat-label">
+              <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden="true" />
+              Join Thousands of Men!
+            </p>
             <div className="stat-number-card">
-              <h2 className="stat-number">1847</h2>
-              <p className="stat-description">Men started their<br />recovery journey today</p>
+              <h2 className="stat-number">5,000+</h2>
+              <p className="stat-description">Men transformed their<br />sexual health naturally</p>
               <div className="avatar-group">
-                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User" className="avatar" />
-                <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="User" className="avatar" />
-                <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User" className="avatar" />
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" className="avatar" />
+                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="User" className="avatar" />
+                <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="User" className="avatar" />
                 <div className="avatar-more">+</div>
               </div>
             </div>
@@ -62,21 +123,26 @@ const HeroSection = () => {
 
           <div className="library-card">
             <div className="library-header">
-              <span className="library-label">Services <span className="superscript">02</span></span>
+              <span className="library-label">Our Expertise <span className="superscript">02</span></span>
               <button className="add-btn-circle">+</button>
             </div>
             <div className="library-pills">
-              <div className="pill-item yellow">1-on-1 Therapy 💭</div>
-              <div className="pill-item blue">Group Support 🤝</div>
-              <div className="pill-item white">Online Coaching</div>
+              {expertisePills.map(({ label, color, Icon }) => (
+                <div key={label} className={`pill-item ${color}`}>
+                  <Icon size={18} strokeWidth={2.3} aria-hidden="true" />
+                  <span>{label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
+      <FeaturedOn />
+
       <button className="browse-library-btn">
-        Explore Services
-        <span className="arrow-down">↓</span>
+        Discover Our Approach
+        <ChevronDown className="arrow-down" size={18} strokeWidth={2.4} aria-hidden="true" />
       </button>
     </section>
   );

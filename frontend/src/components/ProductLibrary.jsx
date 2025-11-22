@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Brain, Target, Lightbulb, UsersRound, MessageCircle, Check } from 'lucide-react';
 import './ProductLibrary.css';
 
 const ProductLibrary = () => {
   const [activeCategory, setActiveCategory] = useState('therapy');
 
   const categories = [
-    { id: 'therapy', name: 'Therapy Programs', icon: '💭' },
-    { id: 'coaching', name: 'Coaching', icon: '🎯' },
-    { id: 'workshops', name: 'Workshops', icon: '🧠' },
-    { id: 'support', name: 'Support Groups', icon: '🤝' }
+    { id: 'therapy', name: 'Therapy Programs', Icon: Brain },
+    { id: 'coaching', name: 'Coaching', Icon: Target },
+    { id: 'workshops', name: 'Workshops', Icon: Lightbulb },
+    { id: 'support', name: 'Support Groups', Icon: UsersRound }
   ];
 
   const programs = {
@@ -86,7 +86,10 @@ const ProductLibrary = () => {
                   className={`category-item ${activeCategory === category.id ? 'active' : ''}`}
                   onClick={() => setActiveCategory(category.id)}
                 >
-                  <span>{category.name} {category.icon}</span>
+                  <span className="category-label">
+                    <category.Icon size={18} strokeWidth={2.2} aria-hidden="true" />
+                    {category.name}
+                  </span>
                   <span className="plus-icon">+</span>
                 </button>
               ))}
@@ -111,11 +114,13 @@ const ProductLibrary = () => {
 
                 <div className="showcase-image-container">
                   <img src={program.image} alt={program.name} className="showcase-img" />
-                  <div className="showcase-icons">
-                    <span className="showcase-icon-circle">💭</span>
-                    <span className="showcase-icon-circle">✓</span>
-                    <span className="showcase-icon-circle">🎯</span>
-                  </div>
+                <div className="showcase-icons">
+                  {[Brain, Check, MessageCircle].map((Icon, index) => (
+                    <span key={index} className="showcase-icon-circle">
+                      <Icon size={16} strokeWidth={2.2} aria-hidden="true" />
+                    </span>
+                  ))}
+                </div>
                 </div>
 
                 <button className="showcase-cta">

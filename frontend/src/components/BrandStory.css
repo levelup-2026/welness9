@@ -1,0 +1,483 @@
+.brand-story {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+}
+
+.story-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Story Hero */
+.story-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.story-hero-content {
+  flex: 1;
+}
+
+.story-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.story-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0a0a0a;
+  margin: 0 0 24px 0;
+}
+
+.highlight-gradient {
+  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.story-lead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
+}
+
+.story-hero-image {
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+}
+
+.founder-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.founder-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+/* Journey Cards */
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.journey-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: #9ca3af;
+  margin-bottom: 16px;
+  font-family: monospace;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 16px 0;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
+}
+
+.card-icon {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+.icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0a0a;
+}
+
+.icon-wrapper svg {
+  color: inherit;
+}
+
+.icon-wrapper.red {
+  background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+}
+
+.icon-wrapper.yellow {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+}
+
+.icon-wrapper.green {
+  background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+}
+
+/* Mission Section */
+.mission-section {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  border-radius: 32px;
+  padding: 48px 32px;
+  margin-bottom: 80px;
+  color: white;
+}
+
+.mission-content {
+  margin-bottom: 40px;
+}
+
+.mission-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.mission-icon {
+  color: #FCD34D;
+}
+
+.mission-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.mission-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.mission-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mission-stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.mission-stat svg {
+  color: #FCD34D;
+  flex-shrink: 0;
+}
+
+.mission-stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.mission-stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Leadership Section */
+.leadership-section {
+  margin-bottom: 80px;
+}
+
+.leadership-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a0a0a;
+  text-align: center;
+  margin: 0 0 48px 0;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.leader-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.leader-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.leader-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leader-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  background: white;
+  color: #0a0a0a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leader-badge.forbes {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: white;
+}
+
+.leader-info {
+  padding: 32px;
+}
+
+.leader-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 8px 0;
+}
+
+.leader-role {
+  font-size: 16px;
+  color: #3B82F6;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.leader-bio {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0 0 20px 0;
+}
+
+.leader-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.achievement-badge {
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5568;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.achievement-badge svg {
+  color: #3B82F6;
+}
+
+/* Values Section */
+.values-section {
+  margin-bottom: 40px;
+}
+
+.values-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a0a0a;
+  text-align: center;
+  margin: 0 0 48px 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.value-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+.value-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 24px;
+  margin: 0 auto 16px;
+  background: #F3F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon svg {
+  color: #0a0a0a;
+}
+
+.value-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 12px 0;
+}
+
+.value-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .brand-story {
+    padding: 100px 32px;
+  }
+
+  .story-hero {
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .story-title {
+    font-size: 48px;
+  }
+
+  .story-lead {
+    font-size: 20px;
+  }
+
+  .journey-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .mission-stats {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .brand-story {
+    padding: 120px 48px;
+  }
+
+  .story-title {
+    font-size: 56px;
+  }
+
+  .mission-section {
+    padding: 60px 48px;
+  }
+
+  .mission-title {
+    font-size: 32px;
+  }
+
+  .mission-text {
+    font-size: 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+

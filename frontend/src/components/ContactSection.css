@@ -1,0 +1,390 @@
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 16px 0;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 32px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 32px 0;
+}
+
+/* Contact Methods */
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-method {
+  display: flex;
+  gap: 20px;
+}
+
+.method-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.method-icon-wrapper.email {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+}
+
+.method-icon-wrapper.phone {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.method-icon-wrapper.whatsapp {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.method-details {
+  flex: 1;
+}
+
+.method-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.method-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 4px;
+  display: block;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.method-value:hover {
+  color: #3B82F6;
+}
+
+.method-note {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Info Items */
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+}
+
+.info-icon {
+  color: #3B82F6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 4px;
+}
+
+.info-subtext {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Response Banner */
+.response-banner {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 40px;
+  border: 1px solid #F59E0B;
+  text-align: center;
+}
+
+.response-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.response-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin-bottom: 16px;
+}
+
+.response-badge svg {
+  color: #F97316;
+}
+
+.response-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 8px 0;
+}
+
+.response-text {
+  font-size: 15px;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Action Cards */
+.contact-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.action-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  border: 2px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.action-card:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+.action-icon {
+  color: #3B82F6;
+  margin-bottom: 20px;
+}
+
+.action-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 12px 0;
+}
+
+.action-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}
+
+.action-button {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.action-button.primary {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: white;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+}
+
+.action-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.4);
+}
+
+.action-button.secondary {
+  background: white;
+  color: #0a0a0a;
+  border: 2px solid #e5e5e5;
+}
+
+.action-button.secondary:hover {
+  background: #f9fafb;
+  border-color: #0a0a0a;
+}
+
+/* Privacy Note */
+.privacy-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.privacy-note svg {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.privacy-note p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  max-width: 700px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 100px 32px;
+  }
+
+  .contact-title {
+    font-size: 48px;
+  }
+
+  .contact-subtitle {
+    font-size: 20px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-actions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .response-banner {
+    padding: 40px;
+  }
+
+  .response-title {
+    font-size: 24px;
+  }
+
+  .response-text {
+    font-size: 16px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .contact-section {
+    padding: 120px 48px;
+  }
+
+  .contact-title {
+    font-size: 56px;
+  }
+
+  .contact-header {
+    margin-bottom: 80px;
+  }
+
+  .contact-card {
+    padding: 48px 40px;
+  }
+
+  .method-value {
+    font-size: 22px;
+  }
+
+  .info-value {
+    font-size: 20px;
+  }
+
+  .action-card {
+    padding: 48px 40px;
+  }
+
+  .action-title {
+    font-size: 24px;
+  }
+
+  .action-description {
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .contact-title {
+    font-size: 64px;
+  }
+}
+

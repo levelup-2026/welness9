@@ -32,22 +32,18 @@
 }
 
 .logo-icon {
-  font-size: 24px;
-  width: 32px;
-  height: 32px;
+  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  border-radius: 50%;
-  border: 1px solid #e5e5e5;
+  flex-shrink: 0;
 }
 
-.logo-text {
-  font-size: 16px;
-  font-weight: 500;
-  color: #0a0a0a;
-  letter-spacing: -0.3px;
+.logo-icon svg,
+.logo-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Desktop Navigation - Hidden on Mobile */
@@ -181,7 +177,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+}
+
+.quiz-icon svg {
+  color: inherit;
 }
 
 .mobile-social {
@@ -324,13 +323,7 @@
   }
 
   .logo-icon {
-    font-size: 28px;
-    width: 36px;
-    height: 36px;
-  }
-
-  .logo-text {
-    font-size: 17px;
+    width: 160px;
   }
 
   .desktop-nav {

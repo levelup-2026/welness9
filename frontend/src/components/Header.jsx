@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Share2, Instagram, Youtube, Facebook, Menu, X } from 'lucide-react';
+import { Share2, Instagram, Youtube, Facebook, Menu, X, ClipboardCheck } from 'lucide-react';
+import LogoMark from './LogoMark';
 import './Header.css';
 
 const Header = () => {
@@ -42,18 +43,21 @@ const Header = () => {
         <div className="header-container">
           <div className="header-left">
             <div className="logo">
-              <div className="logo-icon">🍌</div>
-              <span className="logo-text">Banana Health</span>
+              <div className="logo-icon">
+                <LogoMark />
+              </div>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="header-nav desktop-nav">
-            <a href="#about" className="nav-link">Our Approach</a>
-            <a href="#services" className="nav-link">Services</a>
-            <button className="quiz-btn-header">
-              Free Consultation
-              <span className="quiz-icon">💬</span>
+            <a href="#approach" className="nav-link">Our Approach</a>
+            <a href="#success-stories" className="nav-link">Success Stories</a>
+            <button className="quiz-btn-header" onClick={() => window.open('https://example.com/quiz', '_blank')}>
+              Free Assessment
+              <span className="quiz-icon" aria-hidden="true">
+                <ClipboardCheck size={16} strokeWidth={2.5} />
+              </span>
             </button>
           </nav>
 
@@ -97,15 +101,17 @@ const Header = () => {
       {/* Mobile Menu Drawer */}
       <nav className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <a href="#about" className="mobile-nav-link" onClick={closeMobileMenu}>
+          <a href="#approach" className="mobile-nav-link" onClick={closeMobileMenu}>
             Our Approach
           </a>
-          <a href="#services" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Services
+          <a href="#success-stories" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Success Stories
           </a>
-          <button className="quiz-btn-mobile" onClick={closeMobileMenu}>
-            Free Consultation
-            <span className="quiz-icon">💬</span>
+          <button className="quiz-btn-mobile" onClick={() => { closeMobileMenu(); window.open('https://example.com/quiz', '_blank'); }}>
+            Free Assessment
+            <span className="quiz-icon" aria-hidden="true">
+              <ClipboardCheck size={16} strokeWidth={2.5} />
+            </span>
           </button>
 
           <div className="mobile-social">

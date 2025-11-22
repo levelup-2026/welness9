@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Phone, Instagram, Facebook, Youtube, Shield } from 'lucide-react';
+import LogoMark from './LogoMark';
 import './Footer.css';
 
 const Footer = () => {
@@ -9,69 +10,66 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              <div className="footer-logo-icon">🍌</div>
-              <span className="footer-logo-text">Banana Health</span>
+              <div className="footer-logo-icon">
+                <LogoMark />
+              </div>
             </div>
             <p className="footer-tagline">
-              Emotional wellness and counseling for men seeking confidence, healing, and healthier intimate relationships.
+              India's leading natural sexual health transformation platform. Reverse ED & PE permanently without pills, pumps, or side effects.
             </p>
             <div className="footer-socials">
-              <button className="social-btn">
+              <a href="https://instagram.com/bananahealth" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
                 <Instagram size={18} />
-              </button>
-              <button className="social-btn">
+              </a>
+              <a href="https://facebook.com/bananahealth" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
                 <Facebook size={18} />
-              </button>
-              <button className="social-btn">
-                <Twitter size={18} />
-              </button>
-              <button className="social-btn">
-                <Linkedin size={18} />
-              </button>
+              </a>
+              <a href="https://youtube.com/@bananahealth" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="YouTube">
+                <Youtube size={18} />
+              </a>
             </div>
           </div>
 
           <div className="footer-links">
             <div className="footer-column">
-              <h4 className="footer-heading">Services</h4>
+              <h4 className="footer-heading">Quick Links</h4>
               <ul className="footer-list">
-                <li><a href="#">Individual Therapy</a></li>
-                <li><a href="#">Couples Counseling</a></li>
-                <li><a href="#">Group Support</a></li>
-                <li><a href="#">Online Coaching</a></li>
-                <li><a href="#">Workshops</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#approach">5-Pillar Approach</a></li>
+                <li><a href="#program">Our Program</a></li>
+                <li><a href="#success-stories">Success Stories</a></li>
+                <li><a href="#faq">FAQ</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
-              <h4 className="footer-heading">Company</h4>
+              <h4 className="footer-heading">Program</h4>
               <ul className="footer-list">
-                <li><a href="#">Our Approach</a></li>
-                <li><a href="#">Meet Our Therapists</a></li>
-                <li><a href="#">Success Stories</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
+                <li><a href="#program">How It Works</a></li>
+                <li><a href="#approach">Methodology</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); window.open('https://example.com/quiz', '_blank'); }}>Free Assessment</a></li>
+                <li><a href="#contact">Book Strategy Call</a></li>
+                <li><a href="#success-stories">Results & Testimonials</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="footer-heading">Support</h4>
               <ul className="footer-list">
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Book Consultation</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Resources</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">Help Center</a></li>
+                <li><a href="mailto:support@bananahealth.in">Email Support</a></li>
+                <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="footer-heading">Legal</h4>
               <ul className="footer-list">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">HIPAA Compliance</a></li>
-                <li><a href="#">Therapist Code</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms & Conditions</a></li>
+                <li><a href="#nda">NDA Commitment</a></li>
+                <li><a href="#refund">Refund Policy</a></li>
               </ul>
             </div>
           </div>
@@ -80,24 +78,24 @@ const Footer = () => {
         <div className="footer-contact">
           <div className="contact-item">
             <Mail size={18} />
-            <span>hello@bananahealth.com</span>
+            <span>support@bananahealth.in</span>
           </div>
           <div className="contact-item">
             <Phone size={18} />
-            <span>1-800-HEALING</span>
+            <span>+91 98765 43210 (9 AM - 9 PM IST)</span>
           </div>
           <div className="contact-item">
-            <MapPin size={18} />
-            <span>Available Nationwide</span>
+            <Shield size={18} />
+            <span>100% Confidential & NDA Protected</span>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2025 Banana Health. All rights reserved.
+            © 2024 Banana Health. All rights reserved.
           </p>
           <p className="footer-disclaimer">
-            Banana Health provides counseling and emotional wellness services. We are not a medical provider. If you are experiencing a mental health crisis, please contact 988 (Suicide & Crisis Lifeline) or your local emergency services.
+            Results may vary between individuals. This program is designed for educational and wellness purposes. Please consult with a healthcare professional before starting any new health program. Banana Health does not provide medical diagnosis or treatment.
           </p>
         </div>
       </div>

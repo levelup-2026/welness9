@@ -7,36 +7,40 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: 'How does therapy help with ED and PE?',
-      answer: 'Most cases of ED and PE have psychological roots - performance anxiety, stress, relationship issues, or past trauma. Therapy addresses these underlying emotional causes, helping you develop healthier thought patterns, reduce anxiety, and rebuild confidence naturally. Many men see significant improvement within 8-12 weeks.'
+      question: 'Does this really work without medication?',
+      answer: 'Yes! ED and PE are often symptoms of fixable biological imbalances—hormones, blood flow, stress, and lifestyle factors. Our 5-Pillar approach addresses these root causes naturally. Over 5,000 men have reversed their ED and PE completely without pills, with an 89% success rate. Unlike medication which masks symptoms, our approach creates permanent change.'
     },
     {
-      question: 'Are your therapists qualified?',
-      answer: 'Yes, all our therapists are licensed mental health professionals (LMFT, LCSW, or psychologists) with specialized training in sex therapy and men\'s wellness. They undergo rigorous background checks and continuing education to provide the highest quality care.'
+      question: 'How long until I see results?',
+      answer: 'Most men notice improvements within 6 weeks, with significant progress by 3 months. The complete 4-month program is designed for permanent reversal. Results vary based on individual biology and commitment, but you\'ll have weekly progress reviews with your coaches to ensure you\'re on track.'
     },
     {
-      question: 'How long does treatment typically take?',
-      answer: 'Every journey is unique. Many clients notice improvements within 4-8 weeks, with significant progress by 12-16 weeks. We create personalized treatment plans that adapt to your progress, ensuring you get the support you need for lasting change.'
+      question: 'Is this backed by science?',
+      answer: 'Absolutely. Every pillar of our approach is grounded in peer-reviewed research on testosterone optimization, blood flow enhancement, pelvic health, and performance psychology. Our system was developed over 3 years with input from nutritionists, fitness experts, and sexual health specialists. It\'s not a quick fix—it\'s a comprehensive, evidence-based methodology.'
     },
     {
-      question: 'Is my information kept confidential?',
-      answer: 'Absolutely. We adhere to strict HIPAA guidelines and all sessions are completely confidential. Your privacy is our top priority - billing appears discreetly on statements, and we never share your information without explicit consent.'
+      question: 'What if I\'ve tried everything and nothing worked?',
+      answer: 'Most men who come to us have tried pills, exercises, or other methods without lasting success. That\'s because those approaches only address one aspect of the problem. Our 5-Pillar system is different—it simultaneously addresses nutrition, fitness, psychology, lifestyle, and provides daily coaching support. It\'s the most comprehensive natural approach available in India.'
     },
     {
-      question: 'What if I\'m not comfortable talking about this?',
-      answer: 'That\'s completely normal and expected. Our therapists specialize in creating safe, judgment-free spaces. They\'re trained to help you open up at your own pace. Many clients feel nervous at first but find relief in finally being able to discuss these concerns openly.'
+      question: 'Is my information confidential?',
+      answer: 'Yes, 100%. All client information is protected under strict Non-Disclosure Agreement (NDA). Your coaches, communication, and progress are completely private. We never share your information with anyone. Privacy and discretion are paramount to us.'
     },
     {
-      question: 'Do you offer couples counseling?',
-      answer: 'Yes! We offer both individual and couples therapy. Many sexual wellness issues benefit from involving partners, and our therapists are skilled at facilitating healthy communication and rebuilding intimacy in relationships.'
+      question: 'What\'s the money-back guarantee?',
+      answer: 'We offer a full money-back guarantee if you complete the 4-month program as prescribed and see no improvement. We\'re confident in our system because it works—but if it doesn\'t deliver results for you, you get your investment back. Terms and conditions apply. Contact us for full details.'
     },
     {
-      question: 'How do online sessions work?',
-      answer: 'Sessions are conducted via secure video conferencing from anywhere you feel comfortable. You\'ll receive a private link before your appointment. It\'s just like an in-person session but with the added comfort and privacy of your own space.'
+      question: 'Do I need to exercise heavily?',
+      answer: 'No. Our Cellular Fitness protocol requires just 30 minutes per day and doesn\'t involve heavy gym workouts. It\'s focused on targeted exercises for pelvic health, cardiovascular function, and nerve optimization—not bodybuilding. Even if you\'re not currently active, our program is designed to be sustainable and effective.'
     },
     {
-      question: 'What if therapy doesn\'t work for me?',
-      answer: 'While our success rate is high, we understand therapy isn\'t one-size-fits-all. If you\'re not seeing progress, we\'ll work with you to adjust your treatment plan or connect you with additional resources. Your healing is what matters most.'
+      question: 'Will I need to take supplements or buy products?',
+      answer: 'The program is based on whole foods and natural lifestyle changes—no expensive supplements required. Your personalized nutrition protocol focuses on regular foods available in India that optimize your hormones and blood flow. Everything you need is included in the program fee.'
+    },
+    {
+      question: 'How does the coaching support work?',
+      answer: 'You\'ll have a team of 4 expert coaches available daily through private messaging and weekly video check-ins. They monitor your progress, answer questions, make adjustments to your protocol, and keep you accountable. You\'re never alone in this journey—your success team is with you every step of the way.'
     }
   ];
 
@@ -48,8 +52,8 @@ const FAQSection = () => {
     <section className="faq-section">
       <div className="faq-container">
         <div className="faq-header">
-          <h2 className="faq-title">Your Questions Answered</h2>
-          <p className="faq-subtitle">Everything you need to know about emotional recovery</p>
+          <h2 className="faq-title">Frequently Asked Questions</h2>
+          <p className="faq-subtitle">Everything you need to know about reversing ED & PE naturally</p>
         </div>
 
         <div className="faq-list">
@@ -69,9 +73,14 @@ const FAQSection = () => {
         </div>
 
         <div className="faq-cta">
-          <h3 className="faq-cta-title">Ready to start your journey?</h3>
-          <p className="faq-cta-text">Book a free consultation with our wellness specialists</p>
-          <button className="contact-btn">Schedule Free Call</button>
+          <h3 className="faq-cta-title">Still have questions?</h3>
+          <p className="faq-cta-text">Book a free strategy call with our team to discuss your specific situation</p>
+          <button 
+            className="contact-btn"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Book Free Strategy Call
+          </button>
         </div>
       </div>
     </section>

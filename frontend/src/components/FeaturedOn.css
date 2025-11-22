@@ -1,0 +1,208 @@
+.featured-on {
+  padding: 2rem 0;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(249, 250, 251, 0.5) 100%);
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.featured-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.media-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: fadeUpLogo 0.6s ease forwards;
+}
+
+.media-logo-wrapper:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.media-logo {
+  height: 24px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.media-logo-wrapper:hover .media-logo {
+  filter: grayscale(0%);
+}
+
+.featured-spotlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+
+.spotlight-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  animation: spotlightReveal 0.9s ease forwards;
+  position: relative;
+  isolation: isolate;
+}
+
+.spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(59, 130, 246, 0.08), rgba(250, 204, 21, 0.08));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+
+.spotlight-image-wrapper {
+  height: 160px;
+  overflow: hidden;
+}
+
+.spotlight-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.spotlight-card:hover .spotlight-image {
+  transform: scale(1.05);
+}
+
+.spotlight-meta {
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.spotlight-source {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #3B82F6;
+}
+
+.spotlight-headline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.spotlight-date {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .featured-logos {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .media-logo {
+    height: 20px;
+    max-width: 100px;
+  }
+
+  .featured-label {
+    font-size: 0.7rem;
+  }
+
+  .spotlight-card {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-logos {
+    gap: 1.5rem;
+  }
+
+  .media-logo {
+    height: 18px;
+    max-width: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .featured-spotlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 2rem;
+  }
+
+  .spotlight-image-wrapper {
+    height: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured-spotlights {
+    gap: 32px;
+  }
+
+  .spotlight-image-wrapper {
+    height: 200px;
+  }
+}
+
+@keyframes fadeUpLogo {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spotlightReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,27 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
-import FeaturedProducts from '../components/FeaturedProducts';
-import ProductLibrary from '../components/ProductLibrary';
-import HowItWorks from '../components/HowItWorks';
-import BenefitsSection from '../components/BenefitsSection';
-import ScienceSection from '../components/ScienceSection';
+import ImpactStats from '../components/ImpactStats';
+import BrandStory from '../components/BrandStory';
+import FivePillarApproach from '../components/FivePillarApproach';
+import ProgramSection from '../components/ProgramSection';
 import SocialProof from '../components/SocialProof';
 import FAQSection from '../components/FAQSection';
+import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 const HomePage = () => {
+  // Enable smooth scrolling
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
     <div className="homepage">
       <Header />
       <HeroSection />
-      <FeaturedProducts />
-      <ProductLibrary />
-      <HowItWorks />
-      <BenefitsSection />
-      <ScienceSection />
+      <ImpactStats />
+      <BrandStory />
+      <FivePillarApproach />
+      <ProgramSection />
       <SocialProof />
       <FAQSection />
+      <ContactSection />
       <Footer />
     </div>
   );

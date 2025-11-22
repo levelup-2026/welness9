@@ -30,20 +30,18 @@
 }
 
 .footer-logo-icon {
-  font-size: 28px;
-  width: 40px;
-  height: 40px;
+  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.footer-logo-text {
-  font-size: 18px;
-  font-weight: 500;
-  color: white;
+.footer-logo-icon svg,
+.footer-logo-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .footer-tagline {
@@ -165,13 +163,7 @@
   }
 
   .footer-logo-icon {
-    font-size: 30px;
-    width: 42px;
-    height: 42px;
-  }
-
-  .footer-logo-text {
-    font-size: 19px;
+    width: 160px;
   }
 
   .footer-tagline {
@@ -229,13 +221,7 @@
   }
 
   .footer-logo-icon {
-    font-size: 32px;
-    width: 44px;
-    height: 44px;
-  }
-
-  .footer-logo-text {
-    font-size: 20px;
+    width: 200px;
   }
 
   .footer-tagline {
