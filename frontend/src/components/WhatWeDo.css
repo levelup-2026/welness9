@@ -1,0 +1,136 @@
+.what-we-do-section {
+  padding: 5rem 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-we-do-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.what-we-do-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.what-we-do-subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+}
+
+@media (min-width: 768px) {
+  .what-we-do-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.category-card {
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 450px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+  .category-card {
+    gap: 2.5rem;
+    padding: 3rem;
+    min-height: 480px;
+  }
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Variants */
+.card-diagnosis {
+  background: linear-gradient(135deg, #FFF4B8 0%, #FFE89F 100%);
+  border: 1px solid #f0e68c;
+  color: #0a0a0a;
+}
+
+.card-recovery {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.card-control {
+  background: linear-gradient(135deg, #E5F2FF 0%, #D4E9FF 100%);
+  border: 1px solid #b3d9ff;
+  color: #0a0a0a;
+}
+
+.card-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card-svg {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  max-height: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .card-svg {
+  transform: scale(1.05);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.card-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: auto;
+  flex-grow: 1;
+}
+
+
+
+/* Decorative elements */
+.card-decoration {
+  position: absolute;
+  pointer-events: none;
+}

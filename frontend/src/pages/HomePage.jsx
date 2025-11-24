@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
+import WhatWeDo from '../components/WhatWeDo';
 import ImpactStats from '../components/ImpactStats';
 import BrandStory from '../components/BrandStory';
 import FivePillarApproach from '../components/FivePillarApproach';
@@ -24,6 +25,7 @@ const HomePage = () => {
     <div className="homepage">
       <Header />
       <HeroSection />
+      <WhatWeDo />
       <ImpactStats />
       <BrandStory />
       <FivePillarApproach />
