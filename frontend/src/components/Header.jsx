@@ -6,16 +6,30 @@ import './Header.css';
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Handle scroll for shadow effect
+  // Handle scroll for floating effect and hide/show
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      
+      // Set scrolled state for styling
+      setIsScrolled(currentScrollY > 10);
+      
+      // Show header when scrolling up, hide when scrolling down
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -39,7 +53,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
+      <header className={`main-header ${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : 'hidden'}`}>
         <div className="header-container">
           <div className="header-left">
             <div className="logo">
