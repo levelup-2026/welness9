@@ -21,12 +21,6 @@ const HeroSection = () => {
     { Icon: Sparkles, label: 'Performance breakthroughs' }
   ];
 
-  const expertisePills = [
-    { label: 'ED Reversal', color: 'yellow', Icon: Target },
-    { label: 'PE Solution', color: 'blue', Icon: Zap },
-    { label: 'Performance Boost', color: 'white', Icon: Sparkles }
-  ];
-
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -118,21 +112,6 @@ const HeroSection = () => {
                 <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="User" className="avatar" />
                 <div className="avatar-more">+</div>
               </div>
-            </div>
-          </div>
-
-          <div className="library-card">
-            <div className="library-header">
-              <span className="library-label">Our Expertise <span className="superscript">02</span></span>
-              <button className="add-btn-circle">+</button>
-            </div>
-            <div className="library-pills">
-              {expertisePills.map(({ label, color, Icon }) => (
-                <div key={label} className={`pill-item ${color}`}>
-                  <Icon size={18} strokeWidth={2.3} aria-hidden="true" />
-                  <span>{label}</span>
-                </div>
-              ))}
             </div>
           </div>
         </div>
