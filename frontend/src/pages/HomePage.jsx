@@ -9,7 +9,6 @@ import ProgramSection from '../components/ProgramSection';
 import AboutMissionSection from '../components/AboutMissionSection';
 import SocialProof from '../components/SocialProof';
 import FAQSection from '../components/FAQSection';
-import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 const HomePage = () => {
@@ -30,10 +29,9 @@ const HomePage = () => {
       <KeyBenefits />
       <ProgramSection />
       <AboutMissionSection />
-      <SocialProof />
+      {/* <SocialProof /> */}
       <ImpactStats />
       <FAQSection />
-      <ContactSection />
       <Footer />
     </div>
   );

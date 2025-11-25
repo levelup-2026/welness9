@@ -1,159 +1,124 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Users, Heart, Target, TrendingUp, Award, Sparkles, ShieldCheck, BadgeCheck } from 'lucide-react';
-import './ImpactStats.css';
+import React from "react";
+import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
+import { motion } from "motion/react";
+
+const impactStories = [
+  {
+    text: "The counseling sessions transformed my perspective. I learned effective coping strategies that helped me navigate through anxiety and find inner peace.",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    name: "Sarah Martinez",
+    role: "Mental Wellness Journey",
+  },
+  {
+    text: "Professional guidance helped me rebuild my confidence. The therapist's compassionate approach made me feel heard and supported throughout my healing process.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    name: "Michael Chen",
+    role: "Personal Growth Story",
+  },
+  {
+    text: "After months of struggling, I finally found the support I needed. The therapy sessions gave me tools to manage stress and improve my relationships.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    name: "Emily Thompson",
+    role: "Relationship Counseling",
+  },
+  {
+    text: "The mindfulness techniques I learned have been life-changing. I now approach challenges with clarity and emotional balance that I never thought possible.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    name: "David Anderson",
+    role: "Mindfulness Practice",
+  },
+  {
+    text: "Therapy helped me process trauma I had buried for years. The safe space created by my counselor allowed me to heal and move forward with my life.",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop",
+    name: "Jennifer Williams",
+    role: "Trauma Recovery",
+  },
+  {
+    text: "The guidance I received helped me navigate career transitions while maintaining my mental health. I'm now thriving both professionally and personally.",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+    name: "Robert Taylor",
+    role: "Career & Life Balance",
+  },
+  {
+    text: "Counseling gave me the courage to set boundaries and prioritize self-care. I've learned that taking care of my mental health isn't selfish—it's essential.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
+    name: "Amanda Rodriguez",
+    role: "Self-Care Journey",
+  },
+  {
+    text: "The cognitive behavioral therapy techniques I learned have helped me reframe negative thoughts. My outlook on life has become significantly more positive.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    name: "James Wilson",
+    role: "CBT Success Story",
+  },
+  {
+    text: "Through therapy, I discovered my inner strength. The support and validation I received empowered me to overcome obstacles I once thought insurmountable.",
+    image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop",
+    name: "Lisa Brown",
+    role: "Empowerment Journey",
+  },
+];
+
+const firstColumn = impactStories.slice(0, 3);
+const secondColumn = impactStories.slice(3, 6);
+const thirdColumn = impactStories.slice(6, 9);
 
 const ImpactStats = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({
-    clients: 0,
-    edReversed: 0,
-    peOvercome: 0,
-    intimacy: 0,
-    erections: 0
-  });
-  
-  const sectionRef = useRef(null);
-
-  const stats = [
-    {
-      id: 'clients',
-      target: 5000,
-      label: 'Clients Served',
-      icon: Users,
-      color: '#3B82F6',
-      gradient: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)'
-    },
-    {
-      id: 'edReversed',
-      target: 1500,
-      label: 'Men Reversed ED',
-      icon: Award,
-      color: '#10B981',
-      gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
-    },
-    {
-      id: 'peOvercome',
-      target: 1800,
-      label: 'Men Overcame PE',
-      icon: Target,
-      color: '#F59E0B',
-      gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)'
-    },
-    {
-      id: 'intimacy',
-      target: 2000,
-      label: 'Improved Intimacy',
-      icon: Heart,
-      color: '#EF4444',
-      gradient: 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)'
-    },
-    {
-      id: 'erections',
-      target: 1000,
-      label: 'Stronger Erections',
-      icon: TrendingUp,
-      color: '#8B5CF6',
-      gradient: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)'
-    }
-  ];
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, [isVisible]);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const interval = duration / steps;
-
-    stats.forEach((stat) => {
-      let currentCount = 0;
-      const increment = stat.target / steps;
-
-      const timer = setInterval(() => {
-        currentCount += increment;
-        if (currentCount >= stat.target) {
-          currentCount = stat.target;
-          clearInterval(timer);
-        }
-        setCounts(prev => ({
-          ...prev,
-          [stat.id]: Math.floor(currentCount)
-        }));
-      }, interval);
-    });
-  }, [isVisible]);
-
   return (
-    <section className="impact-stats" ref={sectionRef}>
-      <div className="impact-container">
-        <div className="impact-header">
-          <h2 className="impact-title">
-            Transforming Lives Across <span className="highlight-text">India</span>
-          </h2>
-          <p className="impact-subtitle">
-            Real results from real men who chose the natural path to sexual wellness
-          </p>
-        </div>
+    <section className="bg-background my-20 relative overflow-hidden">
+      <div className="container z-10 mx-auto px-4">
+        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-center">
+          {/* Left Side - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            {/* Decorative Blob */}
+            <div className="absolute -left-20 -top-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-3xl -z-10" />
+            <div className="absolute -left-10 top-40 w-56 h-56 bg-gradient-to-tr from-green-400/15 via-blue-400/15 to-purple-400/15 rounded-full blur-2xl -z-10" />
+            
+            <div className="border py-1 px-4 rounded-lg inline-block">Real Impact</div>
 
-        <div className="stats-grid">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div 
-                key={stat.id} 
-                className={`stat-card ${isVisible ? 'visible' : ''}`}
-                style={{ 
-                  animationDelay: `${index * 0.1}s`,
-                  '--card-gradient': stat.gradient
-                }}
-              >
-                <div className="stat-icon-wrapper" style={{ background: stat.gradient }}>
-                  <Icon size={28} color="white" strokeWidth={2.5} />
-                </div>
-                <div className="stat-content">
-                  <div className="stat-number-wrapper">
-                    <span className="stat-number">{counts[stat.id].toLocaleString()}</span>
-                    <span className="stat-plus">+</span>
-                  </div>
-                  <p className="stat-label">{stat.label}</p>
-                </div>
-                <div className="stat-glow" style={{ background: `${stat.color}33` }}></div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mt-6 leading-tight">
+              Stories of Transformation
+            </h2>
+            
+            <p className="mt-6 text-lg opacity-75 leading-relaxed max-w-xl">
+              Real experiences from people who found support and healing through counseling. 
+              Each story represents a journey of courage, growth, and positive change.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-blue-500 mt-2" />
+                <p className="text-base opacity-70">Professional guidance tailored to individual needs</p>
               </div>
-            );
-          })}
-        </div>
-
-        <div className="impact-footer">
-          {[
-            { Icon: Sparkles, text: '100% Natural & Medication-Free' },
-            { Icon: ShieldCheck, text: 'Completely Confidential' },
-            { Icon: BadgeCheck, text: 'Money-Back Guarantee' }
-          ].map(({ Icon, text }) => (
-            <div key={text} className="impact-badge">
-              <Icon className="badge-icon" size={18} strokeWidth={2.4} aria-hidden="true" />
-              <span className="badge-text">{text}</span>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-purple-500 mt-2" />
+                <p className="text-base opacity-70">Safe, confidential space for healing and growth</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-pink-500 mt-2" />
+                <p className="text-base opacity-70">Evidence-based techniques for lasting results</p>
+              </div>
             </div>
-          ))}
+          </motion.div>
+
+          {/* Right Side - Testimonials */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="lg:col-span-2 flex justify-center lg:justify-end gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[600px] overflow-hidden"
+          >
+            <TestimonialsColumn testimonials={firstColumn} duration={15} />
+            <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+            <TestimonialsColumn testimonials={thirdColumn} className="hidden xl:block" duration={17} />
+          </motion.div>
         </div>
       </div>
     </section>
@@ -161,4 +126,3 @@ const ImpactStats = () => {
 };
 
 export default ImpactStats;
-
