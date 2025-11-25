@@ -28,11 +28,11 @@ const HomePage = () => {
       <HeroSection />
       <WhatWeDo />
       <KeyBenefits />
-      <ImpactStats />
+      <ProgramSection />
       <BrandStory />
       <FivePillarApproach />
-      <ProgramSection />
       <SocialProof />
+      <ImpactStats />
       <FAQSection />
       <ContactSection />
       <Footer />
