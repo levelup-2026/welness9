@@ -6,6 +6,7 @@ import KeyBenefits from '../components/KeyBenefits';
 import ImpactStats from '../components/ImpactStats';
 import BrandStory from '../components/BrandStory';
 import ProgramSection from '../components/ProgramSection';
+import AboutMissionSection from '../components/AboutMissionSection';
 import SocialProof from '../components/SocialProof';
 import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
@@ -28,6 +29,7 @@ const HomePage = () => {
       <WhatWeDo />
       <KeyBenefits />
       <ProgramSection />
+      <AboutMissionSection />
       <SocialProof />
       <ImpactStats />
       <FAQSection />
