@@ -5,7 +5,6 @@ import WhatWeDo from '../components/WhatWeDo';
 import KeyBenefits from '../components/KeyBenefits';
 import ImpactStats from '../components/ImpactStats';
 import BrandStory from '../components/BrandStory';
-import FivePillarApproach from '../components/FivePillarApproach';
 import ProgramSection from '../components/ProgramSection';
 import SocialProof from '../components/SocialProof';
 import FAQSection from '../components/FAQSection';
@@ -29,8 +28,6 @@ const HomePage = () => {
       <WhatWeDo />
       <KeyBenefits />
       <ProgramSection />
-      <BrandStory />
-      <FivePillarApproach />
       <SocialProof />
       <ImpactStats />
       <FAQSection />

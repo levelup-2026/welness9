@@ -156,33 +156,55 @@ const ProgramSection = () => {
           </div>
         </div>
 
-        {/* Final CTA - Quiz Button */}
+        {/* Final CTA - Assessment Card Only */}
         <div className="program-cta">
-          <div className="cta-doodle-decoration">
-            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10,50 Q50,10 90,50 T170,50" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="5,5" opacity="0.3" />
-            </svg>
-          </div>
-          
-          <div className="cta-buttons">
-            <button 
-              className="cta-btn primary quiz-btn"
-              onClick={() => navigate('/quiz')}
-            >
-              <span className="btn-content">
-                Take Free Assessment
-                <svg className="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </span>
-            </button>
-            <button 
-              className="cta-btn secondary"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Book Strategy Call
-            </button>
+          <div className="assessment-card-program">
+            <div className="assessment-card-inner">
+              <div className="assessment-left-side">
+                <div className="assessment-blob-wrapper-program">
+                  <svg className="assessment-blob-program" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="rgba(59, 130, 246, 0.2)" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.4,90,-15.8,88.5,-0.3C87,14.2,81.4,27.7,73.2,39.8C65,51.9,54.2,62.6,41.3,69.8C28.4,77,13.2,80.7,-1.6,83.5C-16.4,86.3,-32.8,88.2,-46.3,81.9C-59.8,75.6,-70.4,61.1,-77.8,45.3C-85.2,29.5,-89.4,12.4,-88.3,-4.2C-87.2,-20.8,-80.8,-36.9,-71.2,-50.1C-61.6,-63.3,-48.8,-73.6,-34.5,-80.6C-20.2,-87.6,-4.4,-91.3,9.8,-88.5C24,-85.7,30.6,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+                  </svg>
+                  <div className="scribble-circle-program">
+                    <svg className="scribble-program" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20,50 Q30,30 50,50 T80,50" stroke="#3B82F6" strokeWidth="2" fill="none" strokeLinecap="round" />
+                      <circle cx="50" cy="50" r="35" stroke="#3B82F6" strokeWidth="2" fill="none" strokeDasharray="3,6" />
+                    </svg>
+                    <Flame size={28} className="assessment-icon-program" strokeWidth={2.5} />
+                  </div>
+                </div>
+              </div>
+              <div className="assessment-right-side">
+                <div className="assessment-content-program">
+                  <div className="assessment-badge-program">
+                    <span className="badge-dot-program"></span>
+                    Free • 2 Minutes
+                  </div>
+                  <h4 className="assessment-title-program">Take Free Assessment</h4>
+                </div>
+              </div>
+              <div className="assessment-button-wrapper">
+                <button 
+                  className="assessment-btn-program"
+                  onClick={() => navigate('/quiz')}
+                >
+                  <span>Start Now</span>
+                  <svg className="arrow-scribble-program" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10 L16 10 M11 5 L16 10 L11 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="assessment-decorative-program">
+              <svg className="doodle-program doodle-program-1" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10,20 Q15,10 20,20 T30,20" stroke="#FACC15" strokeWidth="2" fill="none" strokeLinecap="round" />
+              </svg>
+              <svg className="doodle-program doodle-program-2" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="15" cy="15" r="12" stroke="#60A5FA" strokeWidth="2" fill="none" strokeDasharray="2,4" />
+              </svg>
+              <div className="mini-blob-program mini-blob-program-1"></div>
+              <div className="mini-blob-program mini-blob-program-2"></div>
+            </div>
           </div>
         </div>
       </div>

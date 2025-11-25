@@ -455,23 +455,11 @@
 
 /* Program CTA */
 .program-cta {
-  background: #111827;
-  border-radius: 40px;
-  padding: 80px 40px;
-  text-align: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-doodle-decoration {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 100px;
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 40px;
 }
 
 .cta-badge {
@@ -516,80 +504,300 @@
   z-index: 1;
 }
 
-.cta-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 32px;
+/* Assessment Card in Program Section */
+.assessment-card-program {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 24px;
+  padding: 32px;
   position: relative;
-  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
-.cta-btn {
-  padding: 20px 48px;
-  border-radius: 50px;
-  font-size: 18px;
+.assessment-card-program:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.assessment-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.assessment-left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assessment-right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+}
+
+.assessment-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assessment-blob-wrapper-program {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.assessment-blob-program {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: blobMorphProgram 8s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes blobMorphProgram {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  50% {
+    transform: scale(0.98) rotate(-3deg);
+  }
+  75% {
+    transform: scale(1.03) rotate(8deg);
+  }
+}
+
+.scribble-circle-program {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.scribble-program {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  animation: scribbleRotateProgram 12s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes scribbleRotateProgram {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.assessment-icon-program {
+  color: #3B82F6;
+  z-index: 1;
+  filter: drop-shadow(0 2px 8px rgba(59, 130, 246, 0.3));
+  animation: iconPulseProgram 3s ease-in-out infinite;
+}
+
+@keyframes iconPulseProgram {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.assessment-content-program {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.assessment-badge-program {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 1px solid #BFDBFE;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1E40AF;
+  margin-bottom: 12px;
+}
+
+.badge-dot-program {
+  width: 6px;
+  height: 6px;
+  background: #10B981;
+  border-radius: 50%;
+  animation: dotPulseProgram 2s ease-in-out infinite;
+}
+
+@keyframes dotPulseProgram {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+}
+
+.assessment-title-program {
+  font-size: 20px;
   font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  color: #0a0a0a;
+  margin: 0;
+}
+
+.assessment-btn-program {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: white;
   border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
   white-space: nowrap;
 }
 
-.cta-btn.primary {
-  background: #3B82F6;
-  color: white;
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.assessment-btn-program::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
-.btn-content {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.assessment-btn-program:hover::before {
+  left: 100%;
 }
 
-.btn-arrow {
-  width: 20px;
-  height: 20px;
+.assessment-btn-program:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.5);
+}
+
+.arrow-scribble-program {
   transition: transform 0.3s ease;
 }
 
-.cta-btn.primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
-  background: #2563EB;
-}
-
-.cta-btn.primary:hover .btn-arrow {
+.assessment-btn-program:hover .arrow-scribble-program {
   transform: translateX(4px);
 }
 
-.cta-btn.secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+.assessment-decorative-program {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.cta-btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: white;
+.doodle-program {
+  position: absolute;
+  opacity: 0.4;
+  animation: doodleFloatProgram 6s ease-in-out infinite;
 }
 
-.cta-guarantee {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 15px;
-  color: #9CA3AF;
-  margin: 0;
-  position: relative;
-  z-index: 1;
+.doodle-program-1 {
+  top: 20px;
+  right: 20px;
+  animation-delay: 0s;
+}
+
+.doodle-program-2 {
+  bottom: 30px;
+  left: 30px;
+  animation-delay: 1s;
+}
+
+@keyframes doodleFloatProgram {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+.mini-blob-program {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: miniFloatProgram 8s ease-in-out infinite;
+}
+
+.mini-blob-program-1 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #FACC15 0%, #EAB308 100%);
+  top: 10%;
+  left: 5%;
+  animation-delay: 0.5s;
+}
+
+.mini-blob-program-2 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+  bottom: 15%;
+  right: 8%;
+  animation-delay: 1.5s;
+}
+
+@keyframes miniFloatProgram {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(10px, -10px) scale(1.1);
+  }
+  66% {
+    transform: translate(-10px, 10px) scale(0.9);
+  }
 }
 
 /* Tablet */
@@ -640,9 +848,37 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cta-buttons {
+  /* Horizontal Layout for Assessment Card */
+  .assessment-card-inner {
     flex-direction: row;
     gap: 24px;
+  }
+
+  .assessment-right-side {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .assessment-content-program {
+    text-align: left;
+  }
+
+  .assessment-button-wrapper {
+    margin-left: auto;
+  }
+
+  .assessment-blob-wrapper-program {
+    width: 110px;
+    height: 110px;
+  }
+
+  .scribble-circle-program {
+    width: 80px;
+    height: 80px;
+  }
+
+  .assessment-title-program {
+    font-size: 22px;
   }
 }
 
@@ -679,15 +915,35 @@
   }
 
   .program-cta {
-    padding: 100px 60px;
+    padding: 40px 48px;
+    margin-bottom: 60px;
   }
 
-  .cta-title {
-    font-size: 52px;
+  .assessment-card-program {
+    padding: 36px 40px;
   }
 
-  .cta-text {
-    font-size: 22px;
+  .assessment-card-inner {
+    gap: 32px;
+  }
+
+  .assessment-blob-wrapper-program {
+    width: 120px;
+    height: 120px;
+  }
+
+  .scribble-circle-program {
+    width: 90px;
+    height: 90px;
+  }
+
+  .assessment-title-program {
+    font-size: 24px;
+  }
+
+  .assessment-btn-program {
+    padding: 16px 36px;
+    font-size: 16px;
   }
 }
 

@@ -229,6 +229,258 @@
   transform: translateY(-4px);
 }
 
+/* Assessment Card Redesign */
+.action-card.assessment {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  padding: 48px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-card.assessment:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.12);
+  transform: translateY(-6px);
+}
+
+.assessment-blob-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assessment-blob {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: blobMorph 8s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes blobMorph {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  50% {
+    transform: scale(0.98) rotate(-3deg);
+  }
+  75% {
+    transform: scale(1.03) rotate(8deg);
+  }
+}
+
+.scribble-circle {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.scribble {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  animation: scribbleRotate 12s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes scribbleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.assessment-main-icon {
+  color: #3B82F6;
+  z-index: 1;
+  filter: drop-shadow(0 2px 8px rgba(59, 130, 246, 0.3));
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.assessment-content {
+  margin-bottom: 32px;
+}
+
+.assessment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 1px solid #BFDBFE;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1E40AF;
+  margin-bottom: 20px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: #10B981;
+  border-radius: 50%;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+}
+
+.action-button.assessment-btn {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button.assessment-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.action-button.assessment-btn:hover::before {
+  left: 100%;
+}
+
+.action-button.assessment-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+}
+
+.arrow-scribble {
+  transition: transform 0.3s ease;
+}
+
+.action-button.assessment-btn:hover .arrow-scribble {
+  transform: translateX(4px);
+}
+
+.assessment-decorative-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.doodle {
+  position: absolute;
+  opacity: 0.4;
+  animation: doodleFloat 6s ease-in-out infinite;
+}
+
+.doodle-1 {
+  top: 20px;
+  right: 20px;
+  animation-delay: 0s;
+}
+
+.doodle-2 {
+  bottom: 30px;
+  left: 30px;
+  animation-delay: 1s;
+}
+
+@keyframes doodleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+.mini-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: miniFloat 8s ease-in-out infinite;
+}
+
+.mini-blob-1 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #FACC15 0%, #EAB308 100%);
+  top: 10%;
+  left: 5%;
+  animation-delay: 0.5s;
+}
+
+.mini-blob-2 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  bottom: 15%;
+  right: 8%;
+  animation-delay: 1.5s;
+}
+
+@keyframes miniFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(10px, -10px) scale(1.1);
+  }
+  66% {
+    transform: translate(-10px, 10px) scale(0.9);
+  }
+}
+
 .action-icon {
   color: #3B82F6;
   margin-bottom: 20px;
