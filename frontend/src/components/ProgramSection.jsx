@@ -190,7 +190,7 @@ const ProgramSection = () => {
           
           <div className="problem-grid">
             {painPoints.map(({ illustration, text }, index) => (
-              <div key={text} className={`problem-card problem-card-${index + 1} mobile-animate-slide-up stagger-${index + 1} ${index >= 2 ? 'mobile-hidden' : ''}`}>
+              <div key={text} className={`problem-card problem-card-${index + 1} mobile-animate-slide-up stagger-${index + 1} ${index >= 2 && !showAllPainPoints ? 'mobile-hidden' : ''}`}>
                 <div className="problem-card-doodle">
                   <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="40" stroke="#F1F5F9" strokeWidth="2" strokeDasharray="4,4" />
@@ -262,7 +262,7 @@ const ProgramSection = () => {
               {programFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className={`program-feature-card mobile-animate-fade-in stagger-${index + 1} ${index >= 2 ? 'mobile-hidden' : ''}`}>
+                  <div key={index} className={`program-feature-card mobile-animate-fade-in stagger-${index + 1} ${index >= 2 && !showAllFeatures ? 'mobile-hidden' : ''}`}>
                     <div className="feature-doodle-bg">
                       <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10,50 Q30,20 50,50 T90,50" stroke="#E0F2FE" strokeWidth="20" strokeLinecap="round" opacity="0.5" />
