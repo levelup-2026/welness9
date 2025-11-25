@@ -140,6 +140,13 @@
   }
 }
 
+/* Mobile Hidden Cards */
+@media (max-width: 767px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
 /* Show More Button for Mobile */
 .show-more-btn {
   display: flex;
@@ -178,6 +185,10 @@
 @media (min-width: 768px) {
   .show-more-btn {
     display: none !important;
+  }
+  
+  .mobile-hidden {
+    display: block;
   }
 }
 
