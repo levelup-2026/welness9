@@ -64,25 +64,6 @@ const MobileFloatingCTA = () => {
           </button>
         )}
       </div>
-
-      {/* Tablet & Desktop CTA Bar */}
-      <div className="floating-cta-bar">
-        <div className="cta-bar-content">
-          <div className="cta-bar-text">
-            <Flame size={24} strokeWidth={2.5} className="cta-bar-icon" />
-            <div>
-              <div className="cta-bar-title">Ready to Transform Your Health?</div>
-              <div className="cta-bar-subtitle">Take our free 2-minute assessment</div>
-            </div>
-          </div>
-          <button 
-            className="cta-bar-btn"
-            onClick={() => navigate('/quiz')}
-          >
-            Get Started Free
-          </button>
-        </div>
-      </div>
     </>
   );
 };
