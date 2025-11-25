@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Clock, Calendar, Users, CheckCircle, Shield, TrendingUp, Flame } from 'lucide-react';
+import { Clock, Calendar, Users, CheckCircle, Shield, TrendingUp, Flame, ChevronDown, ChevronUp } from 'lucide-react';
+import InteractiveBlob from './InteractiveBlob';
+import ScribbleLine from './ScribbleLine';
+import BlobBackground from './BlobBackground';
 import './ProgramSection.css';
+import '../styles/BlobAnimations.css';
 
 const ProgramSection = () => {
   const navigate = useNavigate();
+  const [showAllPainPoints, setShowAllPainPoints] = useState(false);
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
   const programFeatures = [
     {
       icon: Clock,
@@ -49,6 +55,113 @@ const ProgramSection = () => {
 
   return (
     <section className="program-section" id="program">
+      {/* Enhanced Blob Background */}
+      <BlobBackground 
+        count={6}
+        colors={['blue', 'yellow', 'orange', 'purple', 'blue', 'pink']}
+        sizes={['xl', 'lg', 'md', 'lg', 'md', 'sm']}
+        enableParallax={true}
+      />
+
+      {/* Interactive Floating Blobs */}
+      <InteractiveBlob
+        color="blue"
+        size="xl"
+        animationType="morph"
+        enableMouseTracking={true}
+        enableScrollEffect={true}
+        intensity={0.2}
+        style={{ top: '8%', right: '5%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="yellow"
+        size="lg"
+        animationType="float"
+        enableMouseTracking={true}
+        intensity={0.18}
+        style={{ top: '35%', left: '3%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="orange"
+        size="md"
+        animationType="morph-reverse"
+        enableScrollEffect={true}
+        style={{ top: '60%', right: '8%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="purple"
+        size="md"
+        animationType="pulse"
+        enableMouseTracking={true}
+        intensity={0.15}
+        style={{ bottom: '15%', left: '10%', zIndex: 0 }}
+      />
+
+      {/* Decorative Scribbles */}
+      <ScribbleLine
+        type="squiggle"
+        color="blue"
+        animate={true}
+        float={true}
+        width={380}
+        height={110}
+        strokeWidth={3}
+        style={{ position: 'absolute', top: '15%', left: '8%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="wave"
+        color="yellow"
+        animate={true}
+        wiggle={true}
+        width={320}
+        height={95}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '45%', right: '5%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="circle"
+        color="orange"
+        animate={true}
+        float={true}
+        width={170}
+        height={170}
+        strokeWidth={2}
+        style={{ position: 'absolute', bottom: '25%', right: '12%', opacity: 0.3, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="arrow"
+        color="purple"
+        animate={true}
+        wiggle={true}
+        width={290}
+        height={75}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '70%', left: '5%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="zigzag"
+        color="pink"
+        animate={true}
+        float={true}
+        width={260}
+        height={85}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '25%', right: '15%', opacity: 0.3, zIndex: 0 }}
+      />
+
+      {/* Particle Effects */}
+      <div className="particle-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <div className="particle" style={{ color: '#60A5FA', top: '12%', animationDuration: '5s' }} />
+        <div className="particle" style={{ color: '#FCD34D', top: '28%', animationDuration: '6s' }} />
+        <div className="particle" style={{ color: '#FB923C', top: '48%', animationDuration: '4.5s' }} />
+        <div className="particle" style={{ color: '#A78BFA', top: '68%', animationDuration: '7s' }} />
+        <div className="particle" style={{ color: '#F472B6', top: '82%', animationDuration: '5.5s' }} />
+        <div className="sparkle" style={{ top: '20%', left: '82%', animationDelay: '0s' }} />
+        <div className="sparkle" style={{ top: '55%', left: '18%', animationDelay: '1.5s' }} />
+        <div className="sparkle" style={{ top: '75%', left: '88%', animationDelay: '2.5s' }} />
+        <div className="sparkle" style={{ top: '38%', left: '92%', animationDelay: '3.5s' }} />
+      </div>
+
       {/* Background Doodles */}
       <div className="program-bg-decoration program-bg-left">
         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,8 +189,8 @@ const ProgramSection = () => {
           </div>
           
           <div className="problem-grid">
-            {painPoints.map(({ illustration, text }, index) => (
-              <div key={text} className={`problem-card problem-card-${index + 1}`}>
+            {painPoints.slice(0, showAllPainPoints ? painPoints.length : 2).map(({ illustration, text }, index) => (
+              <div key={text} className={`problem-card problem-card-${index + 1} mobile-animate-slide-up stagger-${index + 1}`}>
                 <div className="problem-card-doodle">
                   <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="40" stroke="#F1F5F9" strokeWidth="2" strokeDasharray="4,4" />
@@ -92,6 +205,15 @@ const ProgramSection = () => {
               </div>
             ))}
           </div>
+          
+          <button 
+            className="show-more-btn mobile-only"
+            onClick={() => setShowAllPainPoints(!showAllPainPoints)}
+            aria-expanded={showAllPainPoints}
+          >
+            <span>{showAllPainPoints ? 'Show Less' : `Show ${painPoints.length - 2} More Challenges`}</span>
+            {showAllPainPoints ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+          </button>
           
           <div className="problem-solution-wrapper">
             <svg className="solution-arrow" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,24 +257,36 @@ const ProgramSection = () => {
         {/* Program Overview */}
         <div className="program-overview">
           <h3 className="overview-title">The Banana Health Program</h3>
-          <div className="program-features-grid">
-            {programFeatures.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="program-feature-card">
-                  <div className="feature-doodle-bg">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10,50 Q30,20 50,50 T90,50" stroke="#E0F2FE" strokeWidth="20" strokeLinecap="round" opacity="0.5" />
-                    </svg>
+          <div className="program-features-wrapper">
+            <div className="program-features-grid">
+              {programFeatures.slice(0, showAllFeatures ? programFeatures.length : 2).map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className={`program-feature-card mobile-animate-fade-in stagger-${index + 1}`}>
+                    <div className="feature-doodle-bg">
+                      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10,50 Q30,20 50,50 T90,50" stroke="#E0F2FE" strokeWidth="20" strokeLinecap="round" opacity="0.5" />
+                      </svg>
+                    </div>
+                    <div className="feature-icon-wrapper">
+                      <Icon color="#3B82F6" strokeWidth={2} />
+                    </div>
+                    <h4 className="feature-title">{feature.title}</h4>
+                    <p className="feature-description">{feature.description}</p>
                   </div>
-                  <div className="feature-icon-wrapper">
-                    <Icon size={28} color="#3B82F6" strokeWidth={2} />
-                  </div>
-                  <h4 className="feature-title">{feature.title}</h4>
-                  <p className="feature-description">{feature.description}</p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            
+            <button 
+              className="show-more-btn mobile-only"
+              onClick={() => setShowAllFeatures(!showAllFeatures)}
+              aria-expanded={showAllFeatures}
+              style={{ marginTop: '16px' }}
+            >
+              <span>{showAllFeatures ? 'Show Less' : `Show ${programFeatures.length - 2} More Features`}</span>
+              {showAllFeatures ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </button>
           </div>
         </div>
 

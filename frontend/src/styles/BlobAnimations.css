@@ -1,0 +1,564 @@
+/* ================================
+   BLOB ANIMATIONS GLOBAL SYSTEM
+   ================================ */
+
+/* Base Blob Shapes - Organic, fluid forms */
+@keyframes blobMorph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(10px, -10px) rotate(5deg);
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+    transform: translate(-10px, 10px) rotate(-5deg);
+  }
+  75% {
+    border-radius: 60% 40% 60% 40% / 70% 30% 50% 60%;
+    transform: translate(5px, 5px) rotate(3deg);
+  }
+}
+
+@keyframes blobMorphReverse {
+  0%, 100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    transform: translate(-8px, 8px) rotate(-4deg);
+  }
+  50% {
+    border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+    transform: translate(8px, -8px) rotate(4deg);
+  }
+  75% {
+    border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+    transform: translate(-4px, -4px) rotate(-2deg);
+  }
+}
+
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  66% {
+    transform: translateY(10px) translateX(-10px);
+  }
+}
+
+@keyframes blobFloatSlow {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) translateX(15px) scale(1.05);
+  }
+}
+
+@keyframes blobPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Scribble Line Animations */
+@keyframes scribbleDraw {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes scribbleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-2deg);
+  }
+}
+
+@keyframes scribbleWiggle {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+  75% {
+    transform: translateX(3px) rotate(1deg);
+  }
+}
+
+/* Interactive Animations */
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinSlowReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Connecting Line Animations */
+@keyframes lineDraw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes lineFlow {
+  0%, 100% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes pathGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+  }
+}
+
+/* Particle Effects */
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================================
+   BLOB COMPONENT CLASSES
+   ================================ */
+
+/* Base Blob */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Blob Sizes - Mobile First */
+.blob-xs {
+  width: 80px;
+  height: 80px;
+}
+
+.blob-sm {
+  width: 120px;
+  height: 120px;
+}
+
+.blob-md {
+  width: 200px;
+  height: 200px;
+}
+
+.blob-lg {
+  width: 300px;
+  height: 300px;
+}
+
+.blob-xl {
+  width: 400px;
+  height: 400px;
+}
+
+/* Blob Colors */
+.blob-blue {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(147, 197, 253, 0.2) 50%, transparent 100%);
+}
+
+.blob-purple {
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, rgba(196, 181, 253, 0.2) 50%, transparent 100%);
+}
+
+.blob-yellow {
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.4) 0%, rgba(254, 240, 138, 0.2) 50%, transparent 100%);
+}
+
+.blob-orange {
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.4) 0%, rgba(254, 215, 170, 0.2) 50%, transparent 100%);
+}
+
+.blob-green {
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.4) 0%, rgba(134, 239, 172, 0.2) 50%, transparent 100%);
+}
+
+.blob-pink {
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.4) 0%, rgba(251, 207, 232, 0.2) 50%, transparent 100%);
+}
+
+/* Blob Animation Variants */
+.blob-morph {
+  animation: blobMorph 8s ease-in-out infinite;
+}
+
+.blob-morph-reverse {
+  animation: blobMorphReverse 10s ease-in-out infinite;
+}
+
+.blob-float {
+  animation: blobFloat 6s ease-in-out infinite;
+}
+
+.blob-float-slow {
+  animation: blobFloatSlow 12s ease-in-out infinite;
+}
+
+.blob-pulse {
+  animation: blobPulse 4s ease-in-out infinite;
+}
+
+.blob-spin {
+  animation: spinSlow 30s linear infinite;
+}
+
+.blob-spin-reverse {
+  animation: spinSlowReverse 25s linear infinite;
+}
+
+/* Interactive Blobs */
+.blob-interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.blob-interactive:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: blur(30px);
+}
+
+/* ================================
+   SCRIBBLE COMPONENT CLASSES
+   ================================ */
+
+.scribble {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.scribble-line {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.scribble-animated {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: scribbleDraw 2s ease-out forwards;
+}
+
+.scribble-float {
+  animation: scribbleFloat 6s ease-in-out infinite;
+}
+
+.scribble-wiggle {
+  animation: scribbleWiggle 3s ease-in-out infinite;
+}
+
+/* Scribble Colors */
+.scribble-blue {
+  stroke: #60A5FA;
+}
+
+.scribble-purple {
+  stroke: #A78BFA;
+}
+
+.scribble-yellow {
+  stroke: #FCD34D;
+}
+
+.scribble-orange {
+  stroke: #FB923C;
+}
+
+.scribble-green {
+  stroke: #4ADE80;
+}
+
+.scribble-pink {
+  stroke: #F472B6;
+}
+
+/* ================================
+   CONNECTING LINES
+   ================================ */
+
+.connecting-line {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.connecting-line path {
+  stroke-dasharray: 10, 5;
+  stroke-linecap: round;
+  fill: none;
+  animation: lineFlow 3s linear infinite;
+}
+
+.connecting-line-glow {
+  animation: pathGlow 2s ease-in-out infinite;
+}
+
+/* ================================
+   DECORATIVE PARTICLES
+   ================================ */
+
+.particle-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: particleFloat 4s ease-in infinite;
+}
+
+.particle:nth-child(1) { animation-delay: 0s; left: 10%; }
+.particle:nth-child(2) { animation-delay: 0.5s; left: 30%; }
+.particle:nth-child(3) { animation-delay: 1s; left: 50%; }
+.particle:nth-child(4) { animation-delay: 1.5s; left: 70%; }
+.particle:nth-child(5) { animation-delay: 2s; left: 90%; }
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #FCD34D;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* ================================
+   RESPONSIVE ADJUSTMENTS
+   ================================ */
+
+/* Mobile - Base (320px - 767px) */
+@media (max-width: 767px) {
+  .blob-xs { width: 60px; height: 60px; }
+  .blob-sm { width: 100px; height: 100px; }
+  .blob-md { width: 150px; height: 150px; }
+  .blob-lg { width: 220px; height: 220px; }
+  .blob-xl { width: 280px; height: 280px; }
+  
+  .blob {
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+  
+  /* Reduce animation intensity on mobile */
+  @keyframes blobMorph {
+    0%, 100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+      transform: translate(-5px, 5px) rotate(-2deg);
+    }
+  }
+  
+  @keyframes blobFloat {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-10px) translateX(5px);
+    }
+  }
+  
+  /* Smaller scribbles on mobile */
+  .scribble {
+    transform: scale(0.7);
+    transform-origin: top left;
+  }
+  
+  /* Fewer particles visible on mobile */
+  .particle:nth-child(n+4) {
+    display: none;
+  }
+  
+  .sparkle:nth-child(n+3) {
+    display: none;
+  }
+}
+
+/* Tablet - 768px and up */
+@media (min-width: 768px) {
+  .blob-xs { width: 100px; height: 100px; }
+  .blob-sm { width: 150px; height: 150px; }
+  .blob-md { width: 250px; height: 250px; }
+  .blob-lg { width: 400px; height: 400px; }
+  .blob-xl { width: 500px; height: 500px; }
+  
+  .blob {
+    filter: blur(50px);
+    opacity: 0.6;
+  }
+}
+
+/* Desktop - 1024px and up */
+@media (min-width: 1024px) {
+  .blob-xs { width: 120px; height: 120px; }
+  .blob-sm { width: 180px; height: 180px; }
+  .blob-md { width: 300px; height: 300px; }
+  .blob-lg { width: 500px; height: 500px; }
+  .blob-xl { width: 600px; height: 600px; }
+  
+  .blob {
+    filter: blur(60px);
+  }
+}
+
+/* Large Desktop - 1440px and up */
+@media (min-width: 1440px) {
+  .blob-xl { width: 700px; height: 700px; }
+  .blob-lg { width: 600px; height: 600px; }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .blob-xl { width: 800px; height: 800px; }
+  .blob-lg { width: 700px; height: 700px; }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices */
+  .blob-interactive:hover {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  
+  /* Increase touch target sizes */
+  .blob-interactive {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Reduce animation complexity on touch devices */
+  .blob {
+    animation-duration: 1.5s !important;
+  }
+}
+
+/* ================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-morph,
+  .blob-morph-reverse,
+  .blob-float,
+  .blob-float-slow,
+  .blob-pulse,
+  .blob-spin,
+  .blob-spin-reverse,
+  .scribble-animated,
+  .scribble-float,
+  .scribble-wiggle,
+  .connecting-line path,
+  .connecting-line-glow,
+  .particle,
+  .sparkle {
+    animation: none !important;
+  }
+}
+
+/* GPU Acceleration */
+.blob,
+.scribble,
+.connecting-line,
+.particle {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

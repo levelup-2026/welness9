@@ -10,6 +10,7 @@ import AboutMissionSection from '../components/AboutMissionSection';
 import SocialProof from '../components/SocialProof';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
+import MobileFloatingCTA from '../components/MobileFloatingCTA';
 
 const HomePage = () => {
   // Enable smooth scrolling
@@ -33,6 +34,7 @@ const HomePage = () => {
       <ImpactStats />
       <FAQSection />
       <Footer />
+      <MobileFloatingCTA />
     </div>
   );
 };

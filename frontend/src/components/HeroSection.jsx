@@ -12,7 +12,11 @@ import {
   ArrowUpRight
 } from 'lucide-react';
 import FeaturedOn from './FeaturedOn';
+import InteractiveBlob from './InteractiveBlob';
+import ScribbleLine from './ScribbleLine';
+import BlobBackground from './BlobBackground';
 import './HeroSection.css';
+import '../styles/BlobAnimations.css';
 
 const HeroSection = () => {
   const heroProductIcons = [
@@ -23,6 +27,82 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section">
+      {/* Enhanced Blob Background */}
+      <BlobBackground 
+        count={5}
+        colors={['blue', 'purple', 'yellow', 'orange', 'blue']}
+        sizes={['xl', 'lg', 'md', 'lg', 'md']}
+        enableParallax={true}
+      />
+
+      {/* Interactive Floating Blobs */}
+      <InteractiveBlob
+        color="blue"
+        size="lg"
+        animationType="morph"
+        enableMouseTracking={true}
+        intensity={0.2}
+        style={{ top: '10%', right: '5%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="yellow"
+        size="md"
+        animationType="morph-reverse"
+        enableMouseTracking={true}
+        intensity={0.15}
+        style={{ bottom: '20%', left: '8%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="purple"
+        size="sm"
+        animationType="pulse"
+        enableScrollEffect={true}
+        style={{ top: '40%', right: '15%', zIndex: 0 }}
+      />
+
+      {/* Decorative Scribbles */}
+      <ScribbleLine
+        type="squiggle"
+        color="blue"
+        animate={true}
+        float={true}
+        width={300}
+        height={100}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '15%', left: '5%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="wave"
+        color="orange"
+        animate={true}
+        wiggle={true}
+        width={250}
+        height={80}
+        strokeWidth={2}
+        style={{ position: 'absolute', bottom: '15%', right: '10%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="spiral"
+        color="purple"
+        animate={true}
+        float={true}
+        width={150}
+        height={150}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '50%', left: '2%', opacity: 0.3, zIndex: 0 }}
+      />
+
+      {/* Particle Effects */}
+      <div className="particle-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <div className="particle" style={{ color: '#60A5FA', top: '20%', animationDuration: '5s' }} />
+        <div className="particle" style={{ color: '#FCD34D', top: '40%', animationDuration: '6s' }} />
+        <div className="particle" style={{ color: '#A78BFA', top: '60%', animationDuration: '4s' }} />
+        <div className="particle" style={{ color: '#FB923C', top: '30%', animationDuration: '7s' }} />
+        <div className="sparkle" style={{ top: '25%', left: '80%', animationDelay: '0s' }} />
+        <div className="sparkle" style={{ top: '70%', left: '20%', animationDelay: '1s' }} />
+        <div className="sparkle" style={{ top: '45%', left: '90%', animationDelay: '2s' }} />
+      </div>
+
       <div className="hero-content">
         <div className="hero-main">
           <h1 className="hero-title">

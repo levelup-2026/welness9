@@ -1,6 +1,10 @@
 import React from 'react';
 import { Target, Eye, Heart, Users, Award, Sparkles } from 'lucide-react';
+import InteractiveBlob from './InteractiveBlob';
+import ScribbleLine from './ScribbleLine';
+import BlobBackground from './BlobBackground';
 import './AboutMissionSection.css';
+import '../styles/BlobAnimations.css';
 
 const AboutMissionSection = () => {
   const values = [
@@ -28,6 +32,83 @@ const AboutMissionSection = () => {
 
   return (
     <section className="about-mission-section" id="about">
+      {/* Enhanced Blob Background */}
+      <BlobBackground 
+        count={5}
+        colors={['blue', 'purple', 'orange', 'green', 'pink']}
+        sizes={['xl', 'lg', 'md', 'lg', 'md']}
+        enableParallax={true}
+      />
+
+      {/* Interactive Floating Blobs */}
+      <InteractiveBlob
+        color="blue"
+        size="lg"
+        animationType="morph"
+        enableMouseTracking={true}
+        enableScrollEffect={true}
+        intensity={0.18}
+        style={{ top: '10%', right: '8%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="purple"
+        size="md"
+        animationType="float-slow"
+        enableMouseTracking={true}
+        intensity={0.15}
+        style={{ top: '45%', left: '5%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="orange"
+        size="md"
+        animationType="morph-reverse"
+        enableScrollEffect={true}
+        style={{ bottom: '20%', right: '10%', zIndex: 0 }}
+      />
+
+      {/* Decorative Scribbles */}
+      <ScribbleLine
+        type="squiggle"
+        color="blue"
+        animate={true}
+        float={true}
+        width={350}
+        height={100}
+        strokeWidth={3}
+        style={{ position: 'absolute', top: '15%', left: '5%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="wave"
+        color="purple"
+        animate={true}
+        wiggle={true}
+        width={320}
+        height={90}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '55%', right: '8%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="circle"
+        color="orange"
+        animate={true}
+        float={true}
+        width={170}
+        height={170}
+        strokeWidth={2}
+        style={{ position: 'absolute', bottom: '25%', left: '8%', opacity: 0.3, zIndex: 0 }}
+      />
+
+      {/* Particle Effects */}
+      <div className="particle-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <div className="particle" style={{ color: '#60A5FA', top: '16%', animationDuration: '5s' }} />
+        <div className="particle" style={{ color: '#A78BFA', top: '36%', animationDuration: '6s' }} />
+        <div className="particle" style={{ color: '#FB923C', top: '56%', animationDuration: '4.5s' }} />
+        <div className="particle" style={{ color: '#4ADE80', top: '76%', animationDuration: '7s' }} />
+        <div className="sparkle" style={{ top: '24%', left: '82%', animationDelay: '0s' }} />
+        <div className="sparkle" style={{ top: '58%', left: '18%', animationDelay: '1.5s' }} />
+        <div className="sparkle" style={{ top: '72%', left: '85%', animationDelay: '2.5s' }} />
+      </div>
+
       {/* Background Decorations */}
       <div className="about-bg-decoration about-bg-top">
         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">

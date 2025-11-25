@@ -9,6 +9,93 @@
   justify-content: center;
 }
 
+/* Mobile Optimizations */
+@media (max-width: 767px) {
+  .key-benefits-section {
+    padding: 4rem 5vw;
+    min-height: auto;
+  }
+
+  .key-benefits-container {
+    padding: 0;
+  }
+
+  .benefits-header {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-title {
+    font-size: clamp(32px, 8vw, 42px);
+    margin-bottom: 1.25rem;
+    animation: mobileSlideUp 0.8s ease-out both;
+  }
+
+  .benefits-subtitle {
+    font-size: clamp(16px, 4.2vw, 18px);
+    animation: mobileSlideUp 0.9s ease-out both;
+    animation-delay: 0.1s;
+  }
+
+  .key-benefits-grid {
+    gap: 2rem;
+  }
+
+  .benefit-card {
+    padding: 2rem;
+    min-height: 480px;
+    border-radius: 24px;
+    touch-action: manipulation;
+    will-change: transform;
+  }
+
+  .benefit-card:active {
+    transform: scale(0.98);
+  }
+
+  .benefit-visual {
+    padding: 1rem;
+  }
+
+  .benefit-svg {
+    max-width: 240px;
+    max-height: 240px;
+  }
+
+  .benefit-badge {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .benefit-title {
+    font-size: clamp(28px, 6.5vw, 34px);
+  }
+
+  .benefit-description {
+    font-size: clamp(16px, 4vw, 18px);
+  }
+
+  .benefits-bottom-doodles {
+    display: none;
+  }
+
+  /* Staggered Animation for Cards */
+  .benefit-card:nth-child(1) {
+    animation: mobileSlideUp 1s ease-out both;
+    animation-delay: 0.2s;
+  }
+
+  .benefit-card:nth-child(2) {
+    animation: mobileSlideUp 1s ease-out both;
+    animation-delay: 0.3s;
+  }
+
+  .benefit-card:nth-child(3) {
+    animation: mobileSlideUp 1s ease-out both;
+    animation-delay: 0.4s;
+  }
+}
+
 /* Background decorations */
 .benefits-bg-decoration {
   position: absolute;

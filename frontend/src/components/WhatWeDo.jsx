@@ -1,10 +1,103 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
+import InteractiveBlob from './InteractiveBlob';
+import ScribbleLine from './ScribbleLine';
+import BlobBackground from './BlobBackground';
 import './WhatWeDo.css';
+import '../styles/BlobAnimations.css';
 
 const WhatWeDo = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showFloatingTexts, setShowFloatingTexts] = useState(true);
   return (
     <section className="what-we-do-section">
+      {/* Enhanced Blob Background */}
+      <BlobBackground 
+        count={4}
+        colors={['blue', 'orange', 'purple', 'yellow']}
+        sizes={['lg', 'md', 'xl', 'md']}
+        enableParallax={true}
+      />
+
+      {/* Interactive Floating Blobs */}
+      <InteractiveBlob
+        color="blue"
+        size="lg"
+        animationType="morph"
+        enableMouseTracking={true}
+        enableScrollEffect={true}
+        intensity={0.15}
+        style={{ top: '10%', left: '5%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="orange"
+        size="md"
+        animationType="float"
+        enableMouseTracking={true}
+        intensity={0.2}
+        style={{ bottom: '15%', right: '8%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="purple"
+        size="sm"
+        animationType="pulse"
+        enableScrollEffect={true}
+        style={{ top: '50%', right: '5%', zIndex: 0 }}
+      />
+
+      {/* Enhanced Scribbles */}
+      <ScribbleLine
+        type="squiggle"
+        color="blue"
+        animate={true}
+        float={true}
+        width={400}
+        height={120}
+        strokeWidth={3}
+        style={{ position: 'absolute', top: '20%', right: '10%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="wave"
+        color="orange"
+        animate={true}
+        wiggle={true}
+        width={350}
+        height={100}
+        strokeWidth={2}
+        style={{ position: 'absolute', bottom: '20%', left: '5%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="circle"
+        color="purple"
+        animate={true}
+        float={true}
+        width={180}
+        height={180}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '40%', left: '8%', opacity: 0.3, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="zigzag"
+        color="yellow"
+        animate={true}
+        wiggle={true}
+        width={250}
+        height={80}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '70%', right: '15%', opacity: 0.4, zIndex: 0 }}
+      />
+
+      {/* Particle Effects */}
+      <div className="particle-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <div className="particle" style={{ color: '#60A5FA', top: '15%', animationDuration: '5s' }} />
+        <div className="particle" style={{ color: '#FCD34D', top: '35%', animationDuration: '6s' }} />
+        <div className="particle" style={{ color: '#FB923C', top: '55%', animationDuration: '4.5s' }} />
+        <div className="particle" style={{ color: '#A78BFA', top: '75%', animationDuration: '7s' }} />
+        <div className="sparkle" style={{ top: '22%', left: '85%', animationDelay: '0s' }} />
+        <div className="sparkle" style={{ top: '62%', left: '15%', animationDelay: '1.5s' }} />
+        <div className="sparkle" style={{ top: '45%', left: '92%', animationDelay: '3s' }} />
+      </div>
+
       <div className="scribble-bg-left">
         <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,79.6,-46.3C87.4,-33.5,90.1,-18,88.5,-3.3C86.9,11.4,81,25.3,71.8,37.2C62.6,49.1,50.1,59,36.6,65.3C23.1,71.6,8.6,74.3,-5.2,83.3C-19,92.3,-32.1,107.6,-42.7,107.2C-53.3,106.8,-61.4,90.7,-69.3,76.3C-77.2,61.9,-84.9,49.2,-88.3,35.3C-91.7,21.4,-90.8,6.3,-86.3,-7.4C-81.8,-21.1,-73.7,-33.4,-63.3,-43.3C-52.9,-53.2,-40.2,-60.7,-27.4,-68.6C-14.6,-76.5,-1.7,-84.8,12.3,-86.8C26.3,-88.8,52.6,-84.4,44.7,-76.4Z" fill="#E0F2FE" transform="translate(250 250) scale(2.5)" />
@@ -35,12 +128,24 @@ const WhatWeDo = () => {
             <p className="what-we-do-subtitle">
               We provide <span className="text-emphasis">comprehensive wellness solutions</span> that combine <span className="text-highlight">cutting-edge diagnostics</span>, <span className="text-highlight">personalized treatment plans</span>, and <span className="text-highlight">natural healing methods</span>. Our approach focuses on identifying <span className="text-emphasis">root causes</span> and delivering sustainable, long-term health improvements that transform lives.
             </p>
-            <p className="what-we-do-description">
-              In a world where quick fixes often mask underlying issues, we take a different path. We believe that true health is a journey, not a destination. By integrating modern medical science with time-tested holistic practices, we empower you to understand your body's unique language.
-            </p>
-            <p className="what-we-do-description">
-              Our mission goes beyond symptom management. We dive deep into your health story, uncovering patterns and connections that conventional approaches might miss. <span className="text-emphasis">Every person is unique</span>, and so is every healing journey. That's why we craft <span className="text-highlight">individualized protocols</span> that adapt and evolve with you.
-            </p>
+            
+            <div className={`expandable-content ${isExpanded ? 'expanded' : ''}`}>
+              <p className="what-we-do-description">
+                In a world where quick fixes often mask underlying issues, we take a different path. We believe that true health is a journey, not a destination. By integrating modern medical science with time-tested holistic practices, we empower you to understand your body's unique language.
+              </p>
+              <p className="what-we-do-description">
+                Our mission goes beyond symptom management. We dive deep into your health story, uncovering patterns and connections that conventional approaches might miss. <span className="text-emphasis">Every person is unique</span>, and so is every healing journey. That's why we craft <span className="text-highlight">individualized protocols</span> that adapt and evolve with you.
+              </p>
+            </div>
+            
+            <button 
+              className="expand-btn mobile-only"
+              onClick={() => setIsExpanded(!isExpanded)}
+              aria-expanded={isExpanded}
+            >
+              <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
+              {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </button>
             <ul className="what-we-do-features">
               <li>
                 <span className="feature-icon">✓</span>
@@ -72,10 +177,15 @@ const WhatWeDo = () => {
               src="https://cdn.prod.website-files.com/5d5e2ff58f10c53dcffd8683/5d99f352c33c899c487cbea2_composition-1.svg" 
               alt="What We Do"
               className="what-we-do-svg"
+              onClick={() => setShowFloatingTexts(!showFloatingTexts)}
             />
-            <div className="floating-text floating-text-1">Holistic</div>
-            <div className="floating-text floating-text-2">Evidence-Based</div>
-            <div className="floating-text floating-text-3">Personalized</div>
+            {showFloatingTexts && (
+              <>
+                <div className="floating-text floating-text-1">Holistic</div>
+                <div className="floating-text floating-text-2">Evidence-Based</div>
+                <div className="floating-text floating-text-3">Personalized</div>
+              </>
+            )}
           </div>
       </div>
     </section>

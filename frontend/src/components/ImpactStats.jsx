@@ -1,6 +1,10 @@
 import React from "react";
 import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
 import { motion } from "motion/react";
+import InteractiveBlob from './InteractiveBlob';
+import ScribbleLine from './ScribbleLine';
+import BlobBackground from './BlobBackground';
+import '../styles/BlobAnimations.css';
 
 const impactStories = [
   {
@@ -66,6 +70,83 @@ const thirdColumn = impactStories.slice(6, 9);
 const ImpactStats = () => {
   return (
     <section className="bg-background my-20 relative overflow-hidden">
+      {/* Enhanced Blob Background */}
+      <BlobBackground 
+        count={4}
+        colors={['blue', 'purple', 'pink', 'green']}
+        sizes={['lg', 'md', 'xl', 'md']}
+        enableParallax={true}
+      />
+
+      {/* Interactive Floating Blobs */}
+      <InteractiveBlob
+        color="blue"
+        size="lg"
+        animationType="morph"
+        enableMouseTracking={true}
+        enableScrollEffect={true}
+        intensity={0.2}
+        style={{ top: '15%', left: '8%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="purple"
+        size="md"
+        animationType="float"
+        enableMouseTracking={true}
+        intensity={0.18}
+        style={{ bottom: '20%', right: '10%', zIndex: 0 }}
+      />
+      <InteractiveBlob
+        color="pink"
+        size="sm"
+        animationType="pulse"
+        enableScrollEffect={true}
+        style={{ top: '50%', right: '5%', zIndex: 0 }}
+      />
+
+      {/* Decorative Scribbles */}
+      <ScribbleLine
+        type="squiggle"
+        color="purple"
+        animate={true}
+        float={true}
+        width={380}
+        height={110}
+        strokeWidth={3}
+        style={{ position: 'absolute', top: '20%', right: '5%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="wave"
+        color="pink"
+        animate={true}
+        wiggle={true}
+        width={320}
+        height={95}
+        strokeWidth={2}
+        style={{ position: 'absolute', bottom: '25%', left: '8%', opacity: 0.4, zIndex: 0 }}
+      />
+      <ScribbleLine
+        type="spiral"
+        color="blue"
+        animate={true}
+        float={true}
+        width={160}
+        height={160}
+        strokeWidth={2}
+        style={{ position: 'absolute', top: '60%', left: '5%', opacity: 0.3, zIndex: 0 }}
+      />
+
+      {/* Particle Effects */}
+      <div className="particle-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <div className="particle" style={{ color: '#60A5FA', top: '18%', animationDuration: '5s' }} />
+        <div className="particle" style={{ color: '#A78BFA', top: '38%', animationDuration: '6s' }} />
+        <div className="particle" style={{ color: '#F472B6', top: '58%', animationDuration: '4.5s' }} />
+        <div className="particle" style={{ color: '#4ADE80', top: '78%', animationDuration: '7s' }} />
+        <div className="sparkle" style={{ top: '25%', left: '88%', animationDelay: '0s' }} />
+        <div className="sparkle" style={{ top: '65%', left: '12%', animationDelay: '1.5s' }} />
+        <div className="sparkle" style={{ top: '48%', left: '92%', animationDelay: '2.5s' }} />
+      </div>
+
       <div className="container z-10 mx-auto px-4">
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-center">
           {/* Left Side - Content */}
