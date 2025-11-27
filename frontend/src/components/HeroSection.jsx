@@ -11,7 +11,6 @@ import {
   ChevronDown,
   ArrowUpRight
 } from 'lucide-react';
-import FeaturedOn from './FeaturedOn';
 import InteractiveBlob from './InteractiveBlob';
 import ScribbleLine from './ScribbleLine';
 import BlobBackground from './BlobBackground';
@@ -196,8 +195,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      <FeaturedOn />
 
       <button className="browse-library-btn">
         Discover Our Approach

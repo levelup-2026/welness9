@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
+import FeaturedOn from '../components/FeaturedOn';
 import WhatWeDo from '../components/WhatWeDo';
 import KeyBenefits from '../components/KeyBenefits';
 import ImpactStats from '../components/ImpactStats';
@@ -26,6 +27,7 @@ const HomePage = () => {
     <div className="homepage">
       <Header />
       <HeroSection />
+      <FeaturedOn />
       <WhatWeDo />
       <KeyBenefits />
       <ProgramSection />
