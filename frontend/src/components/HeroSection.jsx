@@ -7,7 +7,6 @@ import {
   Target,
   Dumbbell,
   Sparkles,
-  Zap,
   ChevronDown,
   ArrowUpRight
 } from 'lucide-react';
@@ -22,6 +21,45 @@ const HeroSection = () => {
     { Icon: Target, label: 'Root cause diagnostics' },
     { Icon: Dumbbell, label: 'Strength-based training' },
     { Icon: Sparkles, label: 'Performance breakthroughs' }
+  ];
+
+  const heroNoMeds = [
+    { 
+      text: 'No pills', 
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M10.5 20.5L3.5 13.5C1.5 11.5 1.5 8 3.5 6C5.5 4 9 4 11 6L18 13C20 15 20 18.5 18 20.5C16 22.5 12.5 22.5 10.5 20.5Z"/>
+          <path d="M8.5 8.5L15.5 15.5"/>
+          <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" strokeWidth="2.5"/>
+        </svg>
+      )
+    },
+    { 
+      text: 'No pumps', 
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 3l4 4"/>
+          <path d="M19 5l-9.5 9.5"/>
+          <rect x="4" y="14" width="6" height="8" rx="1" transform="rotate(-45 4 14)"/>
+          <path d="M2 21l1.5-1.5"/>
+          <path d="M12 7l1-1"/>
+          <path d="M14 9l1-1"/>
+          <path d="M16 11l1-1"/>
+          <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" strokeWidth="2.5"/>
+        </svg>
+      )
+    },
+    { 
+      text: 'No painful procedures', 
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 3l12 9-3 3-12-9 3-3z"/>
+          <path d="M15 12l5 5"/>
+          <path d="M18 19l2-2"/>
+          <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" strokeWidth="2.5"/>
+        </svg>
+      )
+    }
   ];
 
   return (
@@ -104,20 +142,32 @@ const HeroSection = () => {
 
       <div className="hero-content">
         <div className="hero-main">
+
           <h1 className="hero-title">
-            Reverse ED & PE
-            <span className="highlight-blue"> Naturally</span>
+            India's #1
+            <span className="highlight-blue">Men's Sexual Health</span>
             <br />
-            Without Pills, Pumps, or
-            <span className="highlight-yellow">
-              Side Effects
-              <Sparkles className="highlight-icon" aria-hidden="true" size={28} strokeWidth={2} />
+            <span className="hero-title-inline">
+              Coaching Brand
+              <span className="hero-title-icon">
+                <Sparkles className="highlight-icon" aria-hidden="true" size={28} strokeWidth={2} />
+              </span>
             </span>
           </h1>
 
           <p className="hero-subtitle">
-            India's Leading Natural Sexual Health Solution for Men Who Want <strong>Permanent Results</strong>
+            <strong>Fix ED and PE Permanently in 6 Weeks.</strong> We are the #1 natural solution, featured in media houses like Cosmopolitan, The Times of India, and Hindustan Times. Trusted by over 5,000 men, doctors, and experts, we deliver proven methods.
           </p>
+
+          <div className="hero-no-meds" aria-label="No shortcuts promise">
+            <span className="hero-no-meds-label">Without:</span>
+            {heroNoMeds.map((item) => (
+              <span key={item.text} className="hero-pill soft">
+                {item.icon}
+                {item.text}
+              </span>
+            ))}
+          </div>
 
           <div className="hero-cta-group">
             <button 
@@ -163,7 +213,7 @@ const HeroSection = () => {
               <button className="add-btn-circle">+</button>
             </div>
             <div className="card-content">
-              <p className="card-text">Science-backed 5-Pillar approach to<br />reverse ED & PE permanently.</p>
+              <p className="card-text" style={{ marginBottom: '1rem' }}>Get ready to take control again,<br />because you are at the right place!</p>
               <div className="product-image-container">
                 <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop" alt="Natural health transformation" className="product-img" />
                 <div className="product-icons">
