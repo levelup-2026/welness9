@@ -4,41 +4,67 @@ import './FeaturedOn.css';
 const mediaLogoPath = (fileName) => `${process.env.PUBLIC_URL || ''}/${fileName}`;
 
 const FeaturedOn = () => {
+
   const mediaLogos = [
     {
-      name: 'CNN',
-      logo: mediaLogoPath('logo_cnn.webp'),
-      alt: 'CNN logo'
+      name: 'Featured 1',
+      logo: mediaLogoPath('test/p6nzkkfsqo-fhfvjhuhal-6929ca03b6f38.webp'),
+      alt: 'Featured logo 1'
     },
     {
-      name: 'BBC',
-      logo: mediaLogoPath('logo-bbc.webp'),
-      alt: 'BBC logo'
+      name: 'Featured 2',
+      logo: mediaLogoPath('test/ef9yj9ovritcqbrrtunpd-6929ca01f043f.webp'),
+      alt: 'Featured logo 2'
     },
     {
-      name: 'The New York Times',
-      logo: mediaLogoPath('logo_nyt.webp'),
-      alt: 'The New York Times logo'
+      name: 'Featured 3',
+      logo: mediaLogoPath('test/tkqmw9hderhpjcqmzytwi-6929ca048329e.webp'),
+      alt: 'Featured logo 3'
     },
     {
-      name: 'USA Today',
-      logo: mediaLogoPath('logo_usa-today.webp'),
-      alt: 'USA Today logo'
+      name: 'Featured 4',
+      logo: mediaLogoPath('test/kgln7da-nmv0zajfn0bky-6929ca02e2957.webp'),
+      alt: 'Featured logo 4'
     },
     {
-      name: 'Entrepreneur',
-      logo: mediaLogoPath('logo_entrepreneur.webp'),
-      alt: 'Entrepreneur Magazine logo'
+      name: 'Featured 5',
+      logo: mediaLogoPath('test/kx-bltualv8tbqaeeg4ws-6929ca0398d15.webp'),
+      alt: 'Featured logo 5'
     },
     {
-      name: 'Inc.',
-      logo: mediaLogoPath('logo-inc.webp'),
-      alt: 'Inc. Magazine logo'
+      name: 'Featured 6',
+      logo: mediaLogoPath('test/tnn0sf6tmeonrxijy5zc3-6929ca057a5a7.webp'),
+      alt: 'Featured logo 6'
     },
     {
-      name: 'Forbes',
-      logo: mediaLogoPath('logo_forbes.webp'),
-      alt: 'Forbes logo'
+      name: 'Featured 7',
+      logo: mediaLogoPath('test/ix8m3vvtaehd-v2csjdrt-6929ca02c3ce7.webp'),
+      alt: 'Featured logo 7'
+    },
+    {
+      name: 'Featured 8',
+      logo: mediaLogoPath('test/wymvxl1vue11sn-gjqlfy-6929ca058ebdf.webp'),
+      alt: 'Featured logo 8'
+    },
+    {
+      name: 'Featured 9',
+      logo: mediaLogoPath('test/tndxhxaa59kntcozt1ffp-6929ca0496442.webp'),
+      alt: 'Featured logo 9'
+    },
+    {
+      name: 'Featured 10',
+      logo: mediaLogoPath('test/cnltnsug-zvzeo5aafc5n-6929ca00cb953.webp'),
+      alt: 'Featured logo 10'
+    },
+    {
+      name: 'Featured 11',
+      logo: mediaLogoPath('test/4hocejvnxynzbvywvr84l-6929ca00a81c6.webp'),
+      alt: 'Featured logo 11'
+    },
+    {
+      name: 'Featured 12',
+      logo: mediaLogoPath('test/h4aptdiblrmrni9l8t03e-6929ca020254d.webp'),
+      alt: 'Featured logo 12'
     }
   ];
 
