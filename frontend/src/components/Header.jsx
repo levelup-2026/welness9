@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Share2, Instagram, Youtube, Facebook, Menu, X, ClipboardCheck } from 'lucide-react';
+import { Share2, Instagram, Youtube, Facebook, Menu, X } from 'lucide-react';
 import LogoMark from './LogoMark';
 import './Header.css';
 
@@ -65,14 +65,8 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="header-nav desktop-nav">
-            <a href="#approach" className="nav-link">Our Approach</a>
-            <a href="#success-stories" className="nav-link">Success Stories</a>
-            <button className="quiz-btn-header" onClick={() => window.open('https://example.com/quiz', '_blank')}>
-              Free Assessment
-              <span className="quiz-icon" aria-hidden="true">
-                <ClipboardCheck size={16} strokeWidth={2.5} />
-              </span>
-            </button>
+            <a href="#about-us" className="nav-link">About Us</a>
+            <a href="#contact-us" className="nav-link">Contact Us</a>
           </nav>
 
           {/* Desktop Social Icons */}
@@ -115,18 +109,12 @@ const Header = () => {
       {/* Mobile Menu Drawer */}
       <nav className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <a href="#approach" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Our Approach
+          <a href="#about-us" className="mobile-nav-link" onClick={closeMobileMenu}>
+            About Us
           </a>
-          <a href="#success-stories" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Success Stories
+          <a href="#contact-us" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Contact Us
           </a>
-          <button className="quiz-btn-mobile" onClick={() => { closeMobileMenu(); window.open('https://example.com/quiz', '_blank'); }}>
-            Free Assessment
-            <span className="quiz-icon" aria-hidden="true">
-              <ClipboardCheck size={16} strokeWidth={2.5} />
-            </span>
-          </button>
 
           <div className="mobile-social">
             <button className="icon-btn" aria-label="Share" onClick={closeMobileMenu}>

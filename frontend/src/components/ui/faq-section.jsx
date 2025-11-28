@@ -12,40 +12,32 @@ import { Button } from "@/components/ui/button";
 function FAQ() {
   const faqs = [
     {
-      question: 'Does this really work without medication?',
-      answer: 'Yes! ED and PE are often symptoms of fixable biological imbalances—hormones, blood flow, stress, and lifestyle factors. Our 5-Pillar approach addresses these root causes naturally. Over 5,000 men have reversed their ED and PE completely without pills, with an 89% success rate. Unlike medication which masks symptoms, our approach creates permanent change.'
+      question: 'Who is the CEO of Banana Health?',
+      answer: 'The CEO of Banana Health is Yash Vardhan Swami who is also one of the founders of the brand. Featured in Forbes, global health platforms, and award-winning wellness programs, Yash Vardhan Swami is also among the best health coaches in India.'
     },
     {
-      question: 'How long until I see results?',
-      answer: 'Most men notice improvements within 6 weeks, with significant progress by 3 months. The complete 4-month program is designed for permanent reversal. Results vary based on individual biology and commitment, but you\'ll have weekly progress reviews with your coaches to ensure you\'re on track.'
+      question: 'Is Banana Health credible?',
+      answer: 'Banana Health is a highly credible and reputable platform for treating male sexual health issues. It offers well-structured programs from healthcare experts and has a strong track record supported by a large community of satisfied clients.'
     },
     {
-      question: 'Is this backed by science?',
-      answer: 'Absolutely. Every pillar of our approach is grounded in peer-reviewed research on testosterone optimization, blood flow enhancement, pelvic health, and performance psychology. Our system was developed over 3 years with input from nutritionists, fitness experts, and sexual health specialists. It\'s not a quick fix—it\'s a comprehensive, evidence-based methodology.'
+      question: 'What is the 5-Pillar Integrative Approach?',
+      answer: 'Our 5-Pillar Integrative Approach precisely reveals the exact biological root causes of Erectile Dysfunction, Premature Ejaculation, or other sexual issues in men. This foundation of profound self-understanding immediately equips you with a simple, effective strategy to reclaim and maintain your peak sexual health permanently.'
     },
     {
-      question: 'What if I\'ve tried everything and nothing worked?',
-      answer: 'Most men who come to us have tried pills, exercises, or other methods without lasting success. That\'s because those approaches only address one aspect of the problem. Our 5-Pillar system is different—it simultaneously addresses nutrition, fitness, psychology, lifestyle, and provides daily coaching support. It\'s the most comprehensive natural approach available in India.'
+      question: 'How much time does each session take?',
+      answer: 'Our structured sessions require only 30 minutes of your day over a period of four months. We meticulously track your daily improvements, providing necessary corrections and guidance whenever needed.'
     },
     {
-      question: 'Is my information confidential?',
-      answer: 'Yes, 100%. All client information is protected under strict Non-Disclosure Agreement (NDA). Your coaches, communication, and progress are completely private. We never share your information with anyone. Privacy and discretion are paramount to us.'
+      question: 'Does Banana Health maintain secrecy of their clients?',
+      answer: 'At Banana Health, we prioritize your privacy above all else. We secure every client\'s personal health information with a comprehensive Non-Disclosure Agreement (NDA). This strict commitment to confidentiality ensures you can focus entirely on your health journey with absolute confidence and peace of mind.'
     },
     {
-      question: 'What\'s the money-back guarantee?',
-      answer: 'We offer a full money-back guarantee if you complete the 4-month program as prescribed and see no improvement. We\'re confident in our system because it works—but if it doesn\'t deliver results for you, you get your investment back. Terms and conditions apply. Contact us for full details.'
+      question: 'How long does it typically take to see improvements?',
+      answer: 'Recognizing that one size does not fit all, we implement customized methods tailored specifically to your needs. These personalized approaches are clinically proven to achieve demonstrable improvements in sexual health within a six-week timeframe.'
     },
     {
-      question: 'Do I need to exercise heavily?',
-      answer: 'No. Our Cellular Fitness protocol requires just 30 minutes per day and doesn\'t involve heavy gym workouts. It\'s focused on targeted exercises for pelvic health, cardiovascular function, and nerve optimization—not bodybuilding. Even if you\'re not currently active, our program is designed to be sustainable and effective.'
-    },
-    {
-      question: 'Will I need to take supplements or buy products?',
-      answer: 'The program is based on whole foods and natural lifestyle changes—no expensive supplements required. Your personalized nutrition protocol focuses on regular foods available in India that optimize your hormones and blood flow. Everything you need is included in the program fee.'
-    },
-    {
-      question: 'How does the coaching support work?',
-      answer: 'You\'ll have a team of 4 expert coaches available daily through private messaging and weekly video check-ins. They monitor your progress, answer questions, make adjustments to your protocol, and keep you accountable. You\'re never alone in this journey—your success team is with you every step of the way.'
+      question: 'What happens if the client doesn\'t see any results?',
+      answer: 'If clients don\'t experience any betterment in their sexual health, they are eligible for a full refund. We stand by our Money-Back Guarantee policy, which becomes applicable after the course is completed and no results are achieved. Terms and conditions apply.'
     }
   ];
 
@@ -63,8 +55,7 @@ function FAQ() {
                   Frequently Asked Questions
                 </h4>
                 <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left">
-                  Everything you need to know about reversing ED & PE naturally. Our 5-Pillar approach 
-                  addresses root causes for permanent results without medication.
+                  Get answers to your most pressing questions about Banana Health and our proven approach to men's sexual wellness.
                 </p>
               </div>
               <div className="">

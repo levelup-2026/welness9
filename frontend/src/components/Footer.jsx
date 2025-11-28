@@ -1,78 +1,16 @@
 import React from 'react';
 import { Mail, Phone, Instagram, Facebook, Youtube, Shield } from 'lucide-react';
-import LogoMark from './LogoMark';
-import InteractiveBlob from './InteractiveBlob';
-import ScribbleLine from './ScribbleLine';
-import BlobBackground from './BlobBackground';
 import './Footer.css';
-import '../styles/BlobAnimations.css';
 
 const Footer = () => {
   return (
-    <footer className="main-footer" style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* Enhanced Blob Background */}
-      <BlobBackground 
-        count={3}
-        colors={['blue', 'purple', 'yellow']}
-        sizes={['lg', 'md', 'xl']}
-        enableParallax={false}
-      />
-
-      {/* Interactive Floating Blobs */}
-      <InteractiveBlob
-        color="blue"
-        size="lg"
-        animationType="morph"
-        enableMouseTracking={true}
-        intensity={0.15}
-        style={{ top: '10%', right: '10%', zIndex: 0 }}
-      />
-      <InteractiveBlob
-        color="purple"
-        size="md"
-        animationType="float"
-        enableMouseTracking={true}
-        intensity={0.12}
-        style={{ bottom: '15%', left: '8%', zIndex: 0 }}
-      />
-
-      {/* Decorative Scribbles */}
-      <ScribbleLine
-        type="wave"
-        color="blue"
-        animate={true}
-        float={true}
-        width={300}
-        height={90}
-        strokeWidth={2}
-        style={{ position: 'absolute', top: '20%', left: '5%', opacity: 0.3, zIndex: 0 }}
-      />
-      <ScribbleLine
-        type="squiggle"
-        color="purple"
-        animate={true}
-        wiggle={true}
-        width={280}
-        height={85}
-        strokeWidth={2}
-        style={{ position: 'absolute', bottom: '20%', right: '8%', opacity: 0.3, zIndex: 0 }}
-      />
-
-      {/* Particle Effects */}
-      <div className="particle-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-        <div className="particle" style={{ color: '#60A5FA', top: '15%', animationDuration: '5s' }} />
-        <div className="particle" style={{ color: '#A78BFA', top: '45%', animationDuration: '6s' }} />
-        <div className="particle" style={{ color: '#FCD34D', top: '75%', animationDuration: '7s' }} />
-        <div className="sparkle" style={{ top: '30%', left: '85%', animationDelay: '0s' }} />
-        <div className="sparkle" style={{ top: '65%', left: '15%', animationDelay: '2s' }} />
-      </div>
-
-      <div className="footer-container" style={{ position: 'relative', zIndex: 1 }}>
+    <footer className="main-footer">
+      <div className="footer-container">
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
               <div className="footer-logo-icon">
-                <LogoMark />
+                <img src="/footer.svg" alt="Banana Health" />
               </div>
             </div>
             <p className="footer-tagline">

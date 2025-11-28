@@ -28,9 +28,9 @@ const HeroSection = () => {
       text: 'No pills', 
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          {/* Pill capsule - diagonal orientation */}
           <path d="M10.5 20.5L3.5 13.5C1.5 11.5 1.5 8 3.5 6C5.5 4 9 4 11 6L18 13C20 15 20 18.5 18 20.5C16 22.5 12.5 22.5 10.5 20.5Z"/>
-          <path d="M8.5 8.5L15.5 15.5"/>
-          <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" strokeWidth="2.5"/>
+          <line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/>
         </svg>
       )
     },
@@ -38,14 +38,18 @@ const HeroSection = () => {
       text: 'No pumps', 
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17 3l4 4"/>
-          <path d="M19 5l-9.5 9.5"/>
-          <rect x="4" y="14" width="6" height="8" rx="1" transform="rotate(-45 4 14)"/>
-          <path d="M2 21l1.5-1.5"/>
-          <path d="M12 7l1-1"/>
-          <path d="M14 9l1-1"/>
-          <path d="M16 11l1-1"/>
-          <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" strokeWidth="2.5"/>
+          {/* Vacuum pump - cylinder with handle */}
+          <rect x="7" y="6" width="10" height="14" rx="2"/>
+          {/* Pump handle/grip */}
+          <path d="M9 3h6v3H9z"/>
+          <line x1="12" y1="6" x2="12" y2="3"/>
+          {/* Pump tube */}
+          <path d="M12 20v2"/>
+          <circle cx="12" cy="23" r="1" fill="currentColor"/>
+          {/* Pressure lines inside */}
+          <line x1="9" y1="10" x2="15" y2="10" strokeWidth="1.5"/>
+          <line x1="9" y1="13" x2="15" y2="13" strokeWidth="1.5"/>
+          <line x1="9" y1="16" x2="15" y2="16" strokeWidth="1.5"/>
         </svg>
       )
     },
@@ -53,10 +57,22 @@ const HeroSection = () => {
       text: 'No painful procedures', 
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 3l12 9-3 3-12-9 3-3z"/>
-          <path d="M15 12l5 5"/>
-          <path d="M18 19l2-2"/>
-          <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" strokeWidth="2.5"/>
+          {/* Syringe barrel */}
+          <rect x="8" y="9" width="10" height="6" rx="1"/>
+          {/* Plunger */}
+          <path d="M18 12h3"/>
+          <path d="M21 9v6"/>
+          {/* Needle */}
+          <path d="M8 12H4"/>
+          <path d="M4 12L2 12"/>
+          <circle cx="2" cy="12" r="0.5" fill="currentColor"/>
+          {/* Finger grips */}
+          <path d="M13 9v-2h2v2"/>
+          <path d="M13 15v2h2v-2"/>
+          {/* Dose markers */}
+          <line x1="10" y1="10" x2="10" y2="14" strokeWidth="1"/>
+          <line x1="13" y1="10" x2="13" y2="14" strokeWidth="1"/>
+          <line x1="16" y1="10" x2="16" y2="14" strokeWidth="1"/>
         </svg>
       )
     }
