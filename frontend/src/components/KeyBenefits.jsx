@@ -156,7 +156,7 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="/tiredoftep.png" 
+                src={`${process.env.PUBLIC_URL}/tiredoftep.png`}
                 alt="Tired of temporary fixes"
                 className="benefit-svg"
               />
@@ -177,7 +177,7 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="/anxity.png" 
+                src={`${process.env.PUBLIC_URL}/anxity.png`}
                 alt="Sick of anxiety that ruins intimacy"
                 className="benefit-svg"
               />
@@ -198,7 +198,7 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="/disapointment.png" 
+                src={`${process.env.PUBLIC_URL}/disapointment.png`}
                 alt="Frustrated by programs that deliver disappointment"
                 className="benefit-svg"
               />
@@ -238,7 +238,7 @@ const KeyBenefits = () => {
             <div className="empathy-image-right">
               <div className="main-image-wrapper">
                 <img 
-                  src="/why.png" 
+                  src={`${process.env.PUBLIC_URL}/why.png`}
                   alt="Understanding your journey" 
                   className="main-image-v2" 
                 />
