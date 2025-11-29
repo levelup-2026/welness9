@@ -155,7 +155,7 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="https://cdn.prod.website-files.com/5d5e2ff58f10c53dcffd8683/5d5e309c8f10c53017fd8f15_roller-skating.svg" 
+                src="/Untitled-min.png" 
                 alt="2X Faster Diagnosis"
                 className="benefit-svg"
               />
@@ -179,7 +179,7 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="https://opendoodles.s3-us-west-1.amazonaws.com/dancing.svg" 
+                src="/Untitled(2)-min.png" 
                 alt="Take Control of Your Health"
                 className="benefit-svg"
               />
@@ -203,7 +203,7 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="https://cdn.prod.website-files.com/5d5e2ff58f10c53dcffd8683/5da4a2a996a90ccc56796336_sitting-reading.svg" 
+                src="/Untitled(1)-min.png" 
                 alt="Natural Recovery"
                 className="benefit-svg"
               />
