@@ -1,5 +1,5 @@
 .key-benefits-section {
-  padding: 6rem 4vw;
+  padding: 4rem 4vw;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
   position: relative;
   overflow: hidden;
@@ -144,12 +144,12 @@
 /* Header */
 .benefits-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   position: relative;
 }
 
 .benefits-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: #0f172a;
   margin-bottom: 1.5rem;
@@ -159,13 +159,23 @@
 
 @media (min-width: 768px) {
   .benefits-title {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
 .benefits-highlight-container {
   position: relative;
   display: inline-block;
+}
+
+.benefits-title .highlight-blue {
+  display: inline;
+  color: #0a0a0a;
+  background: linear-gradient(120deg, rgba(212, 233, 255, 0.95) 0%, rgba(178, 217, 255, 0.9) 100%);
+  padding: 0 12px;
+  border-radius: 18px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .benefits-title-underline {
@@ -262,11 +272,11 @@
 .benefit-card {
   background: #ffffff;
   border-radius: 2rem;
-  padding: 2.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  min-height: 550px;
+  gap: 1.5rem;
+  min-height: auto;
   position: relative;
   overflow: hidden;
   border: 2px solid #e2e8f0;
@@ -277,8 +287,8 @@
 
 @media (min-width: 768px) {
   .benefit-card {
-    padding: 3rem;
-    min-height: 600px;
+    padding: 2.5rem;
+    min-height: auto;
   }
 }
 
@@ -379,7 +389,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   position: relative;
   z-index: 1;
 }
@@ -387,8 +397,8 @@
 .benefit-svg {
   width: 100%;
   height: auto;
-  max-width: 280px;
-  max-height: 280px;
+  max-width: 350px;
+  max-height: 350px;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -402,7 +412,7 @@
 .benefit-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   position: relative;
   z-index: 1;
 }
@@ -434,17 +444,17 @@
 }
 
 .benefit-title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: #0f172a;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   margin: 0;
 }
 
 @media (min-width: 768px) {
   .benefit-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -473,6 +483,278 @@
 .benefit-card:hover .benefit-icon-decoration {
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* Redesigned Empathy Section V2 - Refined */
+.empathy-section-v2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  position: relative;
+  /* Removed white background and shadow for seamless look */
+  background: transparent; 
+  padding: 0;
+}
+
+.empathy-container-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .empathy-container-v2 {
+    flex-direction: row;
+    align-items: center; /* Vertically center align */
+    justify-content: space-between;
+    gap: 5rem; /* Increased gap */
+  }
+}
+
+/* Left Column Typography */
+.empathy-content-left {
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .empathy-content-left {
+    max-width: 550px;
+  }
+}
+
+.empathy-headline-v2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #0a0a0a;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  letter-spacing: -1px;
+}
+
+.empathy-headline-v2 .text-blue {
+  color: #0a0a0a;
+}
+
+.empathy-headline-v2 .highlight-blue {
+  display: inline;
+  color: #0a0a0a;
+  background: linear-gradient(120deg, rgba(212, 233, 255, 0.95) 0%, rgba(178, 217, 255, 0.9) 100%);
+  padding: 0 12px;
+  border-radius: 18px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.empathy-body-v2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: #1f2937;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Callout Box - Refined */
+.empathy-callout-v2 {
+  background-color: #FEF08A;
+  border-radius: 1rem;
+  padding: 2rem; /* Increased padding */
+  position: relative;
+  border-left: 4px solid #2563EB; /* Border instead of pseudo-element */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.empathy-callout-v2::before {
+  display: none; /* Remove old pseudo-element */
+}
+
+.callout-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1F2937;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Right Column Image & Floating Elements */
+.empathy-image-right {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.main-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+}
+
+.main-image-v2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image fills container */
+  border-radius: 32px; /* More rounded corners */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  background-color: #f3f4f6; /* Placeholder color while loading */
+}
+
+/* Floating Badge: Mental Wellness - Glass Effect */
+.floating-badge.mental-wellness {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  backdrop-filter: blur(12px); /* Stronger blur */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 10px 20px 10px 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle white border */
+  z-index: 10; /* Higher z-index */
+  animation: float-badge 6s ease-in-out infinite;
+}
+
+.badge-icon-circle {
+  width: 36px;
+  height: 36px;
+  background-color: #2563EB;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.badge-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: 0.05em;
+}
+
+/* Floating Card: Community */
+.floating-card.community-card {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
+  min-width: 180px;
+  animation: float-card 7s ease-in-out infinite;
+}
+
+.avatar-group-v2 {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-v2 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-left: -12px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.avatar-v2:first-child {
+  margin-left: 0;
+}
+
+.avatar-plus-v2 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  border: 2px solid #ffffff;
+  margin-left: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.community-text {
+  font-size: 0.85rem; /* Increased size */
+  color: #4B5563; /* Darker gray */
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-card {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Mobile Responsiveness Adjustments */
+@media (max-width: 767px) {
+  .empathy-section-v2 {
+    padding: 0 1rem;
+    margin-top: 4rem;
+  }
+
+  .empathy-headline-v2 {
+    font-size: 2.5rem;
+  }
+  
+  .empathy-callout-v2 {
+    padding: 1.5rem;
+  }
+
+  .floating-badge.mental-wellness {
+    left: 0;
+    top: -15px;
+    transform: scale(0.9);
+  }
+
+  .floating-card.community-card {
+    right: 0;
+    bottom: -20px;
+    transform: scale(0.9);
+  }
+  
+  .main-image-wrapper {
+    margin: 2rem 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Bottom Doodles */

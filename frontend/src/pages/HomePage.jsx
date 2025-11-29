@@ -28,7 +28,7 @@ const HomePage = () => {
       <Header />
       <HeroSection />
       <FeaturedOn />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <KeyBenefits />
       <ProgramSection />
       <AboutMissionSection />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heart, Sparkles, Brain } from 'lucide-react';
 import InteractiveBlob from './InteractiveBlob';
 import ScribbleLine from './ScribbleLine';
 import BlobBackground from './BlobBackground';
@@ -121,14 +122,14 @@ const KeyBenefits = () => {
         <div className="benefits-header">
           <h2 className="benefits-title">
             <span className="benefits-highlight-container">
-              Your Path to Wellness
+              Are you <span className="highlight-blue">also?</span>
               <svg className="benefits-title-underline" viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3,8 Q75,3 150,8 T297,8" stroke="#60A5FA" strokeWidth="4" strokeLinecap="round" opacity="0.6" />
               </svg>
             </span>
           </h2>
           <p className="benefits-subtitle">
-            Experience transformative health outcomes through our comprehensive approach
+            If these struggles feel familiar, you're not alone
           </p>
         </div>
 
@@ -145,7 +146,7 @@ const KeyBenefits = () => {
             <path d="M95,48 L100,50 L95,52" stroke="#F97316" strokeWidth="2" fill="none" />
           </svg>
 
-          {/* Card 1 - 2X Faster Diagnosis */}
+          {/* Card 1 - Tired of temporary fixes */}
           <div className="benefit-card benefit-card-1">
             <div className="benefit-card-doodle benefit-doodle-1">
               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,21 +156,18 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="/Untitled-min.png" 
-                alt="2X Faster Diagnosis"
+                src="/tiredoftep.png" 
+                alt="Tired of temporary fixes"
                 className="benefit-svg"
               />
             </div>
             <div className="benefit-content">
-              <div className="benefit-badge">Lightning Fast</div>
-              <h3 className="benefit-title">Get Diagnosis<br />2X Faster</h3>
-              <p className="benefit-description">
-                Advanced diagnostics that identify the root cause of your issues, not just the symptoms.
-              </p>
+              <div className="benefit-badge">We Understand</div>
+              <h3 className="benefit-title">Tired of<br />temporary fixes?</h3>
             </div>
           </div>
 
-          {/* Card 2 - Take Control */}
+          {/* Card 2 - Sick of the anxiety */}
           <div className="benefit-card benefit-card-2">
             <div className="benefit-card-doodle benefit-doodle-2">
               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,21 +177,18 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="/Untitled(2)-min.png" 
-                alt="Take Control of Your Health"
+                src="/anxity.png" 
+                alt="Sick of anxiety that ruins intimacy"
                 className="benefit-svg"
               />
             </div>
             <div className="benefit-content">
-              <div className="benefit-badge benefit-badge-blue">Empowered</div>
-              <h3 className="benefit-title">Take Control<br />Of Your Health</h3>
-              <p className="benefit-description">
-                Regain your confidence with sustainable, long-term health improvements.
-              </p>
+              <div className="benefit-badge benefit-badge-blue">You're Not Alone</div>
+              <h3 className="benefit-title">Sick of the anxiety<br />that ruins intimacy?</h3>
             </div>
           </div>
 
-          {/* Card 3 - Natural Recovery */}
+          {/* Card 3 - Frustrated by programs that deliver disappointment */}
           <div className="benefit-card benefit-card-3">
             <div className="benefit-card-doodle benefit-doodle-3">
               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -203,17 +198,70 @@ const KeyBenefits = () => {
             </div>
             <div className="benefit-visual">
               <img 
-                src="/Untitled(1)-min.png" 
-                alt="Natural Recovery"
+                src="/disapointment.png" 
+                alt="Frustrated by programs that deliver disappointment"
                 className="benefit-svg"
               />
             </div>
             <div className="benefit-content">
-              <div className="benefit-badge benefit-badge-orange">Holistic</div>
-              <h3 className="benefit-title">Natural<br />Recovery</h3>
-              <p className="benefit-description">
-                Heal naturally with personalized wellness plans designed to restore balance and vitality to your life.
+              <div className="benefit-badge benefit-badge-orange">We're Different</div>
+              <h3 className="benefit-title">Frustrated by programs<br />that deliver disappointment?</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Empathy Closing Statement - Redesigned with Hero Style */}
+        <div className="empathy-section-v2">
+          <div className="empathy-container-v2">
+            {/* Left Column: Content */}
+            <div className="empathy-content-left">
+              <h2 className="empathy-headline-v2">
+                You Are <br />
+                <span className="highlight-blue">Not Alone</span>
+              </h2>
+              
+              <p className="empathy-body-v2">
+                The secret anxiety of Erectile Dysfunction and Premature Ejaculation can feel isolating. 
+                You've endured the dread before intimacy, the quiet panic, and the feeling of your own body letting you down.
               </p>
+              
+              <div className="empathy-callout-v2">
+                <p className="callout-text">
+                  You deserve more than quick fixes. You need the confidence that when the moment arrives, 
+                  your body will respond perfectly, every single time.
+                  <Sparkles className="inline-sparkle" size={18} fill="#FACC15" color="#FACC15" style={{ display: 'inline', marginLeft: '4px', verticalAlign: 'text-bottom' }} />
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column: Image & Floating Elements */}
+            <div className="empathy-image-right">
+              <div className="main-image-wrapper">
+                <img 
+                  src="/why.png" 
+                  alt="Understanding your journey" 
+                  className="main-image-v2" 
+                />
+                
+                {/* Floating Badge: Mental Wellness */}
+                <div className="floating-badge mental-wellness">
+                  <div className="badge-icon-circle">
+                    <Brain size={18} color="white" />
+                  </div>
+                  <span className="badge-text">MENTAL WELLNESS</span>
+                </div>
+
+                {/* Floating Card: Community */}
+                <div className="floating-card community-card">
+                  <div className="avatar-group-v2">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" className="avatar-v2" />
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User" className="avatar-v2" />
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" className="avatar-v2" />
+                    <div className="avatar-plus-v2">+</div>
+                  </div>
+                  <p className="community-text">Join thousands of men</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

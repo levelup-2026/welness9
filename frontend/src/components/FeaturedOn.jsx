@@ -156,6 +156,72 @@ const FeaturedOn = () => {
           </article>
         ))}
       </div>
+
+      {/* Men We've Helped Section */}
+      <div className="men-helped">
+        <div className="men-helped-header">
+          <p className="men-helped-kicker">Real Results</p>
+          <h3>Men We've Helped</h3>
+        </div>
+        <div className="men-helped-stats">
+          <div className="men-helped-card">
+            <div className="men-helped-icon">
+              <img 
+                src={mediaLogoPath('icon-ed.png')} 
+                alt="ED recovery icon"
+                className="stat-icon"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="men-helped-number">1,500+</p>
+              <p className="men-helped-text">men reversed their Erectile Dysfunction</p>
+            </div>
+          </div>
+          <div className="men-helped-card">
+            <div className="men-helped-icon">
+              <img 
+                src={mediaLogoPath('icon-pe.png')} 
+                alt="PE solution icon"
+                className="stat-icon"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="men-helped-number">1,800+</p>
+              <p className="men-helped-text">men fixed their Premature Ejaculation</p>
+            </div>
+          </div>
+          <div className="men-helped-card">
+            <div className="men-helped-icon">
+              <img 
+                src={mediaLogoPath('icon-intimacy.png')} 
+                alt="Intimacy improvement icon"
+                className="stat-icon"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="men-helped-number">2,000+</p>
+              <p className="men-helped-text">men improved their intimacy</p>
+            </div>
+          </div>
+          <div className="men-helped-card">
+            <div className="men-helped-icon">
+              <img 
+                src={mediaLogoPath('icon-erection.png')} 
+                alt="Stronger erections icon"
+                className="stat-icon"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="men-helped-number">1,000+</p>
+              <p className="men-helped-text">men gained stronger erections</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
