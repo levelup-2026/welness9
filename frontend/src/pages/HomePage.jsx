@@ -30,8 +30,8 @@ const HomePage = () => {
       <FeaturedOn />
       {/* <WhatWeDo /> */}
       <KeyBenefits />
-      <ProgramSection />
-      <AboutMissionSection />
+      {/* <ProgramSection />
+      <AboutMissionSection /> */}
       {/* <SocialProof /> */}
       <ImpactStats />
       <FAQSection />

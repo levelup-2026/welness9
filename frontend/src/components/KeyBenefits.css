@@ -561,12 +561,13 @@
 
 /* Callout Box - Refined */
 .empathy-callout-v2 {
-  background-color: #FEF08A;
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.4) 0%, rgba(147, 197, 253, 0.5) 100%);
   border-radius: 1rem;
   padding: 2rem; /* Increased padding */
   position: relative;
   border-left: 4px solid #2563EB; /* Border instead of pseudo-element */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 2px solid #BFDBFE;
 }
 
 .empathy-callout-v2::before {
