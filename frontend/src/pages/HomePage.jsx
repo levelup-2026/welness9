@@ -6,6 +6,7 @@ import PainPoints from '../components/PainPoints';
 import EmpathySection from '../components/EmpathySection';
 import TransformationVision from '../components/TransformationVision';
 import TransformationCollage from '../components/TransformationCollage';
+import MediaFeatures from '../components/MediaFeatures';
 import ImpactStats from '../components/ImpactStats';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
@@ -30,6 +31,7 @@ const HomePage = () => {
       <EmpathySection />
       <TransformationVision />
       <TransformationCollage />
+      <MediaFeatures />
       {/* <ProgramSection />
       <AboutMissionSection /> */}
       {/* <SocialProof /> */}
