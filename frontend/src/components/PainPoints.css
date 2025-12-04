@@ -53,12 +53,12 @@
   }
 
   .pain-visual {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .pain-svg {
-    max-width: 240px;
-    max-height: 240px;
+    max-width: 760px;
+    max-height: 760px;
   }
 
   .pain-badge {

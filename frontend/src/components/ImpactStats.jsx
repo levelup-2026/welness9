@@ -69,7 +69,7 @@ const thirdColumn = impactStories.slice(6, 9);
 
 const ImpactStats = () => {
   return (
-    <section className="bg-background my-20 relative overflow-hidden">
+    <section id="impact" className="bg-background my-20 relative overflow-hidden">
       {/* Enhanced Blob Background */}
       <BlobBackground 
         count={4}

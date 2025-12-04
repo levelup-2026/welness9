@@ -7,7 +7,7 @@ import '../styles/BlobAnimations.css';
 
 const FAQSection = () => {
   return (
-    <div style={{ position: 'relative' }}>
+    <div id="faq" style={{ position: 'relative' }}>
       {/* Enhanced Blob Background */}
       <BlobBackground 
         count={4}

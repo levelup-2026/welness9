@@ -79,7 +79,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="hero-section">
+    <section id="hero" className="hero-section">
       {/* Enhanced Blob Background */}
       <BlobBackground 
         count={5}

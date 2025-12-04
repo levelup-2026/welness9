@@ -11,31 +11,24 @@ const TransformationCollage = () => {
           <h2 className="collage-headline">
             Unachievable?
           </h2>
-          
-          <p className="collage-description">
-            We don't think so. That's why we engineered a scientifically proven method that has helped over{' '}
-            <span className="highlight-text">5,000 men</span>{' '}
-            escape the endless cycle of quick fixes.
-          </p>
+
+          <div className="root-cause-badge">
+            <p className="badge-text">
+              We don't think so. That's why we engineered a scientifically proven method that has helped over <span className="highlight-text">5,000 men</span> escape the endless cycle of quick fixes. By targeting the true root cause of Erectile Dysfunction and Premature Ejaculation, our approach delivers measurable results in as little as 6 weeks.
+            </p>
+          </div>
+
+          <img 
+            src="/doodle-arrow.svg" 
+            className="doodle-arrow" 
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="cta-wrapper">
             <button className="collage-cta-button">
               Take Free Assessment →
             </button>
-            <img 
-              src="/doodle-arrow.svg" 
-              className="doodle-arrow" 
-              alt=""
-              aria-hidden="true"
-            />
-          </div>
-
-          <div className="root-cause-badge">
-            <span className="badge-label">ROOT CAUSE APPROACH</span>
-            <p className="badge-text">
-              By targeting the true root cause of Erectile Dysfunction and Premature Ejaculation, 
-              our approach delivers measurable results that last—not just temporary relief.
-            </p>
           </div>
         </div>
 
@@ -81,7 +74,7 @@ const TransformationCollage = () => {
           {/* Decorative Icons */}
           <img src="/heart-pulse-svgrepo-com.svg" className="doodle-star star-1" alt="" aria-hidden="true" />
           <img src="/stopwatch-svgrepo-com.svg" className="doodle-star star-2" alt="" aria-hidden="true" />
-          <img src="/arm-muscles-silhouette-svgrepo-com.svg" className="doodle-star star-3" alt="" aria-hidden="true" />
+          <img src="/arm-muscles-silhouette-svgrepo-com.svg" className="doodle-star star-4" alt="" aria-hidden="true" />
 
         </div>
       </div>

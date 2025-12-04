@@ -7,7 +7,7 @@ import '../styles/BlobAnimations.css';
 
 const PainPoints = () => {
   return (
-    <section className="pain-points-section">
+    <section id="pain-points" className="pain-points-section">
       {/* Enhanced Blob Background */}
       <BlobBackground 
         count={5}
@@ -127,9 +127,6 @@ const PainPoints = () => {
               </svg>
             </span>
           </h2>
-          <p className="pain-subtitle">
-            If these struggles feel familiar, you're not alone
-          </p>
         </div>
 
         {/* Pain Points Cards Grid */}

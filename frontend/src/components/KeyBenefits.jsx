@@ -128,9 +128,6 @@ const KeyBenefits = () => {
               </svg>
             </span>
           </h2>
-          <p className="benefits-subtitle">
-            If these struggles feel familiar, you're not alone
-          </p>
         </div>
 
         {/* Benefits Cards Grid */}

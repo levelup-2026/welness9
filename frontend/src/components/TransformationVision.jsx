@@ -48,7 +48,7 @@ const TransformationVision = () => {
   ];
 
   return (
-    <section className="transformation-vision-section">
+    <section id="transformation" className="transformation-vision-section">
       {/* Enhanced Blob Background */}
       <BlobBackground 
         count={6}

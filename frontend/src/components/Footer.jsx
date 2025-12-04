@@ -1,10 +1,18 @@
 import React from 'react';
 import { Mail, Phone, Instagram, Facebook, Youtube, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="main-footer">
+    <footer id="contact-us" className="main-footer">
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-brand">
@@ -31,44 +39,43 @@ const Footer = () => {
 
           <div className="footer-links">
             <div className="footer-column">
-              <h4 className="footer-heading">Quick Links</h4>
+              <h4 className="footer-heading">Explore</h4>
               <ul className="footer-list">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#approach">5-Pillar Approach</a></li>
-                <li><a href="#program">Our Program</a></li>
-                <li><a href="#success-stories">Success Stories</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>Home</a></li>
+                <li><a href="#pain-points" onClick={(e) => { e.preventDefault(); scrollToSection('pain-points'); }}>Our Understanding</a></li>
+                <li><a href="#transformation" onClick={(e) => { e.preventDefault(); scrollToSection('transformation'); }}>Transformation</a></li>
+                <li><a href="#impact" onClick={(e) => { e.preventDefault(); scrollToSection('impact'); }}>Impact Stories</a></li>
+                <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollToSection('faq'); }}>FAQ</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
-              <h4 className="footer-heading">Program</h4>
+              <h4 className="footer-heading">Get Started</h4>
               <ul className="footer-list">
-                <li><a href="#program">How It Works</a></li>
-                <li><a href="#approach">Methodology</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); window.open('https://example.com/quiz', '_blank'); }}>Free Assessment</a></li>
-                <li><a href="#contact">Book Strategy Call</a></li>
-                <li><a href="#success-stories">Results & Testimonials</a></li>
+                <li><a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>Begin Your Journey</a></li>
+                <li><a href="#transformation" onClick={(e) => { e.preventDefault(); scrollToSection('transformation'); }}>Our Approach</a></li>
+                <li><a href="#impact" onClick={(e) => { e.preventDefault(); scrollToSection('impact'); }}>Success Stories</a></li>
+                <li><a href="#contact-us" onClick={(e) => { e.preventDefault(); scrollToSection('contact-us'); }}>Contact Us</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="footer-heading">Support</h4>
               <ul className="footer-list">
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#faq">Help Center</a></li>
+                <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollToSection('faq'); }}>Help Center</a></li>
                 <li><a href="mailto:support@bananahealth.in">Email Support</a></li>
                 <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a></li>
+                <li><a href="#contact-us" onClick={(e) => { e.preventDefault(); scrollToSection('contact-us'); }}>Get In Touch</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="footer-heading">Legal</h4>
               <ul className="footer-list">
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms & Conditions</a></li>
-                <li><a href="#nda">NDA Commitment</a></li>
-                <li><a href="#refund">Refund Policy</a></li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
+                <li><Link to="/confidentiality">Confidentiality</Link></li>
+                <li><Link to="/refund-policy">Refund Policy</Link></li>
               </ul>
             </div>
           </div>
