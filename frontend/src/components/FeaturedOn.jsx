@@ -75,7 +75,8 @@ const FeaturedOn = () => {
       description: 'Understanding the science behind food triggers and how to manage them for better health outcomes.',
       date: 'June 2021',
       url: 'https://www.cosmopolitan.in/life/features/story/watch-out-these-food-triggers-can-make-you-overeat-663741-2021-06-25',
-      publisher: 'Cosmopolitan'
+      publisher: 'Cosmopolitan',
+      image: mediaLogoPath('cosmopolitian.jpg')
     },
     {
       name: 'India Today',
@@ -83,7 +84,8 @@ const FeaturedOn = () => {
       description: 'Featuring influential leaders transforming India\'s wellness and fitness landscape.',
       date: 'December 2022',
       url: 'https://www.indiatoday.in/impact-feature/story/meet-10-leaders-who-make-india-a-global-bright-spot-2309980-2022-12-16',
-      publisher: 'India Today'
+      publisher: 'India Today',
+      image: mediaLogoPath('indiatoday.jpg')
     },
     {
       name: 'Times of India',
@@ -91,7 +93,8 @@ const FeaturedOn = () => {
       description: 'Inspiring transformation journey showcasing the power of consistent fitness routines.',
       date: 'December 2021',
       url: 'https://timesofindia.indiatimes.com/life-style/health-fitness/weight-loss/weight-loss-story-i-did-cardio-and-weight-training-5-days-to-lose-44-kilos/photostory/87607509.cms?from=mdr',
-      publisher: 'Times of India'
+      publisher: 'Times of India',
+      image: mediaLogoPath('TOI.jpg')
     },
     {
       name: 'Mid-Day',
@@ -99,7 +102,8 @@ const FeaturedOn = () => {
       description: 'How one fitness entrepreneur is revolutionizing the wellness industry.',
       date: 'May 2019',
       url: 'https://www.mid-day.com/entertainment/bollywood-news/article/yash-vardhan-swami-takes-fitness-and-entrepreneurship-to-next-level-21197158',
-      publisher: 'Mid-Day'
+      publisher: 'Mid-Day',
+      image: mediaLogoPath('MIDDAY.jpg')
     },
     {
       name: 'Red Bull',
@@ -107,7 +111,8 @@ const FeaturedOn = () => {
       description: 'Expert advice on nutrition strategies for optimal fitness performance.',
       date: '2023',
       url: 'https://www.redbull.com/in-en/nutrition-tips-to-achieve-fitness-goals',
-      publisher: 'Red Bull'
+      publisher: 'Red Bull',
+      image: mediaLogoPath('REDBULL.jpg')
     },
     {
       name: 'DNA India',
@@ -115,15 +120,8 @@ const FeaturedOn = () => {
       description: 'Celebrity fitness coach Yash Vardhan Swami shares insights on true body positivity.',
       date: 'April 2021',
       url: 'https://www.dnaindia.com/lifestyle/report-real-body-positivity-is-misunderstood-celebrity-fitness-coach-yash-vardhan-swami-2842993',
-      publisher: 'DNA'
-    },
-    {
-      name: 'News18',
-      headline: 'Meet Fitness Expert Yash Vardhan Swami - A New Social Media Sensation',
-      description: 'The rise of a fitness influencer making waves in the wellness community.',
-      date: 'February 2022',
-      url: 'https://hindi.news18.com/news/lifestyle/meet-fitness-expert-yash-vardhan-swami-who-is-a-new-social-media-sensation-3560761.html',
-      publisher: 'News18'
+      publisher: 'DNA',
+      image: mediaLogoPath('DNA.jpg')
     },
     {
       name: 'The Pioneer',
@@ -131,7 +129,8 @@ const FeaturedOn = () => {
       description: 'Exploring sustainable approaches to wellness and fitness transformation.',
       date: 'May 2022',
       url: 'https://www.dailypioneer.com/2022/vivacity/inch-away.html',
-      publisher: 'The Pioneer'
+      publisher: 'The Pioneer',
+      image: mediaLogoPath('PIONEER.jpg')
     }
   ];
 
@@ -187,9 +186,18 @@ const FeaturedOn = () => {
               className="spotlight-card"
             >
               <div className="spotlight-image-wrapper">
-                <div className="spotlight-placeholder">
-                  <span className="spotlight-publisher-name">{feature.publisher}</span>
-                </div>
+                {feature.image ? (
+                  <img 
+                    src={feature.image} 
+                    alt={`${feature.publisher} logo`}
+                    className="spotlight-image"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="spotlight-placeholder">
+                    <span className="spotlight-publisher-name">{feature.publisher}</span>
+                  </div>
+                )}
               </div>
               <div className="spotlight-meta">
                 <p className="spotlight-source">{feature.name}</p>
