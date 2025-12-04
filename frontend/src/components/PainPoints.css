@@ -1,0 +1,492 @@
+.pain-points-section {
+  padding: 4rem 4vw;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 767px) {
+  .pain-points-section {
+    padding: 4rem 5vw;
+    min-height: auto;
+  }
+
+  .pain-points-container {
+    padding: 0;
+  }
+
+  .pain-header {
+    margin-bottom: 3rem;
+  }
+
+  .pain-title {
+    font-size: clamp(32px, 8vw, 42px);
+    margin-bottom: 1.25rem;
+    animation: mobileSlideUp 0.8s ease-out both;
+  }
+
+  .pain-subtitle {
+    font-size: clamp(16px, 4.2vw, 18px);
+    animation: mobileSlideUp 0.9s ease-out both;
+    animation-delay: 0.1s;
+  }
+
+  .pain-points-grid {
+    gap: 2rem;
+  }
+
+  .pain-card {
+    padding: 2rem;
+    min-height: 480px;
+    border-radius: 24px;
+    touch-action: manipulation;
+    will-change: transform;
+  }
+
+  .pain-card:active {
+    transform: scale(0.98);
+  }
+
+  .pain-visual {
+    padding: 1rem;
+  }
+
+  .pain-svg {
+    max-width: 240px;
+    max-height: 240px;
+  }
+
+  .pain-badge {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .pain-card-title {
+    font-size: clamp(28px, 6.5vw, 34px);
+  }
+
+  .pain-bottom-doodles {
+    display: none;
+  }
+
+  /* Staggered Animation for Cards */
+  .pain-card:nth-child(1) {
+    animation: mobileSlideUp 1s ease-out both;
+    animation-delay: 0.2s;
+  }
+
+  .pain-card:nth-child(2) {
+    animation: mobileSlideUp 1s ease-out both;
+    animation-delay: 0.3s;
+  }
+
+  .pain-card:nth-child(3) {
+    animation: mobileSlideUp 1s ease-out both;
+    animation-delay: 0.4s;
+  }
+}
+
+/* Background decorations */
+.pain-bg-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pain-bg-left {
+  top: 10%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  opacity: 0.4;
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.pain-bg-right {
+  bottom: 15%;
+  right: -3%;
+  width: 200px;
+  height: 200px;
+  opacity: 0.3;
+  animation: rotate-slow 25s linear infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, -30px) rotate(5deg); }
+}
+
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Container */
+.pain-points-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+/* Header */
+.pain-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.pain-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .pain-title {
+    font-size: 5rem;
+  }
+}
+
+.pain-highlight-container {
+  position: relative;
+  display: inline-block;
+}
+
+.pain-title .highlight-blue {
+  display: inline;
+  color: #0a0a0a;
+  background: linear-gradient(120deg, rgba(212, 233, 255, 0.95) 0%, rgba(178, 217, 255, 0.9) 100%);
+  padding: 0 12px;
+  border-radius: 18px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.pain-title-underline {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: auto;
+  pointer-events: none;
+}
+
+.pain-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .pain-subtitle {
+    font-size: 1.35rem;
+  }
+}
+
+/* Pain Points Grid */
+.pain-points-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  position: relative;
+  margin-bottom: 4rem;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .pain-points-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pain-points-grid {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pain-points-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* Connecting Doodles between cards */
+.pain-connector {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 180px;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+  animation: dash-flow 8s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .pain-connector {
+    display: block;
+  }
+}
+
+.connector-1-2 {
+  left: calc(33.333% - 90px);
+  transform: translateY(-50%);
+}
+
+.connector-2-3 {
+  left: calc(66.666% - 90px);
+  transform: translateY(-50%);
+}
+
+@keyframes dash-flow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 100; }
+}
+
+/* Pain Point Cards */
+.pain-card {
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: auto;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .pain-card {
+    padding: 2.5rem;
+    min-height: auto;
+  }
+}
+
+.pain-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  border-color: #cbd5e1;
+}
+
+/* Card-specific styles */
+.pain-card-1 {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.4) 0%, rgba(253, 230, 138, 0.5) 100%);
+  border-color: #FDE68A;
+}
+
+.pain-card-1:hover {
+  border-color: #FCD34D;
+  box-shadow: 0 20px 50px rgba(251, 191, 36, 0.2);
+}
+
+.pain-card-2 {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.4) 0%, rgba(147, 197, 253, 0.5) 100%);
+  border-color: #BFDBFE;
+}
+
+.pain-card-2:hover {
+  border-color: #93C5FD;
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
+}
+
+.pain-card-3 {
+  background: linear-gradient(135deg, rgba(254, 237, 213, 0.4) 0%, rgba(254, 215, 170, 0.5) 100%);
+  border-color: #FED7AA;
+}
+
+.pain-card-3:hover {
+  border-color: #FDBA74;
+  box-shadow: 0 20px 50px rgba(249, 115, 22, 0.2);
+}
+
+/* Card Doodles */
+.pain-card-doodle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.pain-doodle-1 {
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  animation: spin-gentle 12s linear infinite;
+}
+
+.pain-doodle-2 {
+  bottom: -15px;
+  left: -15px;
+  width: 90px;
+  height: 90px;
+  animation: wiggle-rotate 10s ease-in-out infinite;
+}
+
+.pain-doodle-3 {
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 110px;
+  animation: wave-float 8s ease-in-out infinite;
+}
+
+@keyframes spin-gentle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wiggle-rotate {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(5deg) translateY(-5px); }
+  75% { transform: rotate(-5deg) translateY(5px); }
+}
+
+@keyframes wave-float {
+  0%, 100% { transform: translateX(-50%) translateY(0) scaleX(1); }
+  50% { transform: translateX(-50%) translateY(-10px) scaleX(1.1); }
+}
+
+.pain-card:hover .pain-card-doodle {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Pain Visual */
+.pain-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pain-svg {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  max-height: 350px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pain-card:hover .pain-svg {
+  transform: scale(1.08) translateY(-5px);
+}
+
+/* Pain Content */
+.pain-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pain-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  color: #92400E;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.2);
+}
+
+.pain-badge-blue {
+  background: linear-gradient(135deg, #DBEAFE 0%, #93C5FD 100%);
+  color: #1E3A8A;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.pain-badge-orange {
+  background: linear-gradient(135deg, #FFEDD5 0%, #FDBA74 100%);
+  color: #7C2D12;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.2);
+}
+
+.pain-card-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .pain-card-title {
+    font-size: 2rem;
+  }
+}
+
+/* Bottom Doodles */
+.pain-bottom-doodles {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 2rem;
+}
+
+.bottom-doodle-left,
+.bottom-doodle-right {
+  width: 150px;
+  height: auto;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bottom-doodle-left {
+  animation: slide-left 6s ease-in-out infinite;
+}
+
+.bottom-doodle-right {
+  animation: slide-right 7s ease-in-out infinite;
+}
+
+@keyframes slide-left {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-15px); }
+}
+
+@keyframes slide-right {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(15px); }
+}

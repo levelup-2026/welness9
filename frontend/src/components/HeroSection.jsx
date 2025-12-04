@@ -172,7 +172,10 @@ const HeroSection = () => {
           </h1>
 
           <p className="hero-subtitle">
-            <strong>Fix ED and PE Permanently in 6 Weeks.</strong> We are the #1 natural solution, featured in media houses like Cosmopolitan, The Times of India, and Hindustan Times. Trusted by over 5,000 men, doctors, and experts, we deliver proven methods.
+            <strong>Fix ED and PE Permanently in 6 Weeks.</strong>
+          </p>
+          <p className="hero-subtitle">
+            We are the #1 natural solution, featured in media houses like Cosmopolitan, The Times of India, and Hindustan Times. Trusted by over 5,000 men, doctors, and experts, we deliver proven methods.
           </p>
 
           <div className="hero-no-meds" aria-label="No shortcuts promise">

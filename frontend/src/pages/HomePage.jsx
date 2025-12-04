@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import FeaturedOn from '../components/FeaturedOn';
-import KeyBenefits from '../components/KeyBenefits';
+import PainPoints from '../components/PainPoints';
+import EmpathySection from '../components/EmpathySection';
 import TransformationVision from '../components/TransformationVision';
 import TransformationCollage from '../components/TransformationCollage';
 import ImpactStats from '../components/ImpactStats';
@@ -26,7 +27,8 @@ const HomePage = () => {
       <HeroSection />
       <FeaturedOn />
       {/* <WhatWeDo /> */}
-      <KeyBenefits />
+      <PainPoints />
+      <EmpathySection />
       <TransformationVision />
       <TransformationCollage />
       {/* <ProgramSection />
