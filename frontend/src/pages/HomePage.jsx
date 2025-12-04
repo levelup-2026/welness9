@@ -2,13 +2,10 @@ import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import FeaturedOn from '../components/FeaturedOn';
-import WhatWeDo from '../components/WhatWeDo';
 import KeyBenefits from '../components/KeyBenefits';
+import TransformationVision from '../components/TransformationVision';
+import TransformationCollage from '../components/TransformationCollage';
 import ImpactStats from '../components/ImpactStats';
-import BrandStory from '../components/BrandStory';
-import ProgramSection from '../components/ProgramSection';
-import AboutMissionSection from '../components/AboutMissionSection';
-import SocialProof from '../components/SocialProof';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 import MobileFloatingCTA from '../components/MobileFloatingCTA';
@@ -30,6 +27,8 @@ const HomePage = () => {
       <FeaturedOn />
       {/* <WhatWeDo /> */}
       <KeyBenefits />
+      <TransformationVision />
+      <TransformationCollage />
       {/* <ProgramSection />
       <AboutMissionSection /> */}
       {/* <SocialProof /> */}
