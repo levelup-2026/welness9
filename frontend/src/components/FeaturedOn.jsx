@@ -70,28 +70,68 @@ const FeaturedOn = () => {
 
   const mediaSpotlights = [
     {
-      name: 'Hindustan Times',
-      headline: '"India\'s most trusted natural program for men\'s sexual health."',
-      description: 'Discover how our comprehensive five-pillar system is transforming the landscape of men\'s wellness through personalized, evidence-based strategies that address the whole person.',
-      date: 'May 2024',
-      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
-      alt: 'Hindustan Times newsroom feature'
+      name: 'Cosmopolitan',
+      headline: 'Watch Out: These Food Triggers Can Make You Overeat',
+      description: 'Understanding the science behind food triggers and how to manage them for better health outcomes.',
+      date: 'June 2021',
+      url: 'https://www.cosmopolitan.in/life/features/story/watch-out-these-food-triggers-can-make-you-overeat-663741-2021-06-25',
+      publisher: 'Cosmopolitan'
+    },
+    {
+      name: 'India Today',
+      headline: 'Meet 10 Leaders Who Make India a Global Bright Spot',
+      description: 'Featuring influential leaders transforming India\'s wellness and fitness landscape.',
+      date: 'December 2022',
+      url: 'https://www.indiatoday.in/impact-feature/story/meet-10-leaders-who-make-india-a-global-bright-spot-2309980-2022-12-16',
+      publisher: 'India Today'
     },
     {
       name: 'Times of India',
-      headline: 'Featured in the Health & Lifestyle report on long-term ED recovery.',
-      description: 'Learn why leading health professionals are embracing our innovative approach that combines cutting-edge research with time-tested wellness principles for lasting results.',
-      date: 'Aug 2024',
-      image: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80',
-      alt: 'Times of India editorial highlight'
+      headline: 'Weight Loss Story: I Did Cardio and Weight Training 5 Days to Lose 44 Kilos',
+      description: 'Inspiring transformation journey showcasing the power of consistent fitness routines.',
+      date: 'December 2021',
+      url: 'https://timesofindia.indiatimes.com/life-style/health-fitness/weight-loss/weight-loss-story-i-did-cardio-and-weight-training-5-days-to-lose-44-kilos/photostory/87607509.cms?from=mdr',
+      publisher: 'Times of India'
     },
     {
-      name: 'Forbes',
-      headline: 'Recognized for building a science-backed alternative to quick fixes.',
-      description: 'Explore the remarkable success stories and clinical outcomes that demonstrate the power of our holistic methodology in creating sustainable health improvements.',
-      date: 'Jan 2025',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
-      alt: 'Forbes feature imagery'
+      name: 'Mid-Day',
+      headline: 'Yash Vardhan Swami Takes Fitness and Entrepreneurship to Next Level',
+      description: 'How one fitness entrepreneur is revolutionizing the wellness industry.',
+      date: 'May 2019',
+      url: 'https://www.mid-day.com/entertainment/bollywood-news/article/yash-vardhan-swami-takes-fitness-and-entrepreneurship-to-next-level-21197158',
+      publisher: 'Mid-Day'
+    },
+    {
+      name: 'Red Bull',
+      headline: 'Nutrition Tips to Achieve Fitness Goals',
+      description: 'Expert advice on nutrition strategies for optimal fitness performance.',
+      date: '2023',
+      url: 'https://www.redbull.com/in-en/nutrition-tips-to-achieve-fitness-goals',
+      publisher: 'Red Bull'
+    },
+    {
+      name: 'DNA India',
+      headline: 'Real Body Positivity is Misunderstood - Celebrity Fitness Coach',
+      description: 'Celebrity fitness coach Yash Vardhan Swami shares insights on true body positivity.',
+      date: 'April 2021',
+      url: 'https://www.dnaindia.com/lifestyle/report-real-body-positivity-is-misunderstood-celebrity-fitness-coach-yash-vardhan-swami-2842993',
+      publisher: 'DNA'
+    },
+    {
+      name: 'News18',
+      headline: 'Meet Fitness Expert Yash Vardhan Swami - A New Social Media Sensation',
+      description: 'The rise of a fitness influencer making waves in the wellness community.',
+      date: 'February 2022',
+      url: 'https://hindi.news18.com/news/lifestyle/meet-fitness-expert-yash-vardhan-swami-who-is-a-new-social-media-sensation-3560761.html',
+      publisher: 'News18'
+    },
+    {
+      name: 'The Pioneer',
+      headline: 'Inch Away - The Journey to Better Health',
+      description: 'Exploring sustainable approaches to wellness and fitness transformation.',
+      date: 'May 2022',
+      url: 'https://www.dailypioneer.com/2022/vivacity/inch-away.html',
+      publisher: 'The Pioneer'
     }
   ];
 
@@ -136,25 +176,30 @@ const FeaturedOn = () => {
         </div>
       </div>
 
-      <div className="featured-spotlights">
-        {mediaSpotlights.map((feature) => (
-          <article key={feature.name} className="spotlight-card">
-            <div className="spotlight-image-wrapper">
-              <img 
-                src={feature.image}
-                alt={feature.alt}
-                loading="lazy"
-                className="spotlight-image"
-              />
-            </div>
-            <div className="spotlight-meta">
-              <p className="spotlight-source">{feature.name}</p>
-              <h4 className="spotlight-headline">{feature.headline}</h4>
-              <p className="spotlight-description">{feature.description}</p>
-              <span className="spotlight-date">{feature.date}</span>
-            </div>
-          </article>
-        ))}
+      <div className="featured-spotlights-container">
+        <div className="featured-spotlights">
+          {mediaSpotlights.map((feature, index) => (
+            <a 
+              key={index} 
+              href={feature.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="spotlight-card"
+            >
+              <div className="spotlight-image-wrapper">
+                <div className="spotlight-placeholder">
+                  <span className="spotlight-publisher-name">{feature.publisher}</span>
+                </div>
+              </div>
+              <div className="spotlight-meta">
+                <p className="spotlight-source">{feature.name}</p>
+                <h4 className="spotlight-headline">{feature.headline}</h4>
+                <p className="spotlight-description">{feature.description}</p>
+                <span className="spotlight-date">{feature.date}</span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* Men We've Helped Section */}
