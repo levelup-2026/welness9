@@ -218,57 +218,57 @@ const FeaturedOn = () => {
         </div>
         <div className="men-helped-stats">
           <div className="men-helped-card">
-            <div className="men-helped-icon">
+            <div className="men-helped-icon-wrapper">
               <img 
-                src={mediaLogoPath('icon-ed.png')} 
+                src={process.env.PUBLIC_URL + '/heart-pulse.svg'}
                 alt="ED recovery icon"
-                className="stat-icon"
+                className="men-helped-icon"
                 loading="lazy"
               />
             </div>
-            <div>
+            <div className="men-helped-content">
               <p className="men-helped-number">1,500+</p>
               <p className="men-helped-text">men reversed their Erectile Dysfunction</p>
             </div>
           </div>
           <div className="men-helped-card">
-            <div className="men-helped-icon">
+            <div className="men-helped-icon-wrapper">
               <img 
-                src={mediaLogoPath('icon-pe.png')} 
+                src={process.env.PUBLIC_URL + '/time-past.svg'}
                 alt="PE solution icon"
-                className="stat-icon"
+                className="men-helped-icon"
                 loading="lazy"
               />
             </div>
-            <div>
+            <div className="men-helped-content">
               <p className="men-helped-number">1,800+</p>
               <p className="men-helped-text">men fixed their Premature Ejaculation</p>
             </div>
           </div>
           <div className="men-helped-card">
-            <div className="men-helped-icon">
+            <div className="men-helped-icon-wrapper">
               <img 
-                src={mediaLogoPath('icon-intimacy.png')} 
+                src={process.env.PUBLIC_URL + '/couple.svg'}
                 alt="Intimacy improvement icon"
-                className="stat-icon"
+                className="men-helped-icon"
                 loading="lazy"
               />
             </div>
-            <div>
+            <div className="men-helped-content">
               <p className="men-helped-number">2,000+</p>
               <p className="men-helped-text">men improved their intimacy</p>
             </div>
           </div>
           <div className="men-helped-card">
-            <div className="men-helped-icon">
+            <div className="men-helped-icon-wrapper">
               <img 
-                src={mediaLogoPath('icon-erection.png')} 
+                src={process.env.PUBLIC_URL + '/muscle-gain.svg'}
                 alt="Stronger erections icon"
-                className="stat-icon"
+                className="men-helped-icon"
                 loading="lazy"
               />
             </div>
-            <div>
+            <div className="men-helped-content">
               <p className="men-helped-number">1,000+</p>
               <p className="men-helped-text">men gained stronger erections</p>
             </div>
