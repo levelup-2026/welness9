@@ -158,7 +158,6 @@ const PainPoints = () => {
               />
             </div>
             <div className="pain-content">
-              <div className="pain-badge">We Understand</div>
               <h3 className="pain-card-title">Tired of<br />temporary fixes?</h3>
             </div>
           </div>
@@ -179,7 +178,6 @@ const PainPoints = () => {
               />
             </div>
             <div className="pain-content">
-              <div className="pain-badge pain-badge-blue">You're Not Alone</div>
               <h3 className="pain-card-title">Sick of the anxiety<br />that ruins intimacy?</h3>
             </div>
           </div>
@@ -200,7 +198,6 @@ const PainPoints = () => {
               />
             </div>
             <div className="pain-content">
-              <div className="pain-badge pain-badge-orange">We're Different</div>
               <h3 className="pain-card-title">Frustrated by programs<br />that deliver disappointment?</h3>
             </div>
           </div>

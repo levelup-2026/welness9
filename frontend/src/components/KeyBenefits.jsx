@@ -159,7 +159,6 @@ const KeyBenefits = () => {
               />
             </div>
             <div className="benefit-content">
-              <div className="benefit-badge">We Understand</div>
               <h3 className="benefit-title">Tired of<br />temporary fixes?</h3>
             </div>
           </div>
@@ -180,7 +179,6 @@ const KeyBenefits = () => {
               />
             </div>
             <div className="benefit-content">
-              <div className="benefit-badge benefit-badge-blue">You're Not Alone</div>
               <h3 className="benefit-title">Sick of the anxiety<br />that ruins intimacy?</h3>
             </div>
           </div>
@@ -201,7 +199,6 @@ const KeyBenefits = () => {
               />
             </div>
             <div className="benefit-content">
-              <div className="benefit-badge benefit-badge-orange">We're Different</div>
               <h3 className="benefit-title">Frustrated by programs<br />that deliver disappointment?</h3>
             </div>
           </div>

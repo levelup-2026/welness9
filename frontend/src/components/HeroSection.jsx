@@ -162,18 +162,19 @@ const HeroSection = () => {
         <div className="hero-cards-container">
           <div className="info-card floating">
             <div className="card-header">
-              <button className="about-tag">Natural Solution <span className="superscript">01</span></button>
-              <button className="link-icon-btn">
+              <button className="about-tag">
+                Meet the Founder <ArrowRight size={14} strokeWidth={2} style={{ marginLeft: '6px' }} />
+              </button>
+              {/* <button className="link-icon-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M8 2L14 8L8 14M14 8H2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </button>
+              </button> */}
               <button className="add-btn-circle">+</button>
             </div>
             <div className="card-content">
-              <p className="card-text" style={{ marginBottom: '1rem' }}>Get ready to take control again,<br />because you are at the right place!</p>
-              <div className="product-image-container">
-                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop" alt="Natural health transformation" className="product-img" />
+              <div className="product-image-container founder-image">
+                <img src="/yash.jpg" alt="Founder - Head Coach" className="product-img founder-img" />
                 <div className="product-icons">
                     {heroProductIcons.map(({ Icon, label }) => (
                       <span key={label} className="icon-circle" aria-label={label}>
@@ -182,13 +183,13 @@ const HeroSection = () => {
                     ))}
                 </div>
               </div>
+              <p className="card-text founder-bio">A visionary leader dedicated to transforming men's sexual health naturally. His expertise and commitment drive our mission.</p>
             </div>
           </div>
 
           <div className="quiz-stat-card">
             <p className="stat-label">
-              <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden="true" />
-              Join Thousands of Men!
+              Join Thousands of Men! <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden="true" />
             </p>
             <div className="stat-number-card">
               <h2 className="stat-number">5,000+</h2>
