@@ -174,7 +174,7 @@ const HeroSection = () => {
             </div>
             <div className="card-content">
               <div className="product-image-container founder-image">
-                <img src="/yash.jpg" alt="Founder - Head Coach" className="product-img founder-img" />
+                <img src="/hero1.png" alt="Founder - Head Coach" className="product-img founder-img" />
                 <div className="product-icons">
                     {heroProductIcons.map(({ Icon, label }) => (
                       <span key={label} className="icon-circle" aria-label={label}>

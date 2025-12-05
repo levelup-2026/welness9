@@ -1,6 +1,6 @@
 /* Mobile First - Base styles */
 .hero-section {
-  min-height: 200vh;
+  min-height: auto;
   background: linear-gradient(135deg, #fafafa 0%, #ffffff 50%, #f5f5f5 100%);
   padding: 80px 20px 60px;
   position: relative;
@@ -108,11 +108,11 @@
 
 .hero-content {
   max-width: 100%;
-  min-height: calc(200vh - 140px);
+  min-height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 60px;
   align-items: flex-start;
   position: relative;
   z-index: 1;
@@ -120,14 +120,14 @@
 
 .hero-main {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   animation: fadeInUp 0.8s ease-out both;
   position: relative;
   z-index: 1;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .hero-title {
@@ -339,7 +339,7 @@
 
 .hero-cards-container {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -348,7 +348,7 @@
   animation: fadeInUp 0.9s ease-out both;
   animation-delay: 0.1s;
   z-index: 1;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .info-card {
@@ -479,7 +479,7 @@
 
 .founder-img {
   object-fit: cover;
-  object-position: center top;
+  object-position: center 35%;
   mix-blend-mode: normal;
   opacity: 1;
   border-radius: 16px;
