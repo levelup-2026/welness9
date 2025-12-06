@@ -33,7 +33,8 @@ const EmpathySection = () => {
             <img 
               src={`${process.env.PUBLIC_URL}/why.png`}
               alt="Understanding your journey" 
-              className="main-image-v2" 
+              className="main-image-v2"
+              loading="lazy"
             />
             
             {/* Floating Badge: Mental Wellness */}
@@ -47,9 +48,9 @@ const EmpathySection = () => {
             {/* Floating Card: Community */}
             <div className="floating-card community-card">
               <div className="avatar-group-v2">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" className="avatar-v2" />
-                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User" className="avatar-v2" />
-                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" className="avatar-v2" />
+                <div className="avatar-v2 avatar-placeholder">Y</div>
+                <div className="avatar-v2 avatar-placeholder">R</div>
+                <div className="avatar-v2 avatar-placeholder">A</div>
                 <div className="avatar-plus-v2">+</div>
               </div>
               <p className="community-text">Join thousands of men</p>

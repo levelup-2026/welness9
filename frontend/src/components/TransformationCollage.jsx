@@ -23,6 +23,7 @@ const TransformationCollage = () => {
             className="doodle-arrow" 
             alt=""
             aria-hidden="true"
+            loading="lazy"
           />
 
           <div className="cta-wrapper">
@@ -41,12 +42,13 @@ const TransformationCollage = () => {
               src="/unachheivable.png" 
               alt="Man walking confidently" 
               className="character-image"
+              loading="lazy"
             />
           </div>
 
           {/* Stat Box 1 - Top Right */}
           <div className="stat-box stat-box-1">
-            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" />
+            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" loading="lazy" />
             <div className="stat-box-content">
               <span className="stat-number">6 Weeks</span>
               <span className="stat-label">To Measurable Results</span>
@@ -55,7 +57,7 @@ const TransformationCollage = () => {
 
           {/* Stat Box 2 - Bottom Left */}
           <div className="stat-box stat-box-2">
-            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" />
+            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" loading="lazy" />
             <div className="stat-box-content">
               <span className="stat-number">5,000+</span>
               <span className="stat-label">Success Stories</span>
@@ -64,7 +66,7 @@ const TransformationCollage = () => {
 
           {/* Stat Box 3 - Bottom Right */}
           <div className="stat-box stat-box-3">
-            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" />
+            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" loading="lazy" />
             <div className="stat-box-content">
               <span className="stat-number">100%</span>
               <span className="stat-label">Natural Method</span>
@@ -72,9 +74,9 @@ const TransformationCollage = () => {
           </div>
 
           {/* Decorative Icons */}
-          <img src="/heart-pulse-svgrepo-com.svg" className="doodle-star star-1" alt="" aria-hidden="true" />
-          <img src="/stopwatch-svgrepo-com.svg" className="doodle-star star-2" alt="" aria-hidden="true" />
-          <img src="/arm-muscles-silhouette-svgrepo-com.svg" className="doodle-star star-4" alt="" aria-hidden="true" />
+          <img src="/heart-pulse-svgrepo-com.svg" className="doodle-star star-1" alt="" aria-hidden="true" loading="lazy" />
+          <img src="/stopwatch-svgrepo-com.svg" className="doodle-star star-2" alt="" aria-hidden="true" loading="lazy" />
+          <img src="/arm-muscles-silhouette-svgrepo-com.svg" className="doodle-star star-4" alt="" aria-hidden="true" loading="lazy" />
 
         </div>
       </div>

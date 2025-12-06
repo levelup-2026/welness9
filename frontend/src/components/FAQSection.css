@@ -1,4 +1,9 @@
 /* Mobile First */
+.faq-section-wrapper {
+  position: relative;
+  background: linear-gradient(180deg, #fafafa 0%, white 100%);
+}
+
 .faq-section {
   padding: 60px 20px;
   background: linear-gradient(180deg, #fafafa 0%, white 100%);

@@ -339,6 +339,16 @@
   margin-left: -12px;
 }
 
+.avatar.avatar-placeholder {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .avatar:first-child {
   margin-left: 0;
 }

@@ -186,6 +186,16 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+.avatar-v2.avatar-placeholder {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .avatar-v2:first-child {
   margin-left: 0;
 }

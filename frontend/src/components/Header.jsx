@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Share2, Instagram, Youtube, Facebook, Menu, X } from 'lucide-react';
 import LogoMark from './LogoMark';
 import './Header.css';
@@ -7,29 +7,37 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
+  const ticking = useRef(false);
 
-  // Handle scroll for floating effect and hide/show
+  // Optimized scroll handler with requestAnimationFrame throttling
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Set scrolled state for styling
-      setIsScrolled(currentScrollY > 10);
-      
-      // Show header when scrolling up, hide when scrolling down
-      if (currentScrollY < lastScrollY || currentScrollY < 100) {
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const lastScrollY = lastScrollYRef.current;
+          
+          // Set scrolled state for styling
+          setIsScrolled(currentScrollY > 10);
+          
+          // Show header when scrolling up, hide when scrolling down
+          if (currentScrollY < lastScrollY || currentScrollY < 100) {
+            setIsVisible(true);
+          } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            setIsVisible(false);
+          }
+          
+          lastScrollYRef.current = currentScrollY;
+          ticking.current = false;
+        });
+        ticking.current = true;
       }
-      
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {

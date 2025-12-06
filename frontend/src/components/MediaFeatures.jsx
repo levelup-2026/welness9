@@ -1,5 +1,51 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './MediaFeatures.css';
+
+const LazyIframe = ({ src, title, className }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px', threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="lazy-iframe-container">
+      {isVisible ? (
+        <iframe
+          src={src}
+          title={title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className={className}
+          loading="lazy"
+        />
+      ) : (
+        <div className="iframe-placeholder">
+          <div className="placeholder-content">
+            <div className="play-icon">▶</div>
+            <p>Loading video...</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const MediaFeatures = () => {
   return (
@@ -12,14 +58,11 @@ const MediaFeatures = () => {
           {/* Left Column - Main Featured Video (TEDx) */}
           <div className="featured-video-main">
             <div className="video-wrapper primary-video">
-              <iframe
+              <LazyIframe
                 src="https://www.youtube.com/embed/CyYJGb0etjs?start=2"
                 title="TEDx Talk"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
                 className="video-iframe"
-              ></iframe>
+              />
             </div>
           </div>
 
@@ -29,28 +72,22 @@ const MediaFeatures = () => {
             {/* Instagram Video - Fiitakofficial */}
             <div className="featured-video-secondary">
               <div className="video-wrapper secondary-video">
-                <iframe
+                <LazyIframe
                   src="https://www.instagram.com/tv/CTPRCrvD7XO/embed"
                   title="FitTak Instagram - Nutritionist Yash Wardhan"
-                  frameBorder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
                   className="video-iframe"
-                ></iframe>
+                />
               </div>
             </div>
 
             {/* YouTube Video - Saas Bahu Betiyaan */}
             <div className="featured-video-secondary">
               <div className="video-wrapper secondary-video">
-                <iframe
+                <LazyIframe
                   src="https://www.youtube.com/embed/1YFI3y5aAes"
                   title="Saas Bahu Betiyaan"
-                  frameBorder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
                   className="video-iframe"
-                ></iframe>
+                />
               </div>
             </div>
 

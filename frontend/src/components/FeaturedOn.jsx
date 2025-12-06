@@ -147,6 +147,7 @@ const FeaturedOn = () => {
                 alt={media.alt}
                 className="media-logo"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           ))}
@@ -158,17 +159,7 @@ const FeaturedOn = () => {
                 alt={media.alt}
                 className="media-logo"
                 loading="lazy"
-              />
-            </div>
-          ))}
-          {/* Third set to ensure no gaps */}
-          {mediaLogos.map((media, index) => (
-            <div key={`${media.name}-3`} className="media-logo-wrapper">
-              <img 
-                src={media.logo} 
-                alt={media.alt}
-                className="media-logo"
-                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

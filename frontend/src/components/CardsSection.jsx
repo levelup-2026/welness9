@@ -22,6 +22,7 @@ const CardsSection = () => {
               src="/hero1.png" 
               alt="Founder Yash Vardhan coaching session" 
               className="card-img"
+              loading="lazy"
             />
             <div className="image-overlay">
               <span className="overlay-badge">Forbes Featured Coach</span>
@@ -71,21 +72,9 @@ const CardsSection = () => {
             <p className="stat-text">Men transformed their sexual health naturally</p>
             <div className="stat-footer">
               <div className="avatars">
-                <img 
-                  src="https://randomuser.me/api/portraits/men/32.jpg" 
-                  alt="Success story member" 
-                  className="avatar"
-                />
-                <img 
-                  src="https://randomuser.me/api/portraits/men/33.jpg" 
-                  alt="Success story member" 
-                  className="avatar"
-                />
-                <img 
-                  src="https://randomuser.me/api/portraits/men/34.jpg" 
-                  alt="Success story member" 
-                  className="avatar"
-                />
+                <div className="avatar avatar-placeholder">Y</div>
+                <div className="avatar avatar-placeholder">R</div>
+                <div className="avatar avatar-placeholder">A</div>
                 <div className="avatar-plus">+</div>
               </div>
               <span className="join-text">Join the movement</span>
