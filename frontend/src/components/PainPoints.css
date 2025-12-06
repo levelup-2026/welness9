@@ -12,7 +12,7 @@
 /* Mobile Optimizations */
 @media (max-width: 767px) {
   .pain-points-section {
-    padding: 4rem 5vw;
+    padding: 1rem 5vw;
     min-height: auto;
   }
 
@@ -21,12 +21,12 @@
   }
 
   .pain-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   .pain-title {
     font-size: clamp(32px, 8vw, 42px);
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.75rem;
     animation: mobileSlideUp 0.8s ease-out both;
   }
 
@@ -140,7 +140,7 @@
 /* Header */
 .pain-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   position: relative;
 }
 

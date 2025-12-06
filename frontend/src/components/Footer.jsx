@@ -60,16 +60,6 @@ const Footer = () => {
             </div>
 
             <div className="footer-column">
-              <h4 className="footer-heading">Support</h4>
-              <ul className="footer-list">
-                <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollToSection('faq'); }}>Help Center</a></li>
-                <li><a href="mailto:support@bananahealth.in">Email Support</a></li>
-                <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a></li>
-                <li><a href="#contact-us" onClick={(e) => { e.preventDefault(); scrollToSection('contact-us'); }}>Get In Touch</a></li>
-              </ul>
-            </div>
-
-            <div className="footer-column">
               <h4 className="footer-heading">Legal</h4>
               <ul className="footer-list">
                 <li><Link to="/privacy-policy">Privacy Policy</Link></li>

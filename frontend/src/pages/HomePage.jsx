@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
+import CardsSection from '../components/CardsSection';
 import FeaturedOn from '../components/FeaturedOn';
 import PainPoints from '../components/PainPoints';
 import EmpathySection from '../components/EmpathySection';
@@ -25,17 +26,22 @@ const HomePage = () => {
     <div className="homepage">
       <Header />
       <HeroSection />
+      <CardsSection />
       <FeaturedOn />
       {/* <WhatWeDo /> */}
       <PainPoints />
       <EmpathySection />
+      
+      {/* Ambient spacing before transformation vision */}
+      <div className="ambient-spacer" style={{ height: '120px', background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.02) 0%, rgba(15, 23, 42, 0.08) 100%)' }}></div>
+      
       <TransformationVision />
       <TransformationCollage />
       <MediaFeatures />
       {/* <ProgramSection />
       <AboutMissionSection /> */}
       {/* <SocialProof /> */}
-      <ImpactStats />
+      {/* <ImpactStats /> */}
       <FAQSection />
       <Footer />
     </div>
