@@ -31,7 +31,7 @@ const AboutMissionSection = () => {
   ];
 
   return (
-    <section className="about-mission-section" id="about">
+    <section className="about-mission-section" id="about-us">
       {/* Enhanced Blob Background */}
       <BlobBackground 
         count={5}

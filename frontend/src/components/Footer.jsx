@@ -41,21 +41,22 @@ const Footer = () => {
             <div className="footer-column">
               <h4 className="footer-heading">Explore</h4>
               <ul className="footer-list">
-                <li><a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>Home</a></li>
-                <li><a href="#pain-points" onClick={(e) => { e.preventDefault(); scrollToSection('pain-points'); }}>Our Understanding</a></li>
-                <li><a href="#transformation" onClick={(e) => { e.preventDefault(); scrollToSection('transformation'); }}>Transformation</a></li>
-                <li><a href="#impact" onClick={(e) => { e.preventDefault(); scrollToSection('impact'); }}>Impact Stories</a></li>
-                <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollToSection('faq'); }}>FAQ</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about-us">About Us</Link></li>
+                <li><a href="/#pain-points">Our Understanding</a></li>
+                <li><a href="/#transformation">Transformation</a></li>
+                <li><a href="/#impact">Impact Stories</a></li>
+                <li><a href="/#faq">FAQ</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="footer-heading">Get Started</h4>
               <ul className="footer-list">
-                <li><a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>Begin Your Journey</a></li>
-                <li><a href="#transformation" onClick={(e) => { e.preventDefault(); scrollToSection('transformation'); }}>Our Approach</a></li>
-                <li><a href="#impact" onClick={(e) => { e.preventDefault(); scrollToSection('impact'); }}>Success Stories</a></li>
-                <li><a href="#contact-us" onClick={(e) => { e.preventDefault(); scrollToSection('contact-us'); }}>Contact Us</a></li>
+                <li><a href="/#hero">Begin Your Journey</a></li>
+                <li><a href="/#transformation">Our Approach</a></li>
+                <li><a href="/#impact">Success Stories</a></li>
+                <li><a href="/#contact-us">Contact Us</a></li>
               </ul>
             </div>
 

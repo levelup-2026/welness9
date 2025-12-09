@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Share2, Instagram, Youtube, Facebook, Menu, X } from 'lucide-react';
 import LogoMark from './LogoMark';
 import './Header.css';
@@ -73,8 +74,8 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="header-nav desktop-nav">
-            <a href="#about-us" className="nav-link">About Us</a>
-            <a href="#contact-us" className="nav-link">Contact Us</a>
+            <Link to="/about-us" className="nav-link">About Us</Link>
+            <a href="/#contact-us" className="nav-link">Contact Us</a>
           </nav>
 
           {/* Desktop Social Icons */}
@@ -117,10 +118,10 @@ const Header = () => {
       {/* Mobile Menu Drawer */}
       <nav className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <a href="#about-us" className="mobile-nav-link" onClick={closeMobileMenu}>
+          <Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>
             About Us
-          </a>
-          <a href="#contact-us" className="mobile-nav-link" onClick={closeMobileMenu}>
+          </Link>
+          <a href="/#contact-us" className="mobile-nav-link" onClick={closeMobileMenu}>
             Contact Us
           </a>
 

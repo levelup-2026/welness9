@@ -9,6 +9,7 @@ import TransformationVision from '../components/TransformationVision';
 import TransformationCollage from '../components/TransformationCollage';
 import MediaFeatures from '../components/MediaFeatures';
 import ImpactStats from '../components/ImpactStats';
+import ContactUs from '../components/ContactUs';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 
@@ -38,11 +39,11 @@ const HomePage = () => {
       <TransformationVision />
       <TransformationCollage />
       <MediaFeatures />
-      {/* <ProgramSection />
-      <AboutMissionSection /> */}
+      {/* <ProgramSection /> */}
       {/* <SocialProof /> */}
       {/* <ImpactStats /> */}
       <FAQSection />
+      <ContactUs />
       <Footer />
     </div>
   );
