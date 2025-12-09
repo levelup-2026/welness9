@@ -6,25 +6,23 @@ const TransformationCollage = () => {
     <section className="transformation-collage">
       <div className="collage-container">
         
-        {/* Left Column - Text Content */}
+        {/* === LEFT COLUMN: Content === */}
         <div className="collage-content">
           <h2 className="collage-headline">
             Unachievable?
           </h2>
 
-          <div className="root-cause-badge">
-            <p className="badge-text">
-              We don't think so. That's why we engineered a scientifically proven method that has helped over <span className="highlight-text">5,000 men</span> escape the endless cycle of quick fixes. By targeting the true root cause of Erectile Dysfunction and Premature Ejaculation, our approach delivers measurable results in as little as 6 weeks.
+          {/* The "We don't think so" Box */}
+          <div className="message-box">
+            <p className="message-text">
+              <strong>We don't think so.</strong> That's why we engineered a scientifically proven method that has helped over <span className="highlight">5,000 men</span> escape the endless cycle of quick fixes. By targeting the true root cause of Erectile Dysfunction and Premature Ejaculation, our approach delivers measurable results in as little as 6 weeks.
             </p>
           </div>
 
-          <img 
-            src="/doodle-arrow.svg" 
-            className="doodle-arrow" 
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-          />
+          {/* Arrow pointing to button */}
+          <div className="arrow-wrapper">
+             <img src="/doodle-arrow.svg" alt="Arrow" className="connector-arrow" />
+          </div>
 
           <div className="cta-wrapper">
             <button className="collage-cta-button">
@@ -33,50 +31,44 @@ const TransformationCollage = () => {
           </div>
         </div>
 
-        {/* Right Column - Visual Collage */}
+        {/* === RIGHT COLUMN: Visuals === */}
         <div className="collage-visual">
           
-          {/* Main Character Image */}
-          <div className="main-character">
+          {/* Main Character (Man holding tablet) */}
+          <div className="main-character-wrapper">
             <img 
-              src="/unachheivable.png" 
-              alt="Man walking confidently" 
-              className="character-image"
+              src="/realprogress.jpg" 
+              alt="Successful man showing results" 
+              className="main-character-img"
               loading="lazy"
             />
           </div>
 
-          {/* Stat Box 1 - Top Right */}
-          <div className="stat-box stat-box-1">
-            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" loading="lazy" />
-            <div className="stat-box-content">
-              <span className="stat-number">6 Weeks</span>
-              <span className="stat-label">To Measurable Results</span>
-            </div>
+          {/* Floating Card 1: Top Left (Man looking at watch) */}
+          <div className="float-card card-top-left">
+            <img src="/man-waiting.jpg" alt="Man waiting" className="card-img-cover" />
           </div>
 
-          {/* Stat Box 2 - Bottom Left */}
-          <div className="stat-box stat-box-2">
-            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" loading="lazy" />
-            <div className="stat-box-content">
-              <span className="stat-number">5,000+</span>
-              <span className="stat-label">Success Stories</span>
-            </div>
+          {/* Floating Card 2: Top Right (Text Only - 6 Weeks) */}
+          <div className="float-card card-top-right text-card">
+            <span className="card-big-text">6 Weeks</span>
           </div>
 
-          {/* Stat Box 3 - Bottom Right */}
-          <div className="stat-box stat-box-3">
-            <img src="/doodle-box.svg" className="stat-box-bg" alt="" aria-hidden="true" loading="lazy" />
-            <div className="stat-box-content">
-              <span className="stat-number">100%</span>
-              <span className="stat-label">Natural Method</span>
-            </div>
+          {/* Floating Card 3: Bottom Left (Group of men) */}
+          <div className="float-card card-bottom-left">
+             <img src="/successtories.jpg" alt="Success stories" className="card-img-cover" />
+             <div className="card-caption">
+                <strong>5,000+</strong><br/>Success Stories
+             </div>
           </div>
 
-          {/* Decorative Icons */}
-          <img src="/heart-pulse-svgrepo-com.svg" className="doodle-star star-1" alt="" aria-hidden="true" loading="lazy" />
-          <img src="/stopwatch-svgrepo-com.svg" className="doodle-star star-2" alt="" aria-hidden="true" loading="lazy" />
-          <img src="/arm-muscles-silhouette-svgrepo-com.svg" className="doodle-star star-4" alt="" aria-hidden="true" loading="lazy" />
+           {/* Floating Card 4: Bottom Right (Counseling) */}
+           <div className="float-card card-bottom-right">
+             <img src="/coun celling.jpg" alt="Counseling" className="card-img-cover" />
+             <div className="card-caption">
+                <strong>100%</strong><br/>Super Natural
+             </div>
+          </div>
 
         </div>
       </div>

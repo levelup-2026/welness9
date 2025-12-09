@@ -31,7 +31,7 @@ const EmpathySection = () => {
         <div className="empathy-image-right">
           <div className="main-image-wrapper">
             <img 
-              src={`${process.env.PUBLIC_URL}/why.png`}
+              src={`${process.env.PUBLIC_URL}/unnamed.jpg`}
               alt="Understanding your journey" 
               className="main-image-v2"
               loading="lazy"
