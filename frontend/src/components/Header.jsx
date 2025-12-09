@@ -65,17 +65,18 @@ const Header = () => {
       <header className={`main-header ${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : 'hidden'}`}>
         <div className="header-container">
           <div className="header-left">
-            <div className="logo">
+            <Link to="/" className="logo">
               <div className="logo-icon">
                 <LogoMark />
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="header-nav desktop-nav">
+            <Link to="/our-approach" className="nav-link">Our Approach</Link>
             <Link to="/about-us" className="nav-link">About Us</Link>
-            <a href="/#contact-us" className="nav-link">Contact Us</a>
+            <Link to="/about-us#contact-banana-health" className="nav-link">Contact Us</Link>
           </nav>
 
           {/* Desktop Social Icons */}
@@ -118,12 +119,15 @@ const Header = () => {
       {/* Mobile Menu Drawer */}
       <nav className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
+          <Link to="/our-approach" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Our Approach
+          </Link>
           <Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>
             About Us
           </Link>
-          <a href="/#contact-us" className="mobile-nav-link" onClick={closeMobileMenu}>
+          <Link to="/about-us#contact-banana-health" className="mobile-nav-link" onClick={closeMobileMenu}>
             Contact Us
-          </a>
+          </Link>
 
           <div className="mobile-social">
             <button className="icon-btn" aria-label="Share" onClick={closeMobileMenu}>
