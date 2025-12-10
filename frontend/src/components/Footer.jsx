@@ -17,8 +17,8 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              <div className="footer-logo">
-                <img src={`${process.env.PUBLIC_URL}/footer.svg`} alt="Banana Health" loading="lazy" />
+              <div className="footer-logo-icon">
+                <img src="/footer.svg" alt="Banana Health" loading="lazy" />
               </div>
             </div>
             <p className="footer-tagline">

@@ -182,11 +182,11 @@
   transform: translateX(-50%);
   
   /* Larger width for bigger pop-out effect */
-  width: 95%;
-  max-width: 380px;
+  width: 100%;
+  max-width: 420px;
   
   /* Increased height to pop out above background */
-  height: 220px;
+  height: 250px;
   object-fit: contain; /* Show entire person/object, not cropped */
   object-position: bottom; /* Align image to bottom of container */
   

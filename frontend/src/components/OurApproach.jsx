@@ -1,5 +1,6 @@
 import React from 'react';
-import { Scan, Utensils, Brain, Calendar, Users, Activity, Sparkles, ArrowRight, Zap } from 'lucide-react';
+import { Scan, Utensils, Brain, Calendar, Users, Activity } from 'lucide-react';
+import LogoMark from './LogoMark';
 import './OurApproach.css';
 
 const OurApproach = () => {
@@ -23,14 +24,14 @@ const OurApproach = () => {
       title: 'Cellular Fitness + Nerve & Mind Reset',
       description: 'Targeted, short workouts to build the erection engine, combined with daily neuro-techniques to eliminate performance anxiety.',
       icon: Brain,
-      image: '/PERFORMANCE.jpg'
+      image: '/HABIT.jpg'
     },
     {
       number: '04',
       title: 'Performance Habit System',
       description: 'Coaching on critical routines: sleep, testosterone optimization, breathwork, and performance journaling for long-term control.',
       icon: Calendar,
-      image: '/HABIT.jpg'
+      image: '/PERFORMANCE.jpg'
     },
     {
       number: '05',
@@ -44,99 +45,38 @@ const OurApproach = () => {
   return (
     <section className="our-approach-section">
       <div className="our-approach-container">
-        
-        {/* Hero Section - Redesigned */}
-        <div className="approach-hero-redesigned">
-          <div className="approach-header-centered">
-            <h2 className="approach-main-heading">
-              Our <span className="approach-heading-highlight">Approach</span>
-            </h2>
+
+        {/* Hero Section */}
+        <div className="approach-hero">
+          <div className="approach-badge">
+            <Activity size={16} />
+            <span>Our Approach: How We Fix</span>
           </div>
-          
-          <div className="approach-hero-grid">
-            {/* Image Column */}
-            <div className="approach-image-column">
-              <div className="approach-image-decoration"></div>
-              <div className="approach-image-card">
-                <img 
-                  src="/APPROACH.jpg" 
-                  alt="A supportive consultation symbolizing leaving shame behind" 
-                  className="approach-hero-photo"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="approach-photo-placeholder" style={{ display: 'none' }}>
-                  <Activity size={80} className="placeholder-icon" />
-                </div>
-                <div className="approach-floating-badge">
-                  <p className="approach-badge-text">
-                    <Zap size={16} />
-                    <span>5-Pillar System</span>
-                  </p>
-                </div>
-              </div>
+
+          <div className="approach-grid">
+            <div className="approach-content">
+              <h1 className="approach-title">Together, let’s leave the shame behind.</h1>
+              <p className="approach-description">
+                Our 5-Pillar Integrative Approach delivers profound self-understanding by revealing the exact biological blockages causing Erectile Dysfunction, Premature Ejaculation, and other forms of sexual dysfunction in men. You then receive a clear, uncomplicated strategy to achieve and maintain peak performance for life.
+              </p>
             </div>
-
-            {/* Content Column */}
-            <div className="approach-content-column">
-              <div className="approach-content-wrapper">
-                
-                {/* Tagline */}
-                <h2 className="approach-headline">
-                  Together, let's leave<br />
-                  the shame <span className="approach-highlight-natural">behind. <Sparkles className="approach-inline-sparkle" size={28} /></span>
-                </h2>
-                
-                <div className="approach-main-description">
-                  <p>
-                    Our <span className="approach-text-highlight">5-Pillar Integrative Approach</span> delivers profound self-understanding by revealing the exact biological blockages causing Erectile Dysfunction, Premature Ejaculation, and other forms of sexual dysfunction in men.
-                  </p>
-                  <p>
-                    You then receive a clear, uncomplicated strategy to achieve and maintain <span className="approach-text-highlight">peak performance for life</span>.
-                  </p>
-                </div>
-
-                {/* Quick Feature Cards */}
-                <div className="approach-feature-cards-grid">
-                  <div className="approach-feature-card">
-                    <div className="approach-feature-icon yellow-icon">
-                      <Activity size={28} strokeWidth={2} />
-                    </div>
-                    <div className="approach-feature-text">
-                      <h3 className="approach-feature-heading">Root Cause Analysis</h3>
-                      <p className="approach-feature-description">
-                        We identify the exact biological and psychological blockages causing your condition.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="approach-feature-card">
-                    <div className="approach-feature-icon blue-icon">
-                      <ArrowRight size={28} strokeWidth={2} />
-                    </div>
-                    <div className="approach-feature-text">
-                      <h3 className="approach-feature-heading">Clear Action Plan</h3>
-                      <p className="approach-feature-description">
-                        A step-by-step roadmap to permanent transformation, guided by expert coaches.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="approach-image-container">
+              <div className="approach-image-decoration" />
+              <img
+                src="/APPROACH.jpg"
+                alt="A supportive consultation symbolizing leaving shame behind"
+                className="approach-hero-image"
+              />
             </div>
           </div>
         </div>
 
         {/* 5 Pillars Section */}
         <div className="pillars-section">
-          <div className="pillars-header-styled">
-            <h2 className="pillars-main-title">
-              The Five <span className="pillars-highlight-box">Pillars</span>
-            </h2>
-            <div className="pillars-divider-line"></div>
-            <p className="pillars-intro-text">
+          <div className="pillars-header">
+            <span className="pillars-badge">The System</span>
+            <h2>The Five Pillars: A Holistic Approach</h2>
+            <p>
               We don't offer a product; we offer a system designed for busy men seeking lasting change. This is a targeted, step-by-step commitment to health, guided by four expert coaches.
             </p>
           </div>
@@ -164,38 +104,30 @@ const OurApproach = () => {
           </div>
         </div>
 
-        {/* Vision Section - Redesigned */}
-        <div className="vision-section-redesigned">
-          <div className="vision-header-styled">
-            <h2 className="vision-main-title">
-              Our <span className="vision-highlight-box">Vision</span>
-            </h2>
-            <div className="vision-divider-line"></div>
-            <p className="vision-subtitle">The Future We Are Creating</p>
+        {/* Vision Section */}
+        <div className="vision-section">
+          <div className="vision-image">
+            <div className="vision-logo-badge">
+              <LogoMark className="vision-logo-mark" />
+            </div>
+            <img
+              src="/_DSC1103(1).jpg"
+              alt="Our Vision - The Future We Are Creating"
+              className="vision-hero-image"
+            />
           </div>
-          
-          <div className="vision-content-grid">
-            <div className="vision-story-card">
-              <div className="vision-story-content">
-                <div className="vision-quote-icon">
-                  <Sparkles size={32} />
-                </div>
-                <div className="vision-story-text">
-                  <p>
-                    As a fitness coach with peak health, I was shocked to personally experience Erectile Dysfunction in 2021. Despite my health being on point, the first incident quickly led to crippling performance anxiety, proving ED is a silent pandemic that can hit anyone.
-                  </p>
-                  <p>
-                    My subsequent 18 months of research revealed the standard solutions were insufficient: doctors only offered the "Blue Pill" (Viagra) forever, which I determined was an unnatural band-aid that would prevent a natural fix.
-                  </p>
-                  <p>
-                    Driven by the need for a permanent, natural solution, and my goal to see every man live an ED and medicine-free life forever, I dedicated my team and three years of effort to crafting the most advanced solution on the planet to reverse ED permanently.
-                  </p>
-                </div>
-                <div className="vision-founder-badge">
-                  <span className="founder-name">— Yash Vardhan Swami</span>
-                  <span className="founder-title">Founder</span>
-                </div>
-              </div>
+          <div className="vision-content">
+            <h2>Our Vision: The Future We Are Creating</h2>
+            <div className="vision-text">
+              <p>
+                As a fitness coach with peak health, I was shocked to personally experience Erectile Dysfunction in 2021. Despite my health being on point, the first incident quickly led to crippling performance anxiety, proving ED is a silent pandemic that can hit anyone.
+              </p>
+              <p>
+                My subsequent 18 months of research revealed the standard solutions were insufficient: doctors only offered the "Blue Pill" (Viagra) forever, which I determined was an unnatural band-aid that would prevent a natural fix.
+              </p>
+              <p>
+                Driven by the need for a permanent, natural solution, and my goal to see every man live an ED and medicine-free life forever, I dedicated my team and three years of effort to crafting the most advanced solution on the planet to reverse ED permanently.
+              </p>
             </div>
           </div>
         </div>
