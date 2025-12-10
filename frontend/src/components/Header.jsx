@@ -74,6 +74,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="header-nav desktop-nav">
+            <Link to="/" className="nav-link">Home</Link>
             <Link to="/our-approach" className="nav-link">Our Approach</Link>
             <Link to="/about-us" className="nav-link">About Us</Link>
             <Link to="/about-us#contact-banana-health" className="nav-link">Contact Us</Link>
@@ -119,6 +120,9 @@ const Header = () => {
       {/* Mobile Menu Drawer */}
       <nav className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
+          <Link to="/" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Home
+          </Link>
           <Link to="/our-approach" className="mobile-nav-link" onClick={closeMobileMenu}>
             Our Approach
           </Link>
