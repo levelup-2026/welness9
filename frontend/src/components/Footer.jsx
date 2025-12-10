@@ -25,13 +25,16 @@ const Footer = () => {
               India's leading natural sexual health transformation platform. Reverse ED & PE permanently without pills, pumps, or side effects.
             </p>
             <div className="footer-socials">
-              <a href="https://instagram.com/bananahealth" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
+              <a href="https://www.linkedin.com/company/banana-health-with-chetan" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v5.25a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75V14a2 2 0 0 0-4 0v5.25a.75.75 0 0 1-.75.75h-3.5A.75.75 0 0 1 8 19.25V9a.75.75 0 0 1 .75-.75h3.5A.75.75 0 0 1 13 9v.5a6 6 0 0 1 3-1.5Zm-8 2.25V19.25A.75.75 0 0 1 7.25 20h-3.5A.75.75 0 0 1 3 19.25V10.25A.75.75 0 0 1 3.75 9.5h3.5A.75.75 0 0 1 8 10.25ZM5 7.5A2 2 0 1 1 5 3.5a2 2 0 0 1 0 4Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </a>
+              <a href="https://www.instagram.com/mybanana.health?igsh=MW14ZmxkZGo4bGhkbQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
                 <Instagram size={18} />
               </a>
-              <a href="https://facebook.com/bananahealth" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61572211965994&sk=reels_tab" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
                 <Facebook size={18} />
               </a>
-              <a href="https://youtube.com/@bananahealth" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="YouTube">
+              <a href="https://youtube.com/@trainedbyyvs?si=j5KhjEX4wWXHN2mL" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="YouTube">
                 <Youtube size={18} />
               </a>
             </div>

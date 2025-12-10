@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Share2, Instagram, Youtube, Facebook, Menu, X } from 'lucide-react';
+import { Share2, Instagram, Youtube, Facebook, Linkedin, Menu, X } from 'lucide-react';
 import LogoMark from './LogoMark';
 import './Header.css';
 
@@ -61,6 +61,7 @@ const Header = () => {
   };
 
   return (
+
     <>
       <header className={`main-header ${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : 'hidden'}`}>
         <div className="header-container">
@@ -82,18 +83,42 @@ const Header = () => {
 
           {/* Desktop Social Icons */}
           <div className="header-right desktop-social">
-            <button className="icon-btn" aria-label="Share">
-              <Share2 size={18} />
-            </button>
-            <button className="icon-btn" aria-label="Instagram">
+            <a
+              className="icon-btn"
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/company/banana-health-with-chetan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a
+              className="icon-btn"
+              aria-label="Instagram"
+              href="https://www.instagram.com/mybanana.health?igsh=MW14ZmxkZGo4bGhkbQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Instagram size={18} />
-            </button>
-            <button className="icon-btn" aria-label="YouTube">
+            </a>
+            <a
+              className="icon-btn"
+              aria-label="YouTube"
+              href="https://youtube.com/@trainedbyyvs?si=j5KhjEX4wWXHN2mL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Youtube size={18} />
-            </button>
-            <button className="icon-btn" aria-label="Facebook">
+            </a>
+            <a
+              className="icon-btn"
+              aria-label="Facebook"
+              href="https://www.facebook.com/profile.php?id=61572211965994&sk=reels_tab"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Facebook size={18} />
-            </button>
+            </a>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -134,18 +159,46 @@ const Header = () => {
           </Link>
 
           <div className="mobile-social">
-            <button className="icon-btn" aria-label="Share" onClick={closeMobileMenu}>
-              <Share2 size={18} />
-            </button>
-            <button className="icon-btn" aria-label="Instagram" onClick={closeMobileMenu}>
+            <a
+              className="icon-btn"
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/company/banana-health-with-chetan"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+            >
+              <Linkedin size={18} />
+            </a>
+            <a
+              className="icon-btn"
+              aria-label="Instagram"
+              href="https://www.instagram.com/mybanana.health?igsh=MW14ZmxkZGo4bGhkbQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+            >
               <Instagram size={18} />
-            </button>
-            <button className="icon-btn" aria-label="YouTube" onClick={closeMobileMenu}>
+            </a>
+            <a
+              className="icon-btn"
+              aria-label="YouTube"
+              href="https://youtube.com/@trainedbyyvs?si=j5KhjEX4wWXHN2mL"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+            >
               <Youtube size={18} />
-            </button>
-            <button className="icon-btn" aria-label="Facebook" onClick={closeMobileMenu}>
+            </a>
+            <a
+              className="icon-btn"
+              aria-label="Facebook"
+              href="https://www.facebook.com/profile.php?id=61572211965994&sk=reels_tab"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+            >
               <Facebook size={18} />
-            </button>
+            </a>
           </div>
         </div>
       </nav>
