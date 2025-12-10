@@ -25,14 +25,24 @@ const HeroSection = () => {
         </p>
 
         <div className="hero-cta-group">
-          <button className="cta-button primary-cta">
-            Take Free Assessment
-            <ArrowRight size={20} />
-          </button>
-          <button className="cta-button secondary-cta">
-            <Play size={18} />
-            Watch How It Works
-          </button>
+            <a
+              className="cta-button primary-cta"
+              href="https://bananahealth.scoreapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Take Free Assessment
+              <ArrowRight size={20} />
+            </a>
+            <a
+              className="cta-button secondary-cta"
+              href="https://training.banana.health/lead"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Play size={18} />
+              Watch How It Works
+            </a>
         </div>
       </div>
     </section>
