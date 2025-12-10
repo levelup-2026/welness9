@@ -238,6 +238,11 @@
     padding: 4px 12px;
     border-radius: 12px;
   }
+
+  /* Add top margin to prevent collision with navbar */
+  .who-we-are-hero {
+    margin-top: 72px;
+  }
 }
 
 .main-description {
