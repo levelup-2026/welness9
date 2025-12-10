@@ -55,7 +55,10 @@ const OurApproach = () => {
 
           <div className="approach-grid">
             <div className="approach-content">
-              <h1 className="approach-title">Together, let’s leave the shame behind.</h1>
+              <h1 className="approach-title">
+                Together, let’s leave the{' '}
+                <span className="approach-highlight">shame behind.</span>
+              </h1>
               <p className="approach-description">
                 Our 5-Pillar Integrative Approach delivers profound self-understanding by revealing the exact biological blockages causing Erectile Dysfunction, Premature Ejaculation, and other forms of sexual dysfunction in men. You then receive a clear, uncomplicated strategy to achieve and maintain peak performance for life.
               </p>
@@ -117,16 +120,22 @@ const OurApproach = () => {
             />
           </div>
           <div className="vision-content">
-            <h2>Our Vision: The Future We Are Creating</h2>
+            <h2 className="vision-heading">
+              Our Vision:{' '}
+              <span className="vision-heading-highlight">The Future We Are Creating</span>
+            </h2>
             <div className="vision-text">
               <p>
-                As a fitness coach with peak health, I was shocked to personally experience Erectile Dysfunction in 2021. Despite my health being on point, the first incident quickly led to crippling performance anxiety, proving ED is a silent pandemic that can hit anyone.
+                As a fitness coach with peak health, I was shocked to personally experience Erectile Dysfunction in 2021. Despite my health being on point, the first incident quickly led to crippling performance anxiety, proving ED is a{' '}
+                <span className="vision-text-highlight">silent pandemic that can hit anyone</span>.
               </p>
               <p>
-                My subsequent 18 months of research revealed the standard solutions were insufficient: doctors only offered the "Blue Pill" (Viagra) forever, which I determined was an unnatural band-aid that would prevent a natural fix.
+                My subsequent 18 months of research revealed the standard solutions were insufficient: doctors only offered the "Blue Pill" (Viagra) forever, which I determined was an{' '}
+                <span className="vision-text-highlight">unnatural band-aid that would prevent a natural fix</span>.
               </p>
               <p>
-                Driven by the need for a permanent, natural solution, and my goal to see every man live an ED and medicine-free life forever, I dedicated my team and three years of effort to crafting the most advanced solution on the planet to reverse ED permanently.
+                Driven by the need for a <span className="vision-text-highlight">permanent, natural solution</span>, and my goal to see every man live an{' '}
+                <span className="vision-text-highlight">ED and medicine-free life forever</span>, I dedicated my team and three years of effort to crafting the most advanced solution on the planet to reverse ED permanently.
               </p>
             </div>
           </div>
