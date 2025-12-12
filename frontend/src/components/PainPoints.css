@@ -13,19 +13,19 @@
 
 @media (min-width: 768px) {
   .pain-points-section {
-    padding: 5rem 4vw;
+    padding: 5rem 2vw;
   }
 }
 
 @media (min-width: 1024px) {
   .pain-points-section {
-    padding: 6rem 4vw;
+    padding: 6rem 2vw;
   }
 }
 
 /* Container */
 .pain-points-container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -86,7 +86,7 @@
 @media (min-width: 768px) {
   .pain-points-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.25rem;
     margin-bottom: 3rem;
   }
   
@@ -98,6 +98,12 @@
 }
 
 @media (min-width: 1024px) {
+  .pain-points-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
   .pain-points-grid {
     gap: 2rem;
   }
