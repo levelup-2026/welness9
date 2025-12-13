@@ -7,6 +7,7 @@ import PainPoints from '../components/PainPoints';
 import EmpathySection from '../components/EmpathySection';
 import TransformationVision from '../components/TransformationVision';
 import TransformationCollage from '../components/TransformationCollage';
+import InstagramEmbed from '../components/InstagramEmbed';
 import MediaFeatures from '../components/MediaFeatures';
 import ImpactStats from '../components/ImpactStats';
 import FAQSection from '../components/FAQSection';
@@ -37,6 +38,7 @@ const HomePage = () => {
       
       <TransformationVision />
       <TransformationCollage />
+      <InstagramEmbed />
       <MediaFeatures />
       {/* <ProgramSection /> */}
       {/* <SocialProof /> */}
