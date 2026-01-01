@@ -13,6 +13,8 @@ import ImpactStats from '../components/ImpactStats';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 
+import TrustedBanner from '../components/TrustedBanner';
+
 const HomePage = () => {
   // Enable smooth scrolling
   useEffect(() => {
@@ -27,6 +29,7 @@ const HomePage = () => {
     <div className="homepage">
       <Header />
       <HeroSection />
+      <TrustedBanner />
       <CardsSection />
       <FeaturedOn />
       {/* <WhatWeDo /> */}
