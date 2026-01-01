@@ -27,7 +27,8 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Prevent badge from stretching */
+  align-items: flex-start;
+  /* Prevent badge from stretching */
   gap: 24px;
 }
 
@@ -58,7 +59,8 @@
 
 .approach-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Give text more space */
+  grid-template-columns: 1.2fr 1fr;
+  /* Give text more space */
   gap: clamp(40px, 5vw, 80px);
   align-items: center;
   width: 100%;
@@ -180,7 +182,8 @@
   }
 
   .approach-hero {
-    align-items: center; /* Center the badge */
+    align-items: center;
+    /* Center the badge */
   }
 
   .approach-section-header {
@@ -191,7 +194,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  
+
   .approach-description {
     margin: 0 auto;
   }
@@ -385,6 +388,16 @@
   color: #0f172a;
 }
 
+@media (max-width: 768px) {
+  .vision-text-highlight {
+    padding: 0 2px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    display: inline;
+    line-height: 1.6;
+  }
+}
+
 .vision-text:last-child {
   margin-bottom: 0;
 }
@@ -540,19 +553,21 @@
 }
 
 @media (max-width: 768px) {
-  .pillar-item, .pillar-item.reverse {
+
+  .pillar-item,
+  .pillar-item.reverse {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .pillar-item.reverse .pillar-content-side {
     order: 1;
   }
-  
+
   .pillar-item.reverse .pillar-image-side {
     order: 2;
   }
-  
+
   .pillar-number-large {
     font-size: 80px;
     top: -50px;

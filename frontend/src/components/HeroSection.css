@@ -87,8 +87,16 @@
 .hero-title>span {
     display: inline-block;
     width: auto;
-    /* Changed from 100% to auto to fit content better if needed, or keep block if stacking is desired */
     max-width: 100%;
+}
+
+.hero-eyebrow {
+    font-size: clamp(14px, 2vw, 16px);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 0;
 }
 
 .highlight-blue {
@@ -99,8 +107,9 @@
     padding: 8px 24px;
     border-radius: 50px;
     /* Pill shape */
-    color: #2563eb;
-    /* Blue 600 */
+    /* Pill shape */
+    color: #0f172a;
+    /* Black/Dark Slate */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -122,6 +131,10 @@
     /* Amber/Gold for premium contrast */
     animation: sparkle 3s ease-in-out infinite;
     flex-shrink: 0;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-bottom: 4px;
+    /* Slight lift */
 }
 
 @keyframes sparkle {
@@ -249,7 +262,7 @@
     }
 
     .hero-content {
-        gap: 28px;
+        gap: 20px;
     }
 
     .hero-title {
@@ -260,20 +273,41 @@
     }
 
     .highlight-blue {
-        padding: 4px 12px;
-        /* Reduced padding */
-        border-radius: 8px;
-        font-size: 0.9em;
+        background: none;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        padding: 0;
         width: auto;
-        display: inline-flex;
-        /* Ensure it flows nicely */
-        box-sizing: border-box;
+        display: inline;
+        color: #0f172a;
+        /* Black/Dark Slate for main text */
+        font-size: clamp(38px, 12vw, 52px);
+        line-height: 1.15;
+    }
+
+    .hero-eyebrow {
+        font-size: 12px;
+        /* Smaller size */
+        letter-spacing: 2px;
+        color: #64748b;
+    }
+
+    .hero-tagline {
+        color: #2563eb;
+        /* Blue for tagline */
+        font-size: 14px;
+        /* Explicitly small */
+        line-height: 1.4;
+        display: block;
+        margin-top: 4px;
+        font-weight: 600;
     }
 
     .hero-subtitle {
         font-size: 16px;
         /* Smaller as requested */
-        margin-top: 8px;
+        margin-top: 2px;
     }
 
     .hero-description {

@@ -270,6 +270,28 @@
   transform: translateX(4px);
 }
 
+/* Mobile Responsive Button */
+@media (max-width: 768px) {
+  .pain-cta-button {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    gap: 0.5rem;
+    max-width: 90%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .pain-cta-button span {
+    line-height: 1.3;
+  }
+
+  .pain-cta-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {

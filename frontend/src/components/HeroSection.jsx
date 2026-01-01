@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section id="hero" className="hero-section">
       <div className="hero-content">
         <h1 className="hero-title">
-          <span>India's Leading</span>
+          <span className="hero-eyebrow">India's Leading</span>
           <span>
             <span className="highlight-blue">
               Erectile Dysfunction and
@@ -18,7 +18,7 @@ const HeroSection = () => {
               Premature Ejaculation Reversal. <Sparkles className="sparkle-icon" size={28} />
             </span>
           </span>
-          <span>Naturally and without pills.</span>
+          <span className="hero-tagline">Naturally and without pills.</span>
         </h1>
 
         <h2 className="hero-subtitle">
