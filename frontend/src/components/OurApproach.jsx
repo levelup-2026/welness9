@@ -83,7 +83,7 @@ const OurApproach = () => {
               We don't offer a product; we offer a system designed for busy men seeking lasting change. This is a targeted, step-by-step commitment to health, guided by four expert coaches.
             </p>
           </div>
-          
+
           <div className="pillars-list">
             {pillars.map((pillar, index) => (
               <div key={index} className={`pillar-item ${index % 2 !== 0 ? 'reverse' : ''}`}>
@@ -126,7 +126,7 @@ const OurApproach = () => {
             </h2>
             <div className="vision-text">
               <p>
-                As a fitness coach with peak health, I was shocked to personally experience Erectile Dysfunction in 2021. Despite my health being on point, the first incident quickly led to crippling performance anxiety, proving ED is a{' '}
+                As a fitness coach with TrainedbyYVS, I was shocked to personally experience Erectile Dysfunction in 2021. Despite my health being on point, the first incident quickly led to crippling performance anxiety, proving ED is a{' '}
                 <span className="vision-text-highlight">silent pandemic that can hit anyone</span>.
               </p>
               <p>

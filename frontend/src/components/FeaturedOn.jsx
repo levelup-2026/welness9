@@ -142,8 +142,8 @@ const FeaturedOn = () => {
           {/* First set */}
           {mediaLogos.map((media, index) => (
             <div key={`${media.name}-1`} className="media-logo-wrapper">
-              <img 
-                src={media.logo} 
+              <img
+                src={media.logo}
                 alt={media.alt}
                 className="media-logo"
                 loading="lazy"
@@ -154,8 +154,8 @@ const FeaturedOn = () => {
           {/* Second set for seamless loop */}
           {mediaLogos.map((media, index) => (
             <div key={`${media.name}-2`} className="media-logo-wrapper">
-              <img 
-                src={media.logo} 
+              <img
+                src={media.logo}
                 alt={media.alt}
                 className="media-logo"
                 loading="lazy"
@@ -169,17 +169,17 @@ const FeaturedOn = () => {
       <div className="featured-spotlights-container">
         <div className="featured-spotlights">
           {mediaSpotlights.map((feature, index) => (
-            <a 
-              key={index} 
-              href={feature.url} 
-              target="_blank" 
+            <a
+              key={index}
+              href={feature.url}
+              target="_blank"
               rel="noopener noreferrer"
               className="spotlight-card"
             >
               <div className="spotlight-image-wrapper">
                 {feature.image ? (
-                  <img 
-                    src={feature.image} 
+                  <img
+                    src={feature.image}
                     alt={`${feature.publisher} logo`}
                     className="spotlight-image"
                     loading="lazy"
@@ -201,71 +201,7 @@ const FeaturedOn = () => {
         </div>
       </div>
 
-      {/* Men We've Helped Section */}
-      <div className="men-helped">
-        <div className="men-helped-header">
-          <p className="men-helped-kicker">Real Results</p>
-          <h3>Men We've Helped</h3>
-        </div>
-        <div className="men-helped-stats">
-          <div className="men-helped-card">
-            <div className="men-helped-icon-wrapper">
-              <img 
-                src={process.env.PUBLIC_URL + '/heart-pulse.svg'}
-                alt="ED recovery icon"
-                className="men-helped-icon"
-                loading="lazy"
-              />
-            </div>
-            <div className="men-helped-content">
-              <p className="men-helped-number">1,500+</p>
-              <p className="men-helped-text">men reversed their Erectile Dysfunction</p>
-            </div>
-          </div>
-          <div className="men-helped-card">
-            <div className="men-helped-icon-wrapper">
-              <img 
-                src={process.env.PUBLIC_URL + '/time-past.svg'}
-                alt="PE solution icon"
-                className="men-helped-icon"
-                loading="lazy"
-              />
-            </div>
-            <div className="men-helped-content">
-              <p className="men-helped-number">1,800+</p>
-              <p className="men-helped-text">men fixed their Premature Ejaculation</p>
-            </div>
-          </div>
-          <div className="men-helped-card">
-            <div className="men-helped-icon-wrapper">
-              <img 
-                src={process.env.PUBLIC_URL + '/couple.svg'}
-                alt="Intimacy improvement icon"
-                className="men-helped-icon"
-                loading="lazy"
-              />
-            </div>
-            <div className="men-helped-content">
-              <p className="men-helped-number">2,000+</p>
-              <p className="men-helped-text">men improved their intimacy</p>
-            </div>
-          </div>
-          <div className="men-helped-card">
-            <div className="men-helped-icon-wrapper">
-              <img 
-                src={process.env.PUBLIC_URL + '/muscle-gain.svg'}
-                alt="Stronger erections icon"
-                className="men-helped-icon"
-                loading="lazy"
-              />
-            </div>
-            <div className="men-helped-content">
-              <p className="men-helped-number">1,000+</p>
-              <p className="men-helped-text">men gained stronger erections</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 };

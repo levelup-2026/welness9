@@ -1,23 +1,13 @@
-/* Pain Points Section - Redesigned */
+/* Pain Points Section - Redesigned to "We've Helped" Success Theme */
 .pain-points-section {
-  padding: 4rem 1.5rem;
-  background: linear-gradient(180deg, 
-    #e8eef5 0%, 
-    #edf2f8 40%,
-    #f5f3e8 80%,
-    #f8f6eb 100%
-  );
+  padding: 5rem 1.5rem;
+  /* Premium warm gradient background */
+  background: linear-gradient(135deg, #fdfbf7 0%, #fffefc 100%);
   position: relative;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  .pain-points-section {
-    padding: 5rem 2vw;
-  }
-}
-
-@media (min-width: 1024px) {
   .pain-points-section {
     padding: 6rem 2vw;
   }
@@ -25,145 +15,148 @@
 
 /* Container */
 .pain-points-container {
-  max-width: 1400px;
+  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Header */
 .pain-header {
   text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-@media (min-width: 768px) {
-  .pain-header {
-    margin-bottom: 3.5rem;
-  }
+  margin-bottom: 4rem;
 }
 
 .pain-title {
-  font-size: clamp(1.75rem, 5vw, 2.75rem);
-  font-weight: 900;
-  font-style: normal;
-  color: #0a0a0a;
+  font-family: 'Outfit', sans-serif;
+  /* Assuming font availability, otherwise falls back */
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #1a1a1a;
   margin: 0;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .pain-title-highlight {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-  padding: 4px 16px;
-  border-radius: 12px;
-  display: inline;
+  position: relative;
+  display: inline-block;
+  color: #2563eb;
+  /* Primary Blue */
+  background: transparent;
+  padding: 0;
 }
 
-/* Pain Points Grid */
+/* Underline effect for 'Helped' */
+.pain-title-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(37, 99, 235, 0.2);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+/* Grid Layout */
 .pain-points-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-}
-
-@media (min-width: 640px) {
-  .pain-points-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .pain-points-grid .pain-card:last-child {
-    grid-column: span 2;
-    max-width: 50%;
-    margin: 0 auto;
-  }
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
   .pain-points-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    margin-bottom: 3rem;
-  }
-  
-  .pain-points-grid .pain-card:last-child {
-    grid-column: auto;
-    max-width: 100%;
-    margin: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .pain-points-grid {
-    gap: 1.5rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .pain-points-grid {
     gap: 2rem;
   }
 }
 
-/* Pain Card */
+/* Card Design */
 .pain-card {
   background: #ffffff;
-  border-radius: 1.25rem;
-  padding: 0;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    0 10px 20px -5px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  position: relative;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 10px 15px -3px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  height: 100%;
 }
 
 .pain-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 
-    0 12px 24px -8px rgba(0, 0, 0, 0.12),
-    0 20px 40px -12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.05),
+    0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border-color: rgba(37, 99, 235, 0.1);
 }
 
-/* Card Image */
+/* Card Image Area */
 .pain-card-image {
   width: 100%;
   aspect-ratio: 4/3;
-  overflow: hidden;
   position: relative;
-  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  overflow: hidden;
+  background: #f1f5f9;
 }
 
 .pain-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Important for full bleed images */
+  transition: transform 0.6s ease;
 }
 
 .pain-card:hover .pain-card-image img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* Icon Badge */
+/* Overlay gradient on image for text readability if needed, 
+   though design asks for image top, content bottom. 
+   Adding a subtle separation line. */
+.pain-card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
+  pointer-events: none;
+}
+
+
+/* Content Area */
+.pain-card-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Icon Bubble */
 .pain-card-icon {
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
   transition: all 0.3s ease;
-  flex-shrink: 0;
 }
 
 .pain-card-icon svg {
@@ -172,209 +165,118 @@
 }
 
 .pain-card:hover .pain-card-icon {
-  color: #475569;
+  background: #2563eb;
+  color: #ffffff;
+  transform: rotate(-10deg);
 }
 
-@media (min-width: 768px) {
-  .pain-card-icon {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .pain-card-icon svg {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-/* Card Content */
-.pain-card-content {
-  padding: 1rem 1.25rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  min-height: auto;
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .pain-card-content {
-    padding: 1.25rem 1.5rem 1.75rem;
-  }
-}
-
-/* Text wrapper with arrow */
-.pain-card-text-wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  gap: 0.5rem;
-}
-
+/* Typography */
 .pain-card-title {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #1a365d;
-  line-height: 1.35;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  flex: 1;
+  width: 100%;
 }
 
-.pain-card-title span {
+.pain-card-title span:first-child {
+  /* The Number part (2000+ MEN) */
   display: block;
+  font-size: 1.75rem;
+  /* Large number */
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
-@media (min-width: 768px) {
-  .pain-card-title {
-    font-size: 0.9375rem;
-  }
+.pain-card-title span:last-child {
+  /* The subheading (SAVE THEIR MARRIAGE...) */
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 
-@media (min-width: 1024px) {
-  .pain-card-title {
-    font-size: 1rem;
-  }
-}
 
-/* Arrow */
+/* Arrow - positioned absolutely or strictly at bottom right */
 .pain-card-arrow {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background: #f8fafc;
   color: #94a3b8;
   transition: all 0.3s ease;
-  align-self: flex-end;
-  margin-top: auto;
-}
-
-.pain-card-arrow svg {
-  width: 16px;
-  height: 16px;
 }
 
 .pain-card:hover .pain-card-arrow {
-  color: #64748b;
-  transform: translateX(3px);
+  background: #1a1a1a;
+  color: #ffffff;
+  transform: translateX(5px);
 }
 
-@media (min-width: 768px) {
-  .pain-card-arrow {
-    width: 22px;
-    height: 22px;
-  }
-  
-  .pain-card-arrow svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* CTA Button Wrapper */
+/* CTA Button Section */
 .pain-cta-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
-/* CTA Button */
 .pain-cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 50%, #1e3a5f 100%);
+  background: #1a1a1a;
   color: #ffffff;
-  font-size: 0.9375rem;
+  border: none;
+  padding: 1.25rem 3rem;
+  border-radius: 100px;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border: none;
-  border-radius: 3rem;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 
-    0 4px 14px rgba(30, 58, 95, 0.3),
-    0 8px 24px rgba(30, 58, 95, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.pain-cta-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
 }
 
 .pain-cta-button:hover {
+  background: #2563eb;
+  /* Brand Blue Hover */
   transform: translateY(-2px);
-  box-shadow: 
-    0 6px 20px rgba(30, 58, 95, 0.35),
-    0 12px 32px rgba(30, 58, 95, 0.25);
+  box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.4);
 }
 
-.pain-cta-button:hover::before {
-  opacity: 1;
-}
-
-.pain-cta-button:active {
-  transform: translateY(0);
+.pain-cta-button span {
+  position: relative;
+  z-index: 1;
 }
 
 .pain-cta-icon {
   width: 20px;
   height: 20px;
-  flex-shrink: 0;
-  opacity: 0.9;
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .pain-cta-button {
-    padding: 1.125rem 2.5rem;
-    font-size: 1rem;
-    gap: 1rem;
-  }
-  
-  .pain-cta-icon {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .pain-cta-button {
-    padding: 1.25rem 3rem;
-    font-size: 1.0625rem;
-  }
-}
-
-/* Mobile touch feedback */
-@media (max-width: 767px) {
-  .pain-card:active {
-    transform: scale(0.98);
-  }
-  
-  .pain-cta-button:active {
-    transform: scale(0.98);
-  }
+.pain-cta-button:hover .pain-cta-icon {
+  transform: translateX(4px);
 }
 
 /* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -382,7 +284,7 @@
 }
 
 .pain-card {
-  animation: fadeInUp 0.6s ease-out both;
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .pain-card:nth-child(1) {
@@ -395,9 +297,4 @@
 
 .pain-card:nth-child(3) {
   animation-delay: 0.3s;
-}
-
-.pain-cta-button {
-  animation: fadeInUp 0.6s ease-out both;
-  animation-delay: 0.4s;
 }
