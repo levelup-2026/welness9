@@ -17,7 +17,7 @@ const HomePage = () => {
   // Enable smooth scrolling
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
-    
+
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';
     };
@@ -32,10 +32,10 @@ const HomePage = () => {
       {/* <WhatWeDo /> */}
       <PainPoints />
       <EmpathySection />
-      
+
       {/* Ambient spacing before transformation vision */}
       <div className="ambient-spacer" style={{ height: '120px', background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.02) 0%, rgba(15, 23, 42, 0.08) 100%)' }}></div>
-      
+
       <TransformationVision />
       <TransformationCollage />
       <InstagramEmbed />
