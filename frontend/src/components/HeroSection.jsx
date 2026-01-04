@@ -15,10 +15,10 @@ const HeroSection = () => {
           </span>
           <span>
             <span className="highlight-blue">
-              Premature Ejaculation Reversal. <Sparkles className="sparkle-icon" size={28} />
+              Premature Ejaculation Reversal.
             </span>
           </span>
-          <span className="hero-tagline">Naturally and without pills.</span>
+          <span className="hero-tagline">(Naturally and without pills)</span>
         </h1>
 
         <h2 className="hero-subtitle">

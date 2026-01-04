@@ -57,7 +57,7 @@ const CardsSection = () => {
                 <TrendingUp size={28} strokeWidth={2.5} />
               </div>
               <div className="badge-content">
-                <span className="badge-title">5,000+ Success Stories</span>
+                <span className="badge-title">1,287+ Success Stories</span>
                 <span className="badge-subtitle">Join thousands of transformed men</span>
               </div>
             </div>
@@ -66,7 +66,7 @@ const CardsSection = () => {
           {/* Yellow Card - Social Proof */}
           <div className="card card-yellow card-yellow-small">
             <div className="stat-header">
-              <h2 className="big-stat">5,000+</h2>
+              <h2 className="big-stat">1,287+</h2>
               <span className="stat-badge">And Growing</span>
             </div>
             <p className="stat-text">Men transformed their sexual health naturally</p>

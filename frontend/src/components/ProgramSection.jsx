@@ -242,7 +242,7 @@ const ProgramSection = () => {
             <div className="video-wrapper">
               <div className="video-container">
                 <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  src="https://www.youtube.com/embed/svnxm8-KRig"
                   title="Banana Health Program Overview"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

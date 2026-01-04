@@ -99,6 +99,16 @@
     margin-bottom: 0;
 }
 
+.hero-tagline {
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 500;
+    color: #64748b;
+    /* Slate 500 */
+    opacity: 0.9;
+    margin-top: 12px;
+    /* Added space above as requested */
+}
+
 .highlight-blue {
     /* Semi-transparent blue glassmorphic effect */
     background: rgba(219, 234, 254, 0.5);
@@ -300,7 +310,7 @@
         /* Explicitly small */
         line-height: 1.4;
         display: block;
-        margin-top: 4px;
+        margin-top: 10px;
         font-weight: 600;
     }
 

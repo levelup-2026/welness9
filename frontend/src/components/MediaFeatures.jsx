@@ -59,8 +59,8 @@ const MediaFeatures = () => {
           <div className="featured-video-main">
             <div className="video-wrapper primary-video">
               <LazyIframe
-                src="https://www.youtube.com/embed/CyYJGb0etjs?start=2"
-                title="TEDx Talk"
+                src="https://www.youtube.com/embed/svnxm8-KRig"
+                title="Featured Video"
                 className="video-iframe"
               />
             </div>
