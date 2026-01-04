@@ -7,16 +7,6 @@ const FeaturedOn = () => {
 
   const mediaLogos = [
     {
-      name: 'Entrepreneur',
-      logo: mediaLogoPath('enterpenuer.jpg'),
-      alt: 'Entrepreneur Magazine'
-    },
-    {
-      name: 'United News of India',
-      logo: mediaLogoPath('uni1.jpg'),
-      alt: 'United News of India'
-    },
-    {
       name: 'Featured 1',
       logo: mediaLogoPath('test/p6nzkkfsqo-fhfvjhuhal-6929ca03b6f38.webp'),
       alt: 'Featured logo 1'
@@ -79,24 +69,6 @@ const FeaturedOn = () => {
   ];
 
   const mediaSpotlights = [
-    {
-      name: 'Entrepreneur',
-      headline: 'Health and Wellness Influencer of the Year',
-      description: 'Recognized for his transformative "Last Diet Method™" and empowering fitness coaches globally to build successful businesses.',
-      date: '2022',
-      url: 'https://www.entrepreneur.com/',
-      publisher: 'Entrepreneur',
-      image: mediaLogoPath('enterpenuer.jpg')
-    },
-    {
-      name: 'United News of India',
-      headline: 'Top 10 Entrepreneurs Set to Redefine Industries in 2026',
-      description: 'Featured as a reformist in the fitness industry, advocating for evidence-based health practices and a holistic approach to wellness.',
-      date: 'January 2026',
-      url: 'http://www.uniindia.com/',
-      publisher: 'United News of India',
-      image: mediaLogoPath('uni1.jpg')
-    },
     {
       name: 'Cosmopolitan',
       headline: 'Watch Out: These Food Triggers Can Make You Overeat',
