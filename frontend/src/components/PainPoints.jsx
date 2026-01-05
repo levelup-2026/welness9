@@ -8,7 +8,7 @@ const PainPoints = () => {
       id: 1,
       image: `${process.env.PUBLIC_URL}/happy-couple.png`,
       icon: <Heart strokeWidth={2.5} />,
-      title: "2000+ MEN",
+      title: "353 + MEN",
       subtitle: "'SAVED THEIR MARRIAGE' AND RELATIONSHIP",
       alt: "Happy couple enjoying their relationship"
     },
@@ -16,7 +16,7 @@ const PainPoints = () => {
       id: 2,
       image: `${process.env.PUBLIC_URL}/confident-man.png`,
       icon: <Zap strokeWidth={2.5} />,
-      title: "1,500+ MEN",
+      title: "543 + MEN",
       subtitle: "REVERSED THEIR ERECTILE DYSFUNCTION",
       alt: "Confident man full of vitality"
     },
@@ -24,7 +24,7 @@ const PainPoints = () => {
       id: 3,
       image: `${process.env.PUBLIC_URL}/relaxed-man.png`,
       icon: <Timer strokeWidth={2.5} />,
-      title: "1,300+ MEN",
+      title: "391 + MEN",
       subtitle: "FIXED THEIR PREMATURE EJACULATION",
       alt: "Relaxed man in control"
     }

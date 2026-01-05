@@ -70,6 +70,24 @@ const FeaturedOn = () => {
 
   const mediaSpotlights = [
     {
+      name: 'Entrepreneur Media',
+      headline: 'Featured in Leading Entrepreneurship Publications',
+      description: 'Recognized by top entrepreneurship platforms for innovative approaches to fitness and wellness business.',
+      date: '2023',
+      url: '#',
+      publisher: 'Entrepreneur Media',
+      image: mediaLogoPath('enterpenuer.jpg')
+    },
+    {
+      name: 'University Partnerships',
+      headline: 'Collaborating with Premier Educational Institutions',
+      description: 'Building partnerships with leading universities to promote health, wellness, and fitness education.',
+      date: '2023',
+      url: '#',
+      publisher: 'Universities',
+      image: mediaLogoPath('uni1.jpg')
+    },
+    {
       name: 'Cosmopolitan',
       headline: 'Watch Out: These Food Triggers Can Make You Overeat',
       description: 'Understanding the science behind food triggers and how to manage them for better health outcomes.',

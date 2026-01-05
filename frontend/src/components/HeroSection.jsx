@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section id="hero" className="hero-section">
       <div className="hero-content">
         <h1 className="hero-title">
-          <span className="hero-eyebrow">India's Leading</span>
+          {/* <span className="highlight-blue">India's Leading</span> */}
           <span>
             <span className="highlight-blue">
               Erectile Dysfunction and
@@ -15,8 +15,21 @@ const HeroSection = () => {
           </span>
           <span>
             <span className="highlight-blue">
-              Premature Ejaculation Reversal.
+              Premature Ejaculation Reversal
             </span>
+          </span>
+          <span className="highlight-blue">
+            That Actually Works{' '}
+            <img 
+              src="/spn.png" 
+              alt="Banana Logo" 
+              style={{ 
+                height: '0.9em', 
+                verticalAlign: 'middle', 
+                display: 'inline-block',
+                marginLeft: '0.3em'
+              }} 
+            />
           </span>
           <span className="hero-tagline">(Naturally and without pills)</span>
         </h1>
