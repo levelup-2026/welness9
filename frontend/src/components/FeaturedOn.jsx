@@ -141,7 +141,7 @@ const FeaturedOn = () => {
       url: 'https://www.dailypioneer.com/2022/vivacity/inch-away.html',
       publisher: 'The Pioneer',
       image: mediaLogoPath('PIONEER.jpg')
-    }
+    },
     {
       name: 'Mid-Day',
       headline: 'Yash Vardhan Swami Takes Fitness and Entrepreneurship to Next Level',
