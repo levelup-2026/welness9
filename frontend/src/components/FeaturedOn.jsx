@@ -79,15 +79,6 @@ const FeaturedOn = () => {
       image: mediaLogoPath('enterpenuer.jpg')
     },
     {
-      name: 'United News of India',
-      headline: 'Collaborating with Premier Educational Institutions',
-      description: 'Building partnerships with leading universities to promote health, wellness, and fitness education.',
-      date: '2023',
-      url: '#',
-      publisher: 'Universities',
-      image: mediaLogoPath('uni1.jpg')
-    },
-    {
       name: 'Cosmopolitan',
       headline: 'Watch Out: These Food Triggers Can Make You Overeat',
       description: 'Understanding the science behind food triggers and how to manage them for better health outcomes.',
@@ -150,6 +141,15 @@ const FeaturedOn = () => {
       url: 'https://www.mid-day.com/entertainment/bollywood-news/article/yash-vardhan-swami-takes-fitness-and-entrepreneurship-to-next-level-21197158',
       publisher: 'Mid-Day',
       image: mediaLogoPath('MIDDAY.jpg')
+    },
+    {
+      name: 'United News of India',
+      headline: 'Collaborating with Premier Educational Institutions',
+      description: 'Building partnerships with leading universities to promote health, wellness, and fitness education.',
+      date: '2023',
+      url: '#',
+      publisher: 'Universities',
+      image: mediaLogoPath('uni1.jpg')
     },
   ];
 
