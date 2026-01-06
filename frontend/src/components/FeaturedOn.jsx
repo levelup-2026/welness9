@@ -79,7 +79,7 @@ const FeaturedOn = () => {
       image: mediaLogoPath('enterpenuer.jpg')
     },
     {
-      name: 'University Partnerships',
+      name: 'United News of India',
       headline: 'Collaborating with Premier Educational Institutions',
       description: 'Building partnerships with leading universities to promote health, wellness, and fitness education.',
       date: '2023',
@@ -114,15 +114,7 @@ const FeaturedOn = () => {
       publisher: 'Times of India',
       image: mediaLogoPath('TOI.jpg')
     },
-    {
-      name: 'Mid-Day',
-      headline: 'Yash Vardhan Swami Takes Fitness and Entrepreneurship to Next Level',
-      description: 'How one fitness entrepreneur is revolutionizing the wellness industry.',
-      date: 'May 2019',
-      url: 'https://www.mid-day.com/entertainment/bollywood-news/article/yash-vardhan-swami-takes-fitness-and-entrepreneurship-to-next-level-21197158',
-      publisher: 'Mid-Day',
-      image: mediaLogoPath('MIDDAY.jpg')
-    },
+
     {
       name: 'Red Bull',
       headline: 'Nutrition Tips to Achieve Fitness Goals',
@@ -150,6 +142,15 @@ const FeaturedOn = () => {
       publisher: 'The Pioneer',
       image: mediaLogoPath('PIONEER.jpg')
     }
+    {
+      name: 'Mid-Day',
+      headline: 'Yash Vardhan Swami Takes Fitness and Entrepreneurship to Next Level',
+      description: 'How one fitness entrepreneur is revolutionizing the wellness industry.',
+      date: 'May 2019',
+      url: 'https://www.mid-day.com/entertainment/bollywood-news/article/yash-vardhan-swami-takes-fitness-and-entrepreneurship-to-next-level-21197158',
+      publisher: 'Mid-Day',
+      image: mediaLogoPath('MIDDAY.jpg')
+    },
   ];
 
   return (
