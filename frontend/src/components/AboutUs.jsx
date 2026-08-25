@@ -502,11 +502,11 @@ const AboutUs = () => {
             <div className="contact-info-row">
               <div className="contact-info-item">
                 <Mail size={18} />
-                <a href="mailto:support@bananahealth.in">support@bananahealth.in</a>
+                <a href="mailto:yvs@banana.health">yvs@banana.health</a>
               </div>
               <div className="contact-info-item">
                 <Phone size={18} />
-                <span>+91 94323 00089</span>
+                <span>+91 92641 27497</span>
               </div>
             </div>
           </div>

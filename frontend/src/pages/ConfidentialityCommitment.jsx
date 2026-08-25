@@ -208,8 +208,8 @@ const ConfidentialityCommitment = () => {
         <div className="legal-contact">
           <h3>Privacy Concerns or Questions?</h3>
           <p>We take confidentiality seriously. Reach out anytime:</p>
-          <p><strong>Confidentiality Officer:</strong> privacy@bananahealth.in</p>
-          <p><strong>Emergency Line:</strong> +91 94323 00089 (24/7 for urgent concerns)</p>
+          <p><strong>Confidentiality Officer:</strong> yvs@banana.health</p>
+          <p><strong>Emergency Line:</strong> +91 92641 27497 (24/7 for urgent concerns)</p>
           <p><strong>Secure Contact:</strong> Request encrypted communication for sensitive matters</p>
           <p><strong>Response Time:</strong> Within 6 hours for privacy concerns</p>
         </div>
