@@ -506,7 +506,7 @@ const AboutUs = () => {
               </div>
               <div className="contact-info-item">
                 <Phone size={18} />
-                <span>+91 98765 43210</span>
+                <span>+91 94323 00089</span>
               </div>
             </div>
           </div>
