@@ -209,7 +209,7 @@ const ConfidentialityCommitment = () => {
           <h3>Privacy Concerns or Questions?</h3>
           <p>We take confidentiality seriously. Reach out anytime:</p>
           <p><strong>Confidentiality Officer:</strong> privacy@bananahealth.in</p>
-          <p><strong>Emergency Line:</strong> +91 98765 43210 (24/7 for urgent concerns)</p>
+          <p><strong>Emergency Line:</strong> +91 94323 00089 (24/7 for urgent concerns)</p>
           <p><strong>Secure Contact:</strong> Request encrypted communication for sensitive matters</p>
           <p><strong>Response Time:</strong> Within 6 hours for privacy concerns</p>
         </div>
