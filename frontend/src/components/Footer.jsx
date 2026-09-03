@@ -81,7 +81,7 @@ const Footer = () => {
           </div>
           <div className="contact-item">
             <Phone size={18} />
-            <span>+91 92641 27497 (9 AM - 9 PM IST)</span>
+            <span>+91 94323 00089 (9 AM - 9 PM IST)</span>
           </div>
           <div className="contact-item">
             <Shield size={18} />
