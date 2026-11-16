@@ -1,16 +1,15 @@
 import React from 'react';
 import { Shield, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 import '../styles/LegalPages.css';
 
 const PrivacyPolicy = () => {
   return (
     <>
       <div className="legal-nav">
-        <Link to="/" className="back-button">
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
+       <Header />
       </div>
       <div className="legal-page">
         <div className="legal-header">
@@ -73,6 +72,7 @@ const PrivacyPolicy = () => {
           </section>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
