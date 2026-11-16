@@ -1,16 +1,14 @@
 import React from 'react';
 import { Shield, Lock, Eye, Heart, CheckCircle, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
 
 const ConfidentialityCommitment = () => {
   return (
     <>
       <div className="legal-nav">
-        <Link to="/" className="back-button">
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
+        <Header/>
       </div>
       <div className="legal-page">
       <div className="legal-header">
@@ -215,6 +213,7 @@ const ConfidentialityCommitment = () => {
         </div>
       </div>
     </div>
+      <Footer/>
     </>
   );
 };
