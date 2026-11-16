@@ -22,7 +22,7 @@ const HeroSection = () => {
             That Actually Works{' '}
             <img 
               src="/spn.png" 
-              alt="Banana Logo" 
+             alt="Banana Health logo"
               style={{ 
                 height: '0.9em', 
                 verticalAlign: 'middle', 
