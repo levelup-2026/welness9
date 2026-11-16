@@ -1,5 +1,5 @@
 import React from 'react';
-import { RefreshCw, ArrowLeft } from 'lucide-react';
+import { RefreshCw} from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
@@ -7,9 +7,9 @@ import '../styles/LegalPages.css';
 const RefundPolicy = () => {
   return (
     <>
-      <div className="legal-nav">
+     
        <Header/>
-      </div>
+     
       <div className="legal-page">
         <div className="legal-header">
           <div className="legal-icon">
