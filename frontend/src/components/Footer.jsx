@@ -46,7 +46,6 @@ const Footer = () => {
               <ul className="footer-list">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about-us">About Us</Link></li>
-               
                 <li><a href="/#transformation">Transformation</a></li>
                 <li><a href="/#faq">FAQ</a></li>
               </ul>
