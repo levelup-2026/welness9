@@ -1,15 +1,15 @@
 import React from 'react';
-import { FileText, ArrowLeft } from 'lucide-react';
-iimport Header from '../components/Header';
+import { FileText } from 'lucide-react';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
 
 const TermsConditions = () => {
   return (
     <>
-      <div className="legal-nav">
+     
         <Header/>
-      </div>
+      
       <div className="legal-page">
         <div className="legal-header">
           <div className="legal-icon">
