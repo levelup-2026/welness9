@@ -1,16 +1,14 @@
 import React from 'react';
 import { FileText, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+iimport Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
 
 const TermsConditions = () => {
   return (
     <>
       <div className="legal-nav">
-        <Link to="/" className="back-button">
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
+        <Header/>
       </div>
       <div className="legal-page">
         <div className="legal-header">
@@ -115,6 +113,7 @@ const TermsConditions = () => {
           </section>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
