@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, ArrowLeft } from 'lucide-react';
+import { Shield} from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -8,9 +8,9 @@ import '../styles/LegalPages.css';
 const PrivacyPolicy = () => {
   return (
     <>
-      <div className="legal-nav">
+     
        <Header />
-      </div>
+      
       <div className="legal-page">
         <div className="legal-header">
           <div className="legal-icon">
@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
           </section>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 };
