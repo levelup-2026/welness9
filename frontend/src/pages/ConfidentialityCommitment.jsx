@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, Eye, Heart, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Shield, Lock, Eye, Heart, CheckCircle} from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
@@ -7,9 +7,9 @@ import '../styles/LegalPages.css';
 const ConfidentialityCommitment = () => {
   return (
     <>
-      <div className="legal-nav">
+     
         <Header/>
-      </div>
+     
       <div className="legal-page">
       <div className="legal-header">
         <div className="legal-icon">
