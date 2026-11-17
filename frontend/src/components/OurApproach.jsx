@@ -56,8 +56,8 @@ const OurApproach = () => {
           <div className="approach-grid">
             <div className="approach-content">
               <h1 className="approach-title">
-                Together, let’s leave the{' '}
-                <span className="approach-highlight">shame behind.</span>
+                Five Pillar Integrative Approach to Overcome Erectile Dysfunction &amp;{' '}
+                <span className="approach-highlight">Premature Ejaculation</span>
               </h1>
               <p className="approach-description">
                 Our 5-Pillar Integrative Approach delivers profound self-understanding by revealing the exact biological blockages causing Erectile Dysfunction, Premature Ejaculation, and other forms of sexual dysfunction in men. You then receive a clear, uncomplicated strategy to achieve and maintain peak performance for life.

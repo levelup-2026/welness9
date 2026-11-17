@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import { RefreshCw} from 'lucide-react';
 import Header from '../components/Header';
@@ -7,6 +8,11 @@ import '../styles/LegalPages.css';
 const RefundPolicy = () => {
   return (
     <>
+      <Helmet>
+        <title>Refund Policy | Banana Health</title>
+        <meta name="description" content="Review the Banana Health refund and cancellation policy. Learn about our clear eligibility criteria, timelines, and simple procedures for hassle-free returns." />
+        <link rel="canonical" href="https://www.banana.health/refund-policy" />
+      </Helmet>
      
        <Header/>
      
@@ -15,7 +21,7 @@ const RefundPolicy = () => {
           <div className="legal-icon">
             <RefreshCw size={48} />
           </div>
-          <h1>Refund Policy</h1>
+          <h1>Refund &amp; Cancellation Policy</h1>
           <p className="legal-intro">Our refund policy and payment terms.</p>
           <p className="legal-date">Last Updated: December 2024</p>
         </div>

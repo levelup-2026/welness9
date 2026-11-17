@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import { Shield, Lock, Eye, Heart, CheckCircle} from 'lucide-react';
 import Header from '../components/Header';
@@ -7,6 +8,11 @@ import '../styles/LegalPages.css';
 const ConfidentialityCommitment = () => {
   return (
     <>
+      <Helmet>
+        <title>Confidentiality Policy | Banana Health</title>
+        <meta name="description" content="Read how Banana Health protects your privacy and sensitive health data. We adhere to the highest confidentiality standards to ensure your peace of mind." />
+        <link rel="canonical" href="https://www.banana.health/confidentiality" />
+      </Helmet>
      
         <Header/>
      
@@ -15,7 +21,7 @@ const ConfidentialityCommitment = () => {
         <div className="legal-icon">
           <Shield size={48} />
         </div>
-        <h1>Confidentiality Commitment</h1>
+        <h1>Our Confidentiality Commitment</h1>
         <p className="legal-intro">Your journey is private, sacred, and completely confidential.</p>
         <p className="legal-date">Last Updated: December 2024</p>
       </div>

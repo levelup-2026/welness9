@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import { Shield} from 'lucide-react';
 import Header from '../components/Header';
@@ -8,6 +9,11 @@ import '../styles/LegalPages.css';
 const PrivacyPolicy = () => {
   return (
     <>
+      <Helmet>
+        <title>Privacy Policy | Banana Health</title>
+        <meta name="description" content="Understand how Banana Health collects, protects, and manages your personal information. We prioritize your privacy and data security across all our services." />
+        <link rel="canonical" href="https://www.banana.health/privacy-policy" />
+      </Helmet>
      
        <Header />
       
