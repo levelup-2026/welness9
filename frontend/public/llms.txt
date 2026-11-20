@@ -1,0 +1,13 @@
+# Banana Health
+
+> Banana Health (Banana Wellness LLP) is an online, coach-led program in India for men dealing with erectile dysfunction (ED) and premature ejaculation (PE). It uses nutrition, fitness, mindset and habit coaching. It was started by fitness coach Yash Vardhan Swami.
+
+## Main pages
+
+- [Home](https://www.banana.health/): What Banana Health is and who it is for
+- [Our Approach](https://www.banana.health/our-approach): How the 5-pillar program works
+- [About Us](https://www.banana.health/about-us): The founder and the team
+- [Confidentiality](https://www.banana.health/confidentiality): How we keep your details private
+- [Refund Policy](https://www.banana.health/refund-policy): Payment and refund rules
+- [Privacy Policy](https://www.banana.health/privacy-policy): How we handle your data
+- [Terms & Conditions](https://www.banana.health/terms-conditions): Terms for using the program

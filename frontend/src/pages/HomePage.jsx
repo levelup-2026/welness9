@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
@@ -27,6 +28,11 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
+      <Helmet>
+        <title>Sexual Health Solutions | Natural ED &amp; PE | Banana Health</title>
+        <meta name="description" content="Natural ED &amp; PE treatment in India with private, personalized guidance. No pills, no pumps, no side effects. Trusted by 5,000+ men. Book a consultation today." />
+        <link rel="canonical" href="https://www.banana.health/" />
+      </Helmet>
       <Header />
       <HeroSection />
       <TrustedBanner />

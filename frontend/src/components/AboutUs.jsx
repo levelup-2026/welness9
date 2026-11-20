@@ -48,9 +48,9 @@ const AboutUs = () => {
         {/* Main Who We Are Section - Redesigned */}
         <div className="who-we-are-hero">
           <div className="section-header-centered">
-            <h2 className="main-heading">
-              Who Are <span className="heading-highlight">We?</span>
-            </h2>
+            <h1 className="main-heading">
+              About <span className="heading-highlight">Banana Health</span>
+            </h1>
           </div>
           <div className="who-we-are-grid">
             

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
@@ -32,6 +33,11 @@ const AboutUsPage = () => {
 
   return (
     <div className="about-us-page">
+      <Helmet>
+        <title>About Us | Banana Health</title>
+        <meta name="description" content="Know Banana Health's mission to improve men's sexual wellness through expert guidance, personalized care, and a holistic approach to overcoming ED and PE naturally." />
+        <link rel="canonical" href="https://www.banana.health/about-us" />
+      </Helmet>
       <Header />
       <AboutUs />
       <Footer />

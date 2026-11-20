@@ -1,23 +1,27 @@
+import { Helmet } from 'react-helmet-async';
 import React from 'react';
-import { RefreshCw, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { RefreshCw} from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
 
 const RefundPolicy = () => {
   return (
     <>
-      <div className="legal-nav">
-        <Link to="/" className="back-button">
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
-      </div>
+      <Helmet>
+        <title>Refund Policy | Banana Health</title>
+        <meta name="description" content="Review the Banana Health refund and cancellation policy. Learn about our clear eligibility criteria, timelines, and simple procedures for hassle-free returns." />
+        <link rel="canonical" href="https://www.banana.health/refund-policy" />
+      </Helmet>
+     
+       <Header/>
+     
       <div className="legal-page">
         <div className="legal-header">
           <div className="legal-icon">
             <RefreshCw size={48} />
           </div>
-          <h1>Refund Policy</h1>
+          <h1>Refund &amp; Cancellation Policy</h1>
           <p className="legal-intro">Our refund policy and payment terms.</p>
           <p className="legal-date">Last Updated: December 2024</p>
         </div>
@@ -58,6 +62,7 @@ const RefundPolicy = () => {
           </section>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

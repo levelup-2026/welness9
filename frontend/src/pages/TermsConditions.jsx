@@ -1,23 +1,27 @@
+import { Helmet } from 'react-helmet-async';
 import React from 'react';
-import { FileText, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { FileText } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
 
 const TermsConditions = () => {
   return (
     <>
-      <div className="legal-nav">
-        <Link to="/" className="back-button">
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
-      </div>
+      <Helmet>
+        <title>Terms &amp; Conditions | Banana Health</title>
+        <meta name="description" content="Read the terms and conditions governing your use of Banana Health's website, platform, and medical services. Learn about user rights, guidelines, and policies." />
+        <link rel="canonical" href="https://www.banana.health/terms-conditions" />
+      </Helmet>
+     
+        <Header/>
+      
       <div className="legal-page">
         <div className="legal-header">
           <div className="legal-icon">
             <FileText size={48} />
           </div>
-          <h1>Terms & Conditions</h1>
+          <h1>Terms and Conditions</h1>
           <p className="legal-intro">Terms and conditions for using our services.</p>
           <p className="legal-date">Last Updated: December 2024</p>
         </div>
@@ -115,6 +119,7 @@ const TermsConditions = () => {
           </section>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

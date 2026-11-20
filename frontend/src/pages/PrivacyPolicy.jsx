@@ -1,17 +1,22 @@
+import { Helmet } from 'react-helmet-async';
 import React from 'react';
-import { Shield, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Shield} from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 import '../styles/LegalPages.css';
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <div className="legal-nav">
-        <Link to="/" className="back-button">
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
-      </div>
+      <Helmet>
+        <title>Privacy Policy | Banana Health</title>
+        <meta name="description" content="Understand how Banana Health collects, protects, and manages your personal information. We prioritize your privacy and data security across all our services." />
+        <link rel="canonical" href="https://www.banana.health/privacy-policy" />
+      </Helmet>
+     
+       <Header />
+      
       <div className="legal-page">
         <div className="legal-header">
           <div className="legal-icon">
@@ -73,6 +78,7 @@ const PrivacyPolicy = () => {
           </section>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

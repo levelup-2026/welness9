@@ -1,23 +1,27 @@
+import { Helmet } from 'react-helmet-async';
 import React from 'react';
-import { Shield, Lock, Eye, Heart, CheckCircle, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Shield, Lock, Eye, Heart, CheckCircle} from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/LegalPages.css';
 
 const ConfidentialityCommitment = () => {
   return (
     <>
-      <div className="legal-nav">
-        <Link to="/" className="back-button">
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
-      </div>
+      <Helmet>
+        <title>Confidentiality Policy | Banana Health</title>
+        <meta name="description" content="Read how Banana Health protects your privacy and sensitive health data. We adhere to the highest confidentiality standards to ensure your peace of mind." />
+        <link rel="canonical" href="https://www.banana.health/confidentiality" />
+      </Helmet>
+     
+        <Header/>
+     
       <div className="legal-page">
       <div className="legal-header">
         <div className="legal-icon">
           <Shield size={48} />
         </div>
-        <h1>Confidentiality Commitment</h1>
+        <h1>Our Confidentiality Commitment</h1>
         <p className="legal-intro">Your journey is private, sacred, and completely confidential.</p>
         <p className="legal-date">Last Updated: December 2024</p>
       </div>
@@ -215,6 +219,7 @@ const ConfidentialityCommitment = () => {
         </div>
       </div>
     </div>
+      <Footer/>
     </>
   );
 };

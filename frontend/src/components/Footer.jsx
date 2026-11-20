@@ -46,7 +46,6 @@ const Footer = () => {
               <ul className="footer-list">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about-us">About Us</Link></li>
-                <li><a href="/#pain-points">Our Understanding</a></li>
                 <li><a href="/#transformation">Transformation</a></li>
                 <li><a href="/#faq">FAQ</a></li>
               </ul>
@@ -55,10 +54,10 @@ const Footer = () => {
             <div className="footer-column">
               <h4 className="footer-heading">Get Started</h4>
               <ul className="footer-list">
-                <li><Link to="/">Home</Link></li>
+                
                 <li><Link to="/our-approach">Our Approach</Link></li>
                 <li><Link to="/about-us">About Us</Link></li>
-                <li><Link to="/about-us#contact-banana-health">Contact Us</Link></li>
+                <li><a href="https://www.banana.health/contact-form">Contact Us</a></li>
               </ul>
             </div>
 
@@ -91,7 +90,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2024 Banana Health. All rights reserved.
+               © {new Date().getFullYear()} Banana Health. All rights reserved.
           </p>
           <p className="footer-disclaimer">
             Results may vary between individuals. This program is designed for educational and wellness purposes. Please consult with a healthcare professional before starting any new health program. Banana Health does not provide medical diagnosis or treatment.
