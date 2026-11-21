@@ -8,6 +8,10 @@
   "framework": null,
   "rewrites": [
     {
+      "source": "/contact-form",
+      "destination": "/contact-form.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
