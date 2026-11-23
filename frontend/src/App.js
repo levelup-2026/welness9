@@ -47,7 +47,6 @@ function App() {
                 <h1>Get in Touch With Us</h1>
                 <p>
                   Have questions or need medical support? Contact the Banana Health care team today through our online contact form.
-                  <br />
                   We are dedicated to assisting you promptly.
                 </p>
               </main>
