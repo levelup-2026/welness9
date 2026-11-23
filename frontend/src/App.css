@@ -54,3 +54,7 @@ img {
     height: auto;
     display: block;
 }
+
+.contact-page {
+  padding: 132px 24px 56px;
+}
