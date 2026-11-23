@@ -60,7 +60,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "CI=false craco build",
+    "build": "craco build",
     "postbuild": "react-snap",
     "test": "craco test",
     "postinstall": "echo 'Dependencies installed successfully'"
