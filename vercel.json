@@ -1,7 +1,7 @@
 {
   "version": 2,
   "trailingSlash": false,
-  "buildCommand": "cd frontend \u0026\u0026 npm install --legacy-peer-deps \u0026\u0026 PUPPETEER_EXECUTABLE_PATH=\"$(node --input-type=module -e \u0027import chromium from \"@sparticuz/chromium\"; console.log(await chromium.executablePath())\u0027)\" \u0026\u0026 test -x \"$PUPPETEER_EXECUTABLE_PATH\" \u0026\u0026 export PUPPETEER_EXECUTABLE_PATH \u0026\u0026 CI=false npm run build",
+  "buildCommand": "cd frontend && node scripts/build-vercel.mjs",
   "outputDirectory": "frontend/build",
   "devCommand": "cd frontend && npm start",
   "installCommand": "cd frontend && npm install --legacy-peer-deps",
