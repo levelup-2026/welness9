@@ -46,9 +46,8 @@ function App() {
               <main className="contact-page">
                 <h1>Contact Banana Health – Get in Touch With Our Team</h1>
                 <p>
-                  Contact Banana Health for expert guidance and support with your queries.
-                  <br />
-                  Our team is here to help you with ED and PE-related concerns.
+                  Have questions or need medical support? Contact the Banana Health care team today through our online contact form.
+                  We are dedicated to assisting you promptly.
                 </p>
               </main>
               <Footer />
