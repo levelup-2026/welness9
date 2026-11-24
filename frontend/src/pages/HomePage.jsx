@@ -31,7 +31,7 @@ const HomePage = () => {
     <div className="homepage">
       <Helmet>
         <title>Sexual Health Solutions | Natural ED &amp; PE | Banana Health</title>
-        <meta name="description" content="Natural ED &amp; PE treatment in India with private, personalized guidance. No pills, no pumps, no side effects. Trusted by 5,000+ men. Book a consultation today." />
+        <meta name="description" content="Overcome ED &amp; PE naturally in India with private, personalized guidance. No pills or pumps. Book your consultation today." />
         <link rel="canonical" href="https://www.banana.health/" />
       </Helmet>
       {createPortal(

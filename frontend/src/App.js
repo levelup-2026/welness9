@@ -38,8 +38,8 @@ function App() {
           <Route key={path} path={path} element={
             <>
               <Helmet>
-                <title>Contact Banana Health | Get in Touch With Our Team</title>
-                <meta name="description" content="Have questions about Banana Health? Contact our team for support, guidance, and information about our natural ED and PE reversal programs." />
+                <title>Contact Us | Banana Health</title>
+                <meta name="description" content="Have questions or need support? Contact the Banana Health team today through our online contact form. We are dedicated to assisting you promptly." />
                 <link rel="canonical" href="https://www.banana.health/contact-form" />
               </Helmet>
               <Header />

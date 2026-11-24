@@ -35,7 +35,7 @@ const AboutUsPage = () => {
     <div className="about-us-page">
       <Helmet>
         <title>About Us | Banana Health</title>
-        <meta name="description" content="Know Banana Health's mission to improve men's sexual wellness through expert guidance, personalized care, and a holistic approach to overcoming ED and PE naturally." />
+        <meta name="description" content="Learn about Banana Health's mission to improve men's sexual wellness through expert guidance, personalized care, and natural holistic support." />
         <link rel="canonical" href="https://www.banana.health/about-us" />
       </Helmet>
       <Header />
