@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
     <>
       <Helmet>
         <title>Privacy Policy | Banana Health</title>
-        <meta name="description" content="Understand how Banana Health collects, protects, and manages your personal information. We prioritize your privacy and data security across all our services." />
+        <meta name="description" content="Learn how Banana Health collects, protects, and manages your personal data. We prioritize your privacy and data security across all interactions." />
         <link rel="canonical" href="https://www.banana.health/privacy-policy" />
       </Helmet>
      

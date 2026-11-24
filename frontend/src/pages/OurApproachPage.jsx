@@ -13,8 +13,8 @@ const OurApproachPage = () => {
   return (
     <div className="our-approach-page">
       <Helmet>
-        <title>Our Approach to Healthcare | Banana Health</title>
-        <meta name="description" content="Our Five-Pillar Integrative Approach to overcome Erectile Dysfunction and Premature Ejaculation through personalized guidance, holistic care, and lasting wellness." />
+        <title>Our Approach to Wellness | Banana Health</title>
+        <meta name="description" content="Discover our Five-Pillar Integrative Approach to overcome ED and PE through personalized guidance, holistic care, and lasting wellness." />
         <link rel="canonical" href="https://www.banana.health/our-approach" />
       </Helmet>
       <Header />

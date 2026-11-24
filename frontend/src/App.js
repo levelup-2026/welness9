@@ -39,12 +39,12 @@ function App() {
             <>
               <Helmet>
                 <title>Contact Us | Banana Health</title>
-                <meta name="description" content="Have questions or need medical support? Contact the Banana Health care team today through our online contact form. We are dedicated to assisting you promptly." />
+                <meta name="description" content="Have questions or need support? Contact the Banana Health team today through our online contact form. We are dedicated to assisting you promptly." />
                 <link rel="canonical" href="https://www.banana.health/contact-form" />
               </Helmet>
               <Header />
               <main className="contact-page">
-                <h1>Get in Touch With Us</h1>
+                <h1>Contact Banana Health – Get in Touch With Our Team</h1>
                 <p>
                   Have questions or need medical support? Contact the Banana Health care team today through our online contact form.
                   We are dedicated to assisting you promptly.

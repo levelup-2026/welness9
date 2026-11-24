@@ -10,7 +10,7 @@ const TermsConditions = () => {
     <>
       <Helmet>
         <title>Terms &amp; Conditions | Banana Health</title>
-        <meta name="description" content="Read the terms and conditions governing your use of Banana Health's website, platform, and medical services. Learn about user rights, guidelines, and policies." />
+        <meta name="description" content="Read the terms and conditions governing your use of Banana Health's website and platform. Learn about user rights, guidelines, policies, and support." />
         <link rel="canonical" href="https://www.banana.health/terms-conditions" />
       </Helmet>
      

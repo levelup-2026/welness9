@@ -78,7 +78,7 @@ const Header = () => {
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/our-approach" className="nav-link">Our Approach</Link>
             <Link to="/about-us" className="nav-link">About Us</Link>
-            <Link to="/about-us#contact-banana-health" className="nav-link">Contact Us</Link>
+            <a href="https://www.banana.health/contact-form" className="nav-link">Contact Us</a>
           </nav>
 
           {/* Desktop Social Icons */}
@@ -154,9 +154,9 @@ const Header = () => {
           <Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>
             About Us
           </Link>
-          <Link to="/about-us#contact-banana-health" className="mobile-nav-link" onClick={closeMobileMenu}>
+          <a href="https://www.banana.health/contact-form" className="mobile-nav-link" onClick={closeMobileMenu}>
             Contact Us
-          </Link>
+          </a>
 
           <div className="mobile-social">
             <a

@@ -10,7 +10,7 @@ const RefundPolicy = () => {
     <>
       <Helmet>
         <title>Refund Policy | Banana Health</title>
-        <meta name="description" content="Review the Banana Health refund and cancellation policy. Learn about our clear eligibility criteria, timelines, and simple procedures for hassle-free returns." />
+        <meta name="description" content="Review the Banana Health refund and cancellation policy, including eligibility criteria, timelines, and simple procedures for hassle-free returns." />
         <link rel="canonical" href="https://www.banana.health/refund-policy" />
       </Helmet>
      

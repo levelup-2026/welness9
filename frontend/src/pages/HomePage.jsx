@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import CardsSection from '../components/CardsSection';
@@ -30,9 +31,51 @@ const HomePage = () => {
     <div className="homepage">
       <Helmet>
         <title>Sexual Health Solutions | Natural ED &amp; PE | Banana Health</title>
-        <meta name="description" content="Natural ED &amp; PE treatment in India with private, personalized guidance. No pills, no pumps, no side effects. Trusted by 5,000+ men. Book a consultation today." />
+        <meta name="description" content="Overcome ED &amp; PE naturally in India with private, personalized guidance. No pills or pumps. Book your consultation today." />
         <link rel="canonical" href="https://www.banana.health/" />
       </Helmet>
+      {createPortal(
+        <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.banana.health/#organization",
+      "name": "Banana Health",
+      "legalName": "Banana Wellness LLP",
+      "url": "https://www.banana.health/",
+      "logo": "https://www.banana.health/spn.png",
+      "founder": { "@id": "https://www.banana.health/about-us#founder" },
+      "sameAs": [
+        "https://www.linkedin.com/company/banana-health-with-chetan",
+        "https://www.instagram.com/mybanana.health",
+        "https://www.facebook.com/profile.php?id=61572211965994"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.banana.health/#website",
+      "url": "https://www.banana.health/",
+      "name": "Banana Health",
+      "publisher": { "@id": "https://www.banana.health/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.banana.health/about-us#founder",
+      "name": "Yash Vardhan Swami",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "https://www.banana.health/#organization" },
+      "url": "https://www.banana.health/about-us",
+      "sameAs": [
+        "https://www.youtube.com/@trainedbyyvs"
+      ]
+    }
+  ]
+}
+`}</script>,
+        document.head
+      )}
       <Header />
       <HeroSection />
       <TrustedBanner />

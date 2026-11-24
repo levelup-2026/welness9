@@ -1,7 +1,7 @@
 {
   "version": 2,
   "trailingSlash": false,
-  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build",
+  "buildCommand": "cd frontend && node scripts/build-vercel.mjs",
   "outputDirectory": "frontend/build",
   "devCommand": "cd frontend && npm start",
   "installCommand": "cd frontend && npm install --legacy-peer-deps",
