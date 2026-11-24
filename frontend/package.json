@@ -61,7 +61,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "react-snap",
+    "postbuild": "react-snap && node scripts/dedupe-metadata.mjs",
     "test": "craco test",
     "postinstall": "echo 'Dependencies installed successfully'"
   },
